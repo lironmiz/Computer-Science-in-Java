@@ -21,4 +21,4 @@ public class Triangle1
         System.out.println("The area of the triangle is: " + area);
         
     }// end of method main
-}// end of class Triangle
+}// end of class Triangle1
