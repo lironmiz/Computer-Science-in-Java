@@ -267,4 +267,4 @@ public class Date
        }
        return 365*year + year/4 - year/100 + year/400 +((month+1) * 306)/10 + (day - 62);
    }
-}
+}// end of class Date
