@@ -13,20 +13,26 @@ public class Triangle2
         int x = scan.nextInt(); // Read value from user
         int y = scan.nextInt();
         int z = scan.nextInt();
+        
+        // Checking the correctnees of the input
+        if( x <= 0 || y <= 0 || z <= 0)
+        {
+            System.out.println("The numbers: " + x + ", " + y + " and " + z + " cannot represent a triangle");
+        }
         // checking if the numbers form triangle
-        if (x + y > z && x + z > y && y + z > x)
+        else if (x + y > z && x + z > y && y + z > x)
         {
             // checking if the triangle is Equilateral triangle 
             if (x==y && x==z)
             {
                 System.out.print("The numbers: " + x + ", " + y + " and " + z + " represent an equilateral triangle");
             }
-            // checking if the triangle is isosceles triangle
+            // Checking if the triangle is isosceles triangle
             else if((x==y && x!= z) || (x==z && x!= y) || (y==z && y!=x))
             {
                 System.out.print("The numbers: " + x + ", " + y + " and " + z + " represent an isosceles triangle");
             }
-            // checking if the triangle is right-angle triangle
+            // Checking if the triangle is right-angle triangle
             else if ( (x*x + y*y == z*z) || (y*y + z*z == x*x) || (x*x + z*z == y*y))
             {
                 System.out.print("The numbers: " + x + ", " + y + " and " + z + " represent an right-angle triangle");
