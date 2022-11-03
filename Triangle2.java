@@ -47,5 +47,5 @@ public class Triangle2
             System.out.print("The numbers: " + x + ", " + y + " and " + z + " cannot represent a triangle");
         }
     }// end of method main
-}// end of class Triangle
+}// end of class Triangle2
 
