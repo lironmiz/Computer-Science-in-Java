@@ -12,7 +12,11 @@ public class Car
   // Constant in the class
   private static final int DEFAULT_ID = 9999999; 
   private static final int ID_VALID_LENGTH = 7; 
-  // Constructor for class Car
+  /**
+  * Constructor for class Car
+  * @param id of the car, type of the car, brand of the car, and isManual 
+  * @return None
+  */
   public Car(int id, char type, String brand, boolean isManual)
   {
       // Checking if id is valid
@@ -38,7 +42,11 @@ public class Car
       _isManual = isManual;
   }
   
-  // Constructor for class Car
+  /**
+  * Constructor for class Car
+  * @param id of the car, type of the car, brand of the car, and isManual 
+  * @return None
+  */
   public Car(Car other)
   {
       this._id = other._id;
@@ -46,27 +54,47 @@ public class Car
       this._brand = other._brand;
       this._isManual = other._isManual;
   }
-  // Method return the id of the car
+  /**
+  * Method return the id of the car
+  * @param None
+  * @return the id of the car
+  */
   public int getId()
   {
       return this._id;
   }
-  // Method return the type of the car
+  /**
+  * Method return the type of the car
+  * @param None
+  * @return the type of the car
+  */
   public char getType()
   {
       return this._type;
   }
-  // Method return the brand of the car
+  /**
+  * Method return the brand of the car
+  * @param None
+  * @return the brand of the car
+  */
   public String getBrand()
   {
       return this._brand;
   }
-  // Method return if the car is manual
+  /**
+  * Method return if the car is manual
+  * @param None
+  * @return if the car is manual
+  */
   public boolean isManual()
   {
       return this._isManual;
   }
-  // Method set the car id
+  /**
+  * Method set the car id
+  * @param id of the car 
+  * @return None
+  */
   public void setId(int id)
   {
       int lengthOfId = String.valueOf(id).length();
@@ -74,12 +102,13 @@ public class Car
       {
           this._id = id;
       }
-      else
-      {
-          this._id = id;
-      }
+      this._id = id;
   }
-  // Method set the car type
+  /**
+  * Method set the car type
+  * @param type of the car 
+  * @return None
+  */
   public void setType(char type)
   {
       // Checking if type is valid
@@ -87,70 +116,80 @@ public class Car
       {
           this._type = type;
       }
-      else
-      {
-          this._type = type;
-      }
+      this._type = type;
   }
-  // Method set the car brand
+  /**
+  * Method set the car brand
+  * @param brand of the car 
+  * @return None
+  */
   public void setBrand(String brand)
   {
       this._brand = brand;
   }
-  // Method set if the car is manual
+  /**
+  * Method set if the car is manual
+  * @param manual
+  * @return None
+  */
   public void setIsManual(boolean manual)
   {
       this._isManual = manual;
   }
-  // Method returns the car data as a string
+  /**
+  * Method returns the car data as a string
+  * @param None
+  * @return string
+  */
    public String toString()
   {
-    return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear:" + this._isManual;
+    if (this._isManual)
+    {
+      return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: manual";
+    }
+    else
+    {
+      return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: auto";
+    }
+
   }
-  // Method checking if two car is equals
+  /**
+  * Check if two cars are the same
+  * Cars are considered the same if they have the same type, brand and gear
+  * @param other the car to compare this car to 
+  * @return true if the cars are the same, otherwise false 
+  */
   public boolean equals (Car other)
   {
-      boolean isCarEqual = true;
-      if (this._type == other._type && this._brand == other._brand && Boolean.compare(this._isManual, other._isManual) == 0)
-      {
-          return isCarEqual;
-      }
-      else
-      {
-          isCarEqual = false;
-      }
-      return isCarEqual;
+    return this._type == other._type && this._brand.equals(other._brand) && this._ismanual == other._isManual;
   }
-  // Method checking if car is better
+  /**
+  * Check if this car is better than the other car
+  * A car is considered better than another car if its type is higher.
+  * If both cars have same type, an automated car is better than a manual car. 
+  * @param other the car to compare this car to 
+  * @return true if the car is better than the other car, otherwise false 
+  */
   public boolean better (Car other)
   {
-      boolean isCarBetter = true;
-      if(Character.compare(this._type, other._type) > 0)
+      if (this._type > other._type)
       {
+        return true;
+      }
+      else if ( this._type == other._type)
+      {
+        if (this._isManual == false && other.isManual () == true)
+        {
           return true;
+        }
       }
-      else if(Character.compare(this._type, other._type) == 0)
-      {
-          if(this._isManual == true && other._isManual == false)
-          {
-              return true;
-          }
-          else if(this._isManual == true && other._isManual == true)
-          {
-              return false;
-          }
-          else
-          {
-              return false;
-          }
-      }
-      else
-      {
-          isCarBetter = false;
-      }
-      return isCarBetter;
+      return false;
   }
-  // Method checking if car is worse
+  /**
+  * Check if this car is worse than the other car
+  * @param other the car to compare this car to 
+  * @return true if the car is worse than the other car, otherwise false 
+  */
   public boolean worse (Car other)
   {
       return (!better(other));
