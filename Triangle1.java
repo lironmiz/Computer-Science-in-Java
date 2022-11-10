@@ -13,7 +13,7 @@ public class Triangle1
         int a = scan.nextInt(); // Read value from user
         int b = scan.nextInt();
         int c = scan.nextInt();
-        double s = (a + b + c) / 2;
+        double s = (a + b + c) / 2.0;
         double area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
         int perimeter = a + b + c;
         System.out.println("The lengths of the triangle sides are: " + a + ", " + b + ", " +  c + ".");
