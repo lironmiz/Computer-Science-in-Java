@@ -147,11 +147,7 @@ public class Car
     {
       return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: manual";
     }
-    else
-    {
-      return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: auto";
-    }
-
+    return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: auto";
   }
   /**
   * Check if two cars are the same
