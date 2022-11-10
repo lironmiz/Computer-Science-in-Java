@@ -15,7 +15,11 @@ public class Date
    private static final int MIN_MONTH = 1;
    private static final int MAX_DAY = 31;
    private static final int MIN_DAY = 1;
-   // Constructor for class Date
+  /**
+  * Constructor for class Date
+  * @param day of the date, month of the date, year of the date 
+  * @return None
+  */
    public Date(int day, int month, int year)
    {
        if(isDateValid(day, month, year))
@@ -31,7 +35,11 @@ public class Date
            this._year = 2000; 
        }
    }
-   // Constructor for class Date
+  /**
+  * Constructor for class Car
+  * @param other
+  * @return None
+  */
    public Date (Date other)
    {
        this._day = other._day;
@@ -39,88 +47,118 @@ public class Date
        this._year = other._year; 
        
    }
-   // Method return the day
+  /**
+  * Method return the day of the rent
+  * @param None
+  * @return day of the rent
+  */
    public int getDay()
    {
        return this._day;
    }
-   // Method return the month
+  /**
+  * Method return the month of the rent
+  * @param None
+  * @return month of the rent
+  */
    public int getMonth()
    {
        return this._month;
    }
-   // Method return the year 
+  /**
+  * Method return the year of the rent
+  * @param None
+  * @return year of the rent
+  */
    public int getYear()
    {
        return this._year;
    }
-   // Method set the day
+  /**
+  * Method set the day of the rent
+  * @param day of the rent ot set
+  * @return None
+  */
    public void setDay(int dayToSet)
    {
        this._day = dayToSet;
    }
-   // Method set the month
+  /**
+  * Method set the month of the rent
+  * @param month of the rent ot set
+  * @return None
+  */
    public void setMonth(int monthToSet)
    {
        this._month = monthToSet;
    }
-   // Method set the year
+  /**
+  * Method set the year of the rent
+  * @param year of the rent ot set
+  * @return None
+  */
    public void setYear(int YearToSet)
    {
        this._year = YearToSet;
    }
-   // Method checks if the date received as a parameter is the same as the date represented by the object on which the method is invoked
+  /**
+  * Method checks if the date received as a parameter is the same as the date represented by the object on which the method is invoked
+  * two dates are equals if the day, month and year is the same.
+  * @param other
+  * @return true if the dates is equals or false if not
+  */
    public boolean equals (Date other)
    {
-       boolean isEquals = true;
        if (other._day == this._day && other._month == this._month && other._year == this._year)
        {
-           return isEquals;
+           return true;
        }
-       else
-       {
-           isEquals = false;
-       }
-       return isEquals;
+       return false;
    }
-   // Method checks if the date represented by the object on which the method is invoked is before the date received as a parameter
+  /**
+  * Method checks if the date represented by the object on which the method is invoked is before the date received as a parameter
+  * @param other
+  * @return true if the date is before the other date or false if not
+  */
    public boolean before (Date other)
    {
-       boolean isBefore = true;
        if ((this._day < other._day && this._month == other._month && this._year == other._year) || (this._day == other._day && this._month < other._month && this._year == other._year) || (this._day == other._day && this._month == other._month && this._year < other._year))
        {
-           return isBefore;
+           return true;
        }
-       else
-       {
-           isBefore = false;
-       }
-       return isBefore;
+       return false;
    }
-   // Method checks if the date represented by the object on which the method is invoked is later than the date received as a parameter
+  /**
+  * Method checks if the date represented by the object on which the method is invoked is later than the date received as a parameter
+  * @param other
+  * @return true if the date is after the other date or false if not
+  */
    public boolean after(Date other)
    {
-       boolean isAfter = true;
        other._day = other._day + 1;
        other._month = other._month + 1;
        other._year = other._year + 1;
        if (before(other) == false)
        {
-           return isAfter;
+           return true;
        }
-       else
-       {
-           isAfter = false;
-       }
-       return isAfter;
+       return true;
    }
-   // Method calculates and checks the difference in days between the date received as a parameter and the date represented by the object
+  /**
+  * Method calculates and checks the difference in days between the date received as a parameter and the date represented by the object
+  * @param other
+  * @return the difference in days between the date received as a parameter and the date represented by the object
+  */
    public int difference (Date other)
    {
        int difference = Math.abs(calculateDate(this._day, this._month, this._year) - calculateDate(other._day, other._month, other._year));
        return difference;
    }
-   // Method returns the date as a string
+  /**
+  * Method returns the date as a string
+  * @param None
+  * @return string of the date
+  */ 
    public String toString()
    {
        String dayAsString;
@@ -144,7 +182,11 @@ public class Date
        String date = dayAsString + "/" + monthAsString + "/" + this._year;
        return date;
    }
-   // Method returns today's date the day after the date represented by the object on which the method is invoked.
+  /**
+  * Method returns object date of tomorrow
+  * @param None
+  * @return Date
+  */ 
    public Date tomorrow()
    {
        if(isDateValid(this._day+1, this._month, this._year))
@@ -165,7 +207,11 @@ public class Date
        Date tomorrow = new Date(this._day, this._month, this._year);
        return tomorrow;
    }
-   // Method check if date is Valid
+  /**
+  * Method check if the date is valid
+  * @param day of the date, month of the date and the year of the date
+  * @return true of the date is valid and false if not 
+  */ 
    private boolean isDateValid(int day, int month, int year)
    {
        boolean dateValid = true;
@@ -257,7 +303,11 @@ public class Date
        }
        return dateValid;     
    }
-   // Computes the day number since the beginning of the Christian counting of years
+  /**
+  * Method computes the day number since the beginning of the Christian counting of years
+  * @param day of the date, month of the date and the year of the date
+  * @return the day number since the beginning of the Christian counting of years
+  */ 
    private int calculateDate( int day, int month, int year)
    {
        if(month < 3)
