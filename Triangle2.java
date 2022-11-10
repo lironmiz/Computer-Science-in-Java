@@ -28,7 +28,7 @@ public class Triangle2
                 System.out.print("The numbers: " + x + ", " + y + " and " + z + " represent an equilateral triangle");
             }
             // Checking if the triangle is isosceles triangle
-            else if((x==y && x!= z) || (x==z && x!= y) || (y==z && y!=x))
+            else if((x==y) || (x==z) || (y==z))
             {
                 System.out.print("The numbers: " + x + ", " + y + " and " + z + " represent an isosceles triangle");
             }
