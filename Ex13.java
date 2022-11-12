@@ -77,53 +77,12 @@ public class Ex13
     * @param a (int arr) 
     * @return true if there valid route or false if not
     */
-    public static boolean isWay(int[] a)
-    {
-        int lenArr = a.length;
-        int index = 0;
-        // chekcing if the number in the first index of the arr greater from the size of the arr
-        if (a[0] > lenArr)
-        {
-            return false;
-        }
-        // chekicg if the index the number in this index is equal the the size of the arr
-        else if(index + a[index] == lenArr)
-        {
-            return true;
-        }
-        else
-        {
-            return checkValid(index + a[index], a, lenArr);
-        }
-    }
-    // The method recursively checks if there is a vaild path in the array
-    public static boolean checkValid (int index, int[] a, int lenArr)
-    {
-        // Checking the conditions and necessary recursive calls
-        if (a[index] > lenArr)
-        {
-            return false;
-        }
-        else if(index + a[index] == lenArr)
-        {
-            return true;
-        }
-        else if (checkValid(index + a[index], a, lenArr))
-        {
-            return true;
-        }
-        else
-        {
-            if (index - a[index] < 0)
-            {
-                return false;
-            }
-            else
-            {
-                return checkValid(index - a[index], a, lenArr);
-            }
-        }
-    }// end of exercise 3
+   public static boolean isWay(int[] a, int index)
+   {
+    if (index == a.length-1) return true;
+    if (index > a.length-1 || index < 0) return false;
+    return isWay(a, index+a[index]) || isWay(a, index-a[index]);
+   }
     /**
     * Ex4
     * The method is Boolean recursive and returns the smalest number of steps that the prince need to do to the evil person (-1) in two-dimensional array, If there is no path, then it returns -1
