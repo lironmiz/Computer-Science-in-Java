@@ -1,6 +1,7 @@
 //*******************************************************
 // Ex13.java
 // A class with all the methods of all the exercises
+// semester סתיו 2023א
 //*******************************************************
 public class Ex13
 {
@@ -17,6 +18,7 @@ public class Ex13
     {
         int numOfExchanges = 0;
         int lenStr = s.length();
+        // looping the string
         for (int i = 0; i < lenStr ; i++) 
         {
             // If there is 1 at even index positions
@@ -26,8 +28,10 @@ public class Ex13
             if (i % 2 == 1 && s.charAt(i) == '0')
                 numOfExchanges++;
         }
+        // return the minimum number between the two possibilitys.
         return Math.min(numOfExchanges, lenStr - numOfExchanges);
-    }
+    } // end of exercise 1
+    
     /**
     * Ex2
     * Function find the maximum length of subarray such that sum of the subarray is even 
@@ -65,7 +69,7 @@ public class Ex13
         }
  
         return len;
-    }
+    }// end of exercise 2
     /**
     * Ex3
     * The method is boolean recursive which returns if there is a valid route in the array
@@ -77,10 +81,12 @@ public class Ex13
     {
         int lenArr = a.length;
         int index = 0;
+        // chekcing if the number in the first index of the arr greater from the size of the arr
         if (a[0] > lenArr)
         {
             return false;
         }
+        // chekicg if the index the number in this index is equal the the size of the arr
         else if(index + a[index] == lenArr)
         {
             return true;
@@ -90,8 +96,10 @@ public class Ex13
             return checkValid(index + a[index], a, lenArr);
         }
     }
+    // The method recursively checks if there is a vaild path in the array
     public static boolean checkValid (int index, int[] a, int lenArr)
     {
+        // Checking the conditions and necessary recursive calls
         if (a[index] > lenArr)
         {
             return false;
@@ -115,7 +123,7 @@ public class Ex13
                 return checkValid(index - a[index], a, lenArr);
             }
         }
-    }
+    }// end of exercise 3
     /**
     * Ex4
     * The method is Boolean recursive and returns the smalest number of steps that the prince need to do to the evil person (-1) in two-dimensional array, If there is no path, then it returns -1
@@ -126,42 +134,55 @@ public class Ex13
     public static int prince(int[][] drm, int i, int j)
     {
         int count = 0;
+        //Checking if the cell he arrived at is the desired cell  
         if(drm[i][j] == -1)
         {
             return count;
         }
-        if ( i + 1 > drm.length || i - 1 < 0 || j + 1 > drm[0].length || j - 1 < 0)
+        if ( i + 1 > drm.length)
         {
-            return -1;
+            drm[i + 1][j] += drm[i][j] + 5;
+        }
+        else if( i - 1 < 0 )
+        {
+            drm[i - 1][j] += drm[i][j] + 5;
+        }
+        else if(j + 1 > drm[0].length)
+        {
+            drm[i][j + 1] += drm[i][j] + 5;
+        }
+        else if(j - 1 < 0)
+        {
+            drm[i][j - 1] += drm[i][j] + 5;
         }
         else if(drm[i][j] == drm[i + 1][j] || drm[i + 1][j] == drm[i + 1][j] + 1 || drm[i + 1][j] == drm[i + 1][j] -1 || drm[i + 1][j] == drm[i + 1][j] -2)
         {
             count++;
             prince(drm, i + 1, j);
-            drm[i + 1][j] += 2;
+            drm[i + 1][j] += drm[i][j] + 5;
             prince(drm, i, j);
         }
         else if(drm[i][j] == drm[i - 1][j] || drm[i - 1][j] == drm[i][j] + 1 || drm[i - 1][j] == drm[i][j] -1 || drm[i - 1][j] == drm[i][j] -2)
         {
             count++;
             prince(drm, i - 1, j);
-            drm[i - 1][j] += 2;
+            drm[i - 1][j] += drm[i][j] + 5;
             prince(drm, i, j);
         }
         else if(drm[i][j] == drm[i][j +1] || drm[i][j + 1] == drm[i][j] + 1 || drm[i][j + 1] == drm[i][j] -1 || drm[i][j + 1] == drm[i][j] -2)
         {
             count++;
             prince(drm, i, j + 1);
-            drm[i][j + 1] += 2;
+            drm[i][j + 1] += drm[i][j] + 5;
             prince(drm, i, j);
         }
         else if(drm[i][j] == drm[i][j - 1] || drm[i][j - 1] == drm[i][j] + 1 || drm[i][j - 1] == drm[i][j] -1 || drm[i][j - 1] == drm[i][j] -2)
         {
             count++;
             prince(drm, i, j - 1);
-            drm[i][j - 1] += 2;
+            drm[i][j - 1] += drm[i][j] + 5;
             prince(drm, i, j);
         }
         return -1;
-    }
-}
+    } // end of exercise 4
+}// end of class Ex13
