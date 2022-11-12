@@ -13,6 +13,7 @@ public class Triangle1
         int a = scan.nextInt(); // Read value from user
         int b = scan.nextInt();
         int c = scan.nextInt();
+        // The calculation according to the Heron formula for a triangular area
         double s = (a + b + c) / 2.0;
         double area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
         int perimeter = a + b + c;
