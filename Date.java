@@ -34,7 +34,7 @@ public class Date
            this._month = MIN_DAY;
            this._year = 2000; 
        }
-   }
+   }// end of Date method
   /**
   * Constructor for class Car
   * @param other
@@ -46,7 +46,7 @@ public class Date
        this._month = other._month;
        this._year = other._year; 
        
-   }
+   }// end of Date method
   /**
   * Method return the day of the rent
   * @param None
@@ -55,7 +55,7 @@ public class Date
    public int getDay()
    {
        return this._day;
-   }
+   }// end of getDay method
   /**
   * Method return the month of the rent
   * @param None
@@ -64,7 +64,7 @@ public class Date
    public int getMonth()
    {
        return this._month;
-   }
+   }// end of getMonth method
   /**
   * Method return the year of the rent
   * @param None
@@ -73,7 +73,7 @@ public class Date
    public int getYear()
    {
        return this._year;
-   }
+   }// end of getYear method
   /**
   * Method set the day of the rent
   * @param day of the rent ot set
@@ -82,7 +82,7 @@ public class Date
    public void setDay(int dayToSet)
    {
        this._day = dayToSet;
-   }
+   }// end of setDay method
   /**
   * Method set the month of the rent
   * @param month of the rent ot set
@@ -91,7 +91,7 @@ public class Date
    public void setMonth(int monthToSet)
    {
        this._month = monthToSet;
-   }
+   }// end of setMonth method
   /**
   * Method set the year of the rent
   * @param year of the rent ot set
@@ -100,7 +100,7 @@ public class Date
    public void setYear(int YearToSet)
    {
        this._year = YearToSet;
-   }
+   }// end of setYear method
   /**
   * Method checks if the date received as a parameter is the same as the date represented by the object on which the method is invoked
   * two dates are equals if the day, month and year is the same.
@@ -114,7 +114,7 @@ public class Date
            return true;
        }
        return false;
-   }
+   }// end of equals method
   /**
   * Method checks if the date represented by the object on which the method is invoked is before the date received as a parameter
   * @param other
@@ -127,7 +127,7 @@ public class Date
            return true;
        }
        return false;
-   }
+   }// end of before method
   /**
   * Method checks if the date represented by the object on which the method is invoked is later than the date received as a parameter
   * @param other
@@ -143,7 +143,7 @@ public class Date
            return true;
        }
        return true;
-   }
+   }// end of after method
   /**
   * Method calculates and checks the difference in days between the date received as a parameter and the date represented by the object
   * @param other
@@ -153,7 +153,7 @@ public class Date
    {
        int difference = Math.abs(calculateDate(this._day, this._month, this._year) - calculateDate(other._day, other._month, other._year));
        return difference;
-   }
+   }// end of difference method
   /**
   * Method returns the date as a string
   * @param None
@@ -181,7 +181,7 @@ public class Date
        }
        String date = dayAsString + "/" + monthAsString + "/" + this._year;
        return date;
-   }
+   }// end of toString method
   /**
   * Method returns object date of tomorrow
   * @param None
@@ -206,7 +206,7 @@ public class Date
        }
        Date tomorrow = new Date(this._day, this._month, this._year);
        return tomorrow;
-   }
+   }// end of tomorrow method
   /**
   * Method check if the date is valid
   * @param day of the date, month of the date and the year of the date
@@ -302,7 +302,7 @@ public class Date
            dateValid = false;
        }
        return dateValid;     
-   }
+   }// end of isDateValid method
   /**
   * Method computes the day number since the beginning of the Christian counting of years
   * @param day of the date, month of the date and the year of the date
@@ -316,5 +316,5 @@ public class Date
            month = month + MAX_MONTH;
        }
        return 365*year + year/4 - year/100 + year/400 +((month+1) * 306)/10 + (day - 62);
-   }
+   }// end of calculateDate method
 }// end of class Date
