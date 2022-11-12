@@ -40,7 +40,7 @@ public class Car
       }
       _brand = brand;
       _isManual = isManual;
-  }
+  }// end of Car method
   
   /**
   * Constructor for class Car
@@ -53,7 +53,7 @@ public class Car
       this._type = other._type;
       this._brand = other._brand;
       this._isManual = other._isManual;
-  }
+  }// end of Car method
   /**
   * Method return the id of the car
   * @param None
@@ -62,7 +62,7 @@ public class Car
   public int getId()
   {
       return this._id;
-  }
+  }// end of getId method
   /**
   * Method return the type of the car
   * @param None
@@ -71,7 +71,7 @@ public class Car
   public char getType()
   {
       return this._type;
-  }
+  }// end of getType method
   /**
   * Method return the brand of the car
   * @param None
@@ -80,7 +80,7 @@ public class Car
   public String getBrand()
   {
       return this._brand;
-  }
+  }// end of getBrand method
   /**
   * Method return if the car is manual
   * @param None
@@ -89,7 +89,7 @@ public class Car
   public boolean isManual()
   {
       return this._isManual;
-  }
+  }// end of isManual method
   /**
   * Method set the car id
   * @param id of the car 
@@ -103,7 +103,7 @@ public class Car
           this._id = id;
       }
       this._id = id;
-  }
+  }// end of setId method
   /**
   * Method set the car type
   * @param type of the car 
@@ -117,7 +117,7 @@ public class Car
           this._type = type;
       }
       this._type = type;
-  }
+  }// end of setType method
   /**
   * Method set the car brand
   * @param brand of the car 
@@ -126,7 +126,7 @@ public class Car
   public void setBrand(String brand)
   {
       this._brand = brand;
-  }
+  }// end of setBrand method
   /**
   * Method set if the car is manual
   * @param manual
@@ -135,7 +135,7 @@ public class Car
   public void setIsManual(boolean manual)
   {
       this._isManual = manual;
-  }
+  }// end of setIsManual method
   /**
   * Method returns the car data as a string
   * @param None
@@ -148,7 +148,7 @@ public class Car
       return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: manual";
     }
     return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: auto";
-  }
+  }// end of toString method
   /**
   * Check if two cars are the same
   * Cars are considered the same if they have the same type, brand and gear
@@ -158,7 +158,7 @@ public class Car
   public boolean equals (Car other)
   {
     return this._type == other._type && this._brand.equals(other._brand) && this._ismanual == other._isManual;
-  }
+  }// end of equals method
   /**
   * Check if this car is better than the other car
   * A car is considered better than another car if its type is higher.
@@ -180,7 +180,7 @@ public class Car
         }
       }
       return false;
-  }
+  }// end of better method
   /**
   * Check if this car is worse than the other car
   * @param other the car to compare this car to 
@@ -189,5 +189,5 @@ public class Car
   public boolean worse (Car other)
   {
       return (!better(other));
-  }
+  }// end of worse method
 }// end of class Car
