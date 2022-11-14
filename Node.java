@@ -374,7 +374,39 @@ public class Node
       int maxChildPathSum = Math.max(maxPathSum(root._leftSon), maxPathSum(root._rightSon)); 
       return root._number + maxChildPathSum;
   }// end of method maxPathSum
-  
+  /**
+  * PathSumToTarget recursion approach the method will return the path from root to leaf with the sum equal the targat num
+  * PathSumToTarget wil return true with the input 10 and the root node with the binary tree example in main method
+  * Time complexity n = number of nodes -> O(n)
+  * Spce complexity = O(n) (Because of the memory of the call stack which depends on the size of the input)
+  * @param Node, int
+  * @return boolean
+  */
+  public static boolean pathSumToTarget(Node root, int num)
+  {
+      // checking if we fount a path
+      if( num == 0 && root == null)
+      {
+          return true;
+      }
+      // if we dont find a path and the curr root in null we return false
+      if (root == null)
+      {
+          return false;
+      }
+      // checking the left side of the tree by recursion
+      boolean left = something(root.getLeftSon(). num - root._number());
+      boolean right = false;
+      // if we dont find a path in the left side of the binary tree
+      if(!left)
+      {
+          right = PathSumToTarget(root.getRightSon(), num - root.getNumber());
+      }
+      // checking if we find a path in the left or the right side
+      if(left || right)
+      {
+          System.out.print(root._number + " ");
+      }
+      return left || right;
+  }// end of method PathSumToTarget 
 }// end of class Node
-
- 
