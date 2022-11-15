@@ -7,4 +7,4 @@
       int _data;
       Node _next;
       
-}
+}// end of class Node
