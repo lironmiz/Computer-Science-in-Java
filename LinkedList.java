@@ -44,4 +44,51 @@ public class LinkedList
         }
         System.out.println(node._data);
     }// end of method show
-}
+    /**
+    * length method will return the size of linked list
+    * @param None
+    * @return int
+    */
+    public int length()
+    {
+        Node temp = head;
+        int count = 0;
+        while(temp != null)
+        {
+            count++;
+            temp = temp._next;
+        }
+        return count;
+    }// end of method length
+    /**
+    * getFirst method will return the first number of the linked list
+    * @param None
+    * @return int
+    */
+    public int getFirst() 
+    {
+        if(this.length() == 0)
+        {
+            System.out.println("linked list is empty");
+        }
+        return head._data;
+    }// end of method get first
+    /**
+    * getLast method will return the last number of the linked list
+    * @param None
+    * @return int
+    */
+    public int getLast()
+    {
+        if (this.length() == 0)
+        {
+            System.out.println("linkes list is empty");
+        }
+        Node curr = this.head;
+        while(curr._next != null)
+        {
+           curr = curr._next; 
+        }
+        return curr._data;
+    }// end of method getLast
+}// end of class LinkedList
