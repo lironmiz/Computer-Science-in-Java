@@ -157,7 +157,7 @@ public class Car
   */
   public boolean equals (Car other)
   {
-    return this._type == other._type && this._brand.equals(other._brand) && this._ismanual == other._isManual;
+    return this._type == other._type && this._brand.equals(other._brand) && this._isManual == other._isManual;
   }// end of equals method
   /**
   * Check if this car is better than the other car
