@@ -153,7 +153,7 @@ public class Rent
   */
   public int getPrice()
   {
-      int rentDays = this.howManyDays();
+      int rentDays = howManyDays(this);
       int amountOfWeeksDiscount = rentDays / NUM_OF_DAYS_IN_WEEK;
       int numDaysWithoutDiscount = rentDays % NUM_OF_DAYS_IN_WEEK;
       // Price calculation according to the type of car
@@ -178,11 +178,11 @@ public class Rent
   */
   public int upgrade (Car newCar)
   {
-      if(newCar.better(this._car)
+      if(newCar.better(this._car))
       {
-          priceCarBeforeUpgrade  = this._car.getPrice();
+          priceCarBeforeUpgrade  = this.getPrice();
           _car = new Car(newCar);
-          int price_increase = this._car.getPrice() - priceCarBeforeUpgrade;
+          int price_increase = this.getPrice() - priceCarBeforeUpgrade;
       }
   }// end of upgrade method
   /**
@@ -229,7 +229,7 @@ public class Rent
        return new Rent (this._name, this._car, pickDate, otherReturnDate);
     }
     // returns other pickDate and amse returnDate
-    if(pickDate.after(otherPickDate) && pickDate.before(otherRetrunDate) && returnDate.after(otherReturnDate))
+    if(pickDate.after(otherPickDate) && pickDate.before(other.returnDate) && returnDate.after(otherReturnDate))
     {
       return new Rent (this._name, this._car, otherPickDate, returnDate);
     }
@@ -237,7 +237,7 @@ public class Rent
     {
        return new Rent (this._name, this._car, otherPickDate, returnDate);
     }
-    else if (pickDate.equals(otherRetrunkDate))
+    else if (pickDate.equals(other._returnDate))
     {
        return new Rent (this._name, this._car, otherPickDate, returnDate);
     }
@@ -251,6 +251,6 @@ public class Rent
   */
    public String toString()
   { 
-      return "Name:" + this._name + " From:" + this._pickDate + " To:" + this._returnDate + " Type:" + this._car._type + " Days:" + this.howManyDays() + " Price:" + this.getPrice(); 
+      return "Name:" + this._name + " From:" + this._pickDate + " To:" + this._returnDate + " Type:" + this._car._type + " Days:" + howManyDays(this) + " Price:" + this.getPrice(); 
   }// end of toString method
 }// end of class Rent
