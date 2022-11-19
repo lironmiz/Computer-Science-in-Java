@@ -14,23 +14,25 @@ public class Ex13
     * Time Complexity: O(len)
     * Auxiliary Space: O(1)
     */
-    public static int alternating (String s)
+    public static int getFlipCounter(String str, char predictedCharacter)
     {
-        int numOfExchanges = 0;
-        int lenStr = s.length();
-        // looping the string
-        for (int i = 0; i < lenStr ; i++) 
+        int flipCounter=0;
+        int size=str.length();
+        for (int i=0; i<size; i++)
         {
-            // If there is 1 at even index positions
-            if (i % 2 == 0 && s.charAt(i) == '1')
-                numOfExchanges++;
-            // If there is 0 at odd index positions
-            if (i % 2 == 1 && s.charAt(i) == '0')
-                numOfExchanges++;
+            if (str.charAt(i) != predictedCharacter) 
+            {
+                flipCounter++;
+            }
+            predictedCharacter = (predictedCharacter == '0') ? '1' : '0';
         }
-        // return the minimum number between the two possibilitys.
-        return Math.min(numOfExchanges, lenStr - numOfExchanges);
-    } // end of exercise 1
+        return flipCounter;
+    }// end of method getFlipCounter
+    
+    public static int alternating(String str)
+    {
+        return Math.min(getFlipCounter(str,'1'), getFlipCounter(str,'0')) / 2;
+    }// end of exercise 1
     
     /**
     * Ex2
