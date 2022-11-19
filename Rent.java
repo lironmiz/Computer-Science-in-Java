@@ -190,7 +190,7 @@ public class Rent
   /**
   * Methed check if there overlap between two Rents
   * @param other
-  * @return 
+  * @return rent
   */
   public Rent overlap (Rent other)
   {
