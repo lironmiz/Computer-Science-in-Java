@@ -183,7 +183,9 @@ public class Rent
           priceCarBeforeUpgrade  = this.getPrice();
           _car = new Car(newCar);
           int price_increase = this.getPrice() - priceCarBeforeUpgrade;
+          return price_increase;
       }
+      return this.getPrice()
   }// end of upgrade method
   /**
   * Methed check if there overlap between two Rents
@@ -251,6 +253,6 @@ public class Rent
   */
    public String toString()
   { 
-      return "Name:" + this._name + " From:" + this._pickDate + " To:" + this._returnDate + " Type:" + this._car._type + " Days:" + howManyDays(this) + " Price:" + this.getPrice(); 
+      return "Name:" + this._name + " From:" + this._pickDate + " To:" + this._returnDate + " Type:" + _car.getType() + " Days:" + howManyDays(this) + " Price:" + this.getPrice(); 
   }// end of toString method
 }// end of class Rent
