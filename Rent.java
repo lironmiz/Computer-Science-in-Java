@@ -169,7 +169,7 @@ public class Rent
       {
          return (int) (( NUM_OF_DAYS_IN_WEEK * amountOfWeeksDiscount * TYPE_C_PRICE ) * (DISCOUNT) + ( numDaysWithoutDiscount * TYPE_C_PRICE));
       }
-      rerurn  (int) (( NUM_OF_DAYS_IN_WEEK * amountOfWeeksDiscount * TYPE_D_PRICE ) * ( DISCOUNT) + ( numDaysWithoutDiscount * TYPE_D_PRICE));
+      return  (int) (( NUM_OF_DAYS_IN_WEEK * amountOfWeeksDiscount * TYPE_D_PRICE ) * ( DISCOUNT) + ( numDaysWithoutDiscount * TYPE_D_PRICE));
   }// end of getPrice method
   /**
   * Methed upgrade the car of the renter
