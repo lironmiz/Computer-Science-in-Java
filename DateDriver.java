@@ -1,5 +1,9 @@
-import java.util.Scanner;
 
+/**
+* DateDriver.java
+* A main class for check the Date class
+*/
+import java.util.Scanner;
 public class DateDriver
 {
     public static void main(String[] args)
