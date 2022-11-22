@@ -188,6 +188,6 @@ public class Car
   */
   public boolean worse (Car other)
   {
-      return (!better(other));
+      return (other.better(this));
   }// end of worse method
 }// end of class Car
