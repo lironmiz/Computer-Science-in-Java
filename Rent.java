@@ -139,12 +139,12 @@ public class Rent
   }// end of equals method
   /**
   * Method return how much rent day left
-  * @param other
-  * @return how much rent day left
+  * @param None
+  * @return int how much rent day left
   */
-  public int howManyDays(Rent other)
+  public int howManyDays()
   {
-       return this._pickDate.difference(other._returnDate);
+       return this._pickDate.difference(this._returnDate);
   }// end of howManyDays method
   /**
   * Method Calculates and returns the total price of the rental period
