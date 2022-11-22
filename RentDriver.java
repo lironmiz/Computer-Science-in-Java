@@ -80,7 +80,7 @@ public class RentDriver
        System.out.println(rent.toString());
        System.out.println(rent1.toString());
        // check how much rent day left 
-       System.out.println("the days left is: " + rent.howManyDays(rent1));
+       System.out.println("the days left is: " + rent.howManyDays());
        // get the price of the rent
        System.out.println("rent price is: " + rent.getPrice());
        System.out.println("rent1 price is: " + rent1.getPrice());
