@@ -189,22 +189,25 @@ public class Date
   */ 
    public Date tomorrow()
    {
+       int tomorrowDay = this._day;
+       int tomorrowMonth = this._month;
+       int tomorrowYear = this._year;
        if(isDateValid(this._day+1, this._month, this._year))
        {
-           this._day++;
+          tomorrowDay++;
        }
        else if( isDateValid(MIN_DAY, this._month + 1, this._year))
        {
-           this._day = MIN_DAY;
-           this._month++;
+           tomorrowDay = MIN_DAY;
+          tomorrowMonth++;
        }
        else
        {
-           this._day = MIN_DAY;
-           this._month = 1;
-           this._year++;
+            tomorrowDay = MIN_DAY;
+            tomorrowMonth = 1;
+            tomorrowYear++;
        }
-       Date tomorrow = new Date(this._day, this._month, this._year);
+       Date tomorrow = new Date(tomorrowDay,  tomorrowMonth, tomorrowYear);
        return tomorrow;
    }// end of tomorrow method
   /**
