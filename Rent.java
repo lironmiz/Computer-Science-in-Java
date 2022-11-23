@@ -109,15 +109,23 @@ public class Rent
   */
   public void setPickDate(Date pickDate)
   {
-       this._pickDate = pickDate;
+      if(pickDate.after(this._returnDate))
+      {
+        this._pickDate = pickDate;
+      }
+      this._pickDate = pickDate;
   }// end of setPickDate method
   /**
   * Method set the returen date of the renter
   * @param returnDate
   * @return None
   */
-  public void SetReturnDate(Date retuernDate)
+  public void setReturnDate(Date retuernDate)
   {
+       if(retuernDate.before(this._pickDate))
+       {
+          this._returnDate = retuernDate;
+       }
        this._returnDate = retuernDate;
   }// end of SetReturnDate method
   /**
