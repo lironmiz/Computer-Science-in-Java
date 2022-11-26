@@ -11,10 +11,25 @@ public class Date
    // Constant in the class
    private static final int MAX_YEAR = 9999;
    private static final int MIN_YEAR = 1000;
+    private static final int DEFAULT_YEAR = 2000;
    private static final int MAX_MONTH = 12;
    private static final int MIN_MONTH = 1;
    private static final int MAX_DAY = 31;
    private static final int MIN_DAY = 1;
+   private static final int JANUARY = 1;
+   private static final int FEBRUARY = 2;
+   private static final int MARCH = 3;
+   private static final int APRIL = 4;
+   private static final int MAY = 5;
+   private static final int JUNE = 6;
+   private static final int JULY = 7;
+   private static final int AUGUST = 8;
+   private static final int SEPTEMBER = 9;
+   private static final int OCTOBER = 10;
+   private static final int NOVEMBER = 11;
+   private static final int DECEMBER = 12;
+   private static final int LEAP_FEBRUARY = 29;
+   
   /**
   * Constructor for class Date
   * @param day of the date, month of the date, year of the date 
@@ -32,7 +47,7 @@ public class Date
        {
            this._day = MIN_DAY;
            this._month = MIN_DAY;
-           this._year = 2000; 
+           this._year =  DEFAULT_YEAR; 
        }
    }// end of Date method
   /**
@@ -235,9 +250,9 @@ public class Date
        {
             if( month >= MIN_MONTH && month <= MAX_MONTH)
             {
-                if(month == 2)
+                if(month == FEBRUARY)
                 {
-                    if (day >= MIN_DAY && day <= 29)
+                    if (day >= MIN_DAY && day <= LEAP_FEBRUARY)
                     {
                         return dateValid;
                     }
@@ -246,7 +261,7 @@ public class Date
                         dateValid = false;
                     }
                 }
-                else if(month ==  4 || month == 6 || month == 9 || month == 11)
+                else if(month ==  APRIL || month == JUNE || month == SEPTEMBER || month == NOVEMBER)
                 {
                     if(day >= MIN_DAY && day <= 30)
                     {
@@ -277,7 +292,7 @@ public class Date
        // Checking the date
        else if(month >= MIN_MONTH && month <= MAX_MONTH && year >= MIN_YEAR && year <= MAX_YEAR)
        {
-           if (month == 2)
+           if (month == FEBRUARY)
            {
                if(day >= MIN_DAY && day <= 28)
                {
@@ -288,7 +303,7 @@ public class Date
                    dateValid = false;
                }
            }
-           else if(month ==  4 || month == 6 || month == 9 || month == 11)
+           else if(month ==  APRIL || month == JUNE || month == SEPTEMBER || month == NOVEMBER)
            {
                 if(day >= MIN_DAY && day <= 30)
                 {
