@@ -81,7 +81,11 @@ public class Date
   */
    public void setDay(int dayToSet)
    {
-       this._day = dayToSet;
+      if(isDateValid(dayToSet, this._month, this._year)
+      {
+         this._day = dayToSet;
+      }
+         this._day = dayToSet;
    }// end of setDay method
   /**
   * Method set the month of the rent
@@ -90,7 +94,11 @@ public class Date
   */
    public void setMonth(int monthToSet)
    {
-       this._month = monthToSet;
+       if(isDateValid(this._day, monthToSet, this._year)
+      {
+         this._month = monthToSet;
+      }
+      this._month = monthToSet;
    }// end of setMonth method
   /**
   * Method set the year of the rent
@@ -99,7 +107,11 @@ public class Date
   */
    public void setYear(int YearToSet)
    {
-       this._year = YearToSet;
+      if(isDateValid(this._day, this._month, YearToSet)
+      {
+        this._year = YearToSet;
+      }
+      this._year = YearToSet;
    }// end of setYear method
   /**
   * Method checks if the date received as a parameter is the same as the date represented by the object on which the method is invoked
@@ -152,7 +164,7 @@ public class Date
    public int difference (Date other)
    {
        int difference = Math.abs(calculateDate(this._day, this._month, this._year) - calculateDate(other._day, other._month, other._year));
-       return difference;
+       return difference + 1;
    }// end of difference method
   /**
   * Method returns the date as a string
