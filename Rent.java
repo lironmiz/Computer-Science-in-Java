@@ -27,7 +27,7 @@ public class Rent
       this._name = name;
       this._car = car;
       this._pickDate = pick;
-      if(this._pickDate.after(pick))
+      if(this._pickDate.before(ret))
       {
           this._returnDate = ret;
       }
