@@ -11,7 +11,7 @@ public class Date
    // Constant in the class
    private static final int MAX_YEAR = 9999;
    private static final int MIN_YEAR = 1000;
-    private static final int DEFAULT_YEAR = 2000;
+   private static final int DEFAULT_YEAR = 2000;
    private static final int MAX_MONTH = 12;
    private static final int MIN_MONTH = 1;
    private static final int MAX_DAY = 31;
@@ -46,7 +46,7 @@ public class Date
        else
        {
            this._day = MIN_DAY;
-           this._month = MIN_DAY;
+           this._month = MIN_MONTH;
            this._year =  DEFAULT_YEAR; 
        }
    }// end of Date method
@@ -100,7 +100,7 @@ public class Date
       {
          this._day = dayToSet;
       }
-         this._day = dayToSet;
+      
    }// end of setDay method
   /**
   * Method set the month of the rent
@@ -113,7 +113,6 @@ public class Date
       {
          this._month = monthToSet;
       }
-      this._month = monthToSet;
    }// end of setMonth method
   /**
   * Method set the year of the rent
@@ -126,7 +125,6 @@ public class Date
       {
         this._year = YearToSet;
       }
-      this._year = YearToSet;
    }// end of setYear method
   /**
   * Method checks if the date received as a parameter is the same as the date represented by the object on which the method is invoked
@@ -149,11 +147,11 @@ public class Date
   */
    public boolean before (Date other)
    {
-       if ((this._day < other._day && this._month == other._month && this._year == other._year) || (this._day == other._day && this._month < other._month && this._year == other._year) || (this._day == other._day && this._month == other._month && this._year < other._year))
-       {
+        if ((this._month < other._month && this._year < other._year) || (this._month == other._month && this._year == other._year &&  this._day < other._day) || (this._month > other._month && this._year < other._year) || (this._year == other._year && this._month < other._month))
+        {
            return true;
-       }
-       return false;
+        }
+        return false;
    }// end of before method
   /**
   * Method checks if the date represented by the object on which the method is invoked is later than the date received as a parameter
@@ -162,14 +160,11 @@ public class Date
   */
    public boolean after(Date other)
    {
-       other._day = other._day + 1;
-       other._month = other._month + 1;
-       other._year = other._year + 1;
-       if (before(other) == false)
+       if (other.before(this) == true)
        {
-           return true;
+            return true;
        }
-       return true;
+       return false;
    }// end of after method
   /**
   * Method calculates and checks the difference in days between the date received as a parameter and the date represented by the object
@@ -179,7 +174,7 @@ public class Date
    public int difference (Date other)
    {
        int difference = Math.abs(calculateDate(this._day, this._month, this._year) - calculateDate(other._day, other._month, other._year));
-       return difference + 1;
+       return difference;
    }// end of difference method
   /**
   * Method returns the date as a string
@@ -197,6 +192,7 @@ public class Date
        else
        {
            dayAsString = "" + this._day;
+           System.out.println(dayAsString);
        }
        if(this._month < 10)
        {
@@ -205,6 +201,7 @@ public class Date
        else
        {
            monthAsString = "" + this._month;
+           System.out.println(monthAsString);
        }
        String date = dayAsString + "/" + monthAsString + "/" + this._year;
        return date;
@@ -216,123 +213,87 @@ public class Date
   */ 
    public Date tomorrow()
    {
-       int tomorrowDay = this._day;
-       int tomorrowMonth = this._month;
-       int tomorrowYear = this._year;
-       if(isDateValid(this._day+1, this._month, this._year))
+       int tomorrowDay = (daysInMonth(this._month, this._year) == this._day) ? 1 : this._day + 1;
+       System.out.println(this._day + " wow day ");
+       int tomorrowMonth = (tomorrowDay == 1) ? this._month + 1 : this._month;
+       System.out.println(this._month + " wow month ");
+       if ( tomorrowMonth > MAX_MONTH)
        {
-          tomorrowDay++;
-       }
-       else if( isDateValid(MIN_DAY, this._month + 1, this._year))
-       {
-           tomorrowDay = MIN_DAY;
-          tomorrowMonth++;
-       }
-       else
-       {
-            tomorrowDay = MIN_DAY;
             tomorrowMonth = 1;
-            tomorrowYear++;
        }
-       Date tomorrow = new Date(tomorrowDay,  tomorrowMonth, tomorrowYear);
-       return tomorrow;
+       int tomorrowYear = (tomorrowDay == 1 && tomorrowMonth  == 1) ? this._year + 1 : this._year;
+       return new Date(tomorrowDay,  tomorrowMonth, tomorrowYear);
    }// end of tomorrow method
   /**
   * Method check if the date is valid
   * @param day of the date, month of the date and the year of the date
   * @return true of the date is valid and false if not 
   */ 
-   private boolean isDateValid(int day, int month, int year)
-   {
-       boolean dateValid = true;
-       // Checking if the year is leap year
-       if(year >= MIN_YEAR && year <= MAX_YEAR && year % 100 == 0 && year % 400 == 0)
+  public boolean isDateValid(int day, int month, int year)
+  {
+       if( day < MIN_DAY || day > MAX_DAY || month < MIN_MONTH || month > MAX_MONTH || year < MIN_YEAR || year > MAX_YEAR)
        {
-            if( month >= MIN_MONTH && month <= MAX_MONTH)
-            {
-                if(month == FEBRUARY)
-                {
-                    if (day >= MIN_DAY && day <= LEAP_FEBRUARY)
-                    {
-                        return dateValid;
-                    }
-                    else
-                    {
-                        dateValid = false;
-                    }
-                }
-                else if(month ==  APRIL || month == JUNE || month == SEPTEMBER || month == NOVEMBER)
-                {
-                    if(day >= MIN_DAY && day <= 30)
-                    {
-                        return dateValid;
-                    }
-                    else
-                    {
-                        dateValid = false;
-                    }
-                }
-                else
-                {
-                    if(day >= MIN_DAY && day <= MAX_DAY)
-                    {
-                        return dateValid;
-                    }
-                    else
-                    {
-                        dateValid = false;
-                    }
-                }
-            }
-            else
-            {
-                dateValid = false;
-            }
+            return false;   
        }
-       // Checking the date
-       else if(month >= MIN_MONTH && month <= MAX_MONTH && year >= MIN_YEAR && year <= MAX_YEAR)
+       return day <= daysInMonth(month, year);     
+  }// end of isDateValid method
+  /**
+  * Method return number of days in month
+  * @param int
+  * @return int 
+  */  
+  private int daysInMonth(int month, int year)
+  {
+      switch(month)
+      {
+           case JANUARY:
+                 return MAX_DAY;
+           case MARCH:
+                 return MAX_DAY;
+           case MAY:
+                 return MAX_DAY;
+           case JULY:
+                 return MAX_DAY;
+           case AUGUST:
+                 return MAX_DAY;
+           case OCTOBER:
+                 return MAX_DAY;
+           case DECEMBER:
+               return MAX_DAY;
+           case APRIL:
+               return 30;
+           case JUNE:
+               return 30;
+           case SEPTEMBER:
+               return 30;
+           case NOVEMBER:
+               return 30;
+           case FEBRUARY:
+               return (isLeapYear(year)) ? LEAP_FEBRUARY: 28;   
+      }
+      return 0;
+  }// end of method daysInMonth
+  /**
+  * Method return if the year is leap year
+  * @param int
+  * @return boolean 
+  */
+  public boolean isLeapYear(int year)
+  {
+       if (year % 400 == 0)
        {
-           if (month == FEBRUARY)
-           {
-               if(day >= MIN_DAY && day <= 28)
-               {
-                   return dateValid;
-               }
-               else
-               {
-                   dateValid = false;
-               }
-           }
-           else if(month ==  APRIL || month == JUNE || month == SEPTEMBER || month == NOVEMBER)
-           {
-                if(day >= MIN_DAY && day <= 30)
-                {
-                        return dateValid;
-                }
-                else
-                {
-                        dateValid = false;
-                }
-           }
-           else
-           {
-               if(day > MIN_DAY && day <= MAX_DAY)
-               {
-                   return dateValid;
-               }
-               else
-               {
-                   dateValid = false;
-               }
-           }
-           return dateValid;
-       }
-       else
+          return true;
+       } 
+       else if (year % 100 == 0)
        {
-           dateValid = false;
-       }
-       return dateValid;     
-   }// end of isDateValid method
+          return false;
+       } 
+       else if (year % 4 == 0)
+       {
+          return true;
+       } 
+       return false;        
+  }// end of method isLeapYear
   /**
   * Method computes the day number since the beginning of the Christian counting of years
   * @param day of the date, month of the date and the year of the date
