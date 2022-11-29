@@ -98,8 +98,8 @@ public class Ex13
     /**
     * Ex2
     * Function find the maximum length of subarray such that sum of the subarray is even 
-    * Time Complexity: O(N^3)
-    * Auxiliary Space: O(1)
+    * Time Complexity: O(N^3) ( loop inside loop inside loop with at least 1 time each loop run in the size of the arr )
+    * Auxiliary Space: O(1) ( Because In relation to the size of the input, the memory used is a fixed size and known in advance ) 
     * @param a (int arr) n (int)
     * @return  len (int)
     * Time Complexity of my function is O(N). Because of two loops whose complexity is n
