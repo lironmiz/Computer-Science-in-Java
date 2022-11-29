@@ -227,3 +227,38 @@ public class Exam2022aFebruary87
 * Answer - E - A compilation error will appear
 *
 */
+/**
+*Ex5
+* In this question there are API of the class queue and method 
+* what and we been asking question about them 
+* the what method get in parameter string with the characters
+* '?', '1', '0'
+* Section A: if we call the what method with string pattern = "1?1?1"
+* what will be the output of the method
+* Answer:
+*  11111
+*  11101
+*  10111
+*  10101
+* Section B: if we call the what method with string pattern = "0???0"
+* what will be the output of the method
+* Answer:
+* 01110
+* 01100
+* 01010
+* 01000
+* 00110
+* 00100
+* 00010
+* 00000
+* Section c: after a call to what method with string the output was
+* 11111100
+* 11111000
+* 11110100
+* 11110000
+* 10111100
+* 10111000
+* 10110100
+* 10110000
+* answer: 1?11??
+*/
