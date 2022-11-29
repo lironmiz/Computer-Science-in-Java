@@ -96,7 +96,7 @@ public class Date
   */
    public void setDay(int dayToSet)
    {
-      if(isDateValid(dayToSet, this._month, this._year)
+      if(isDateValid(dayToSet, this._month, this._year))
       {
          this._day = dayToSet;
       }
@@ -109,7 +109,7 @@ public class Date
   */
    public void setMonth(int monthToSet)
    {
-       if(isDateValid(this._day, monthToSet, this._year)
+       if(isDateValid(this._day, monthToSet, this._year))
       {
          this._month = monthToSet;
       }
@@ -122,7 +122,7 @@ public class Date
   */
    public void setYear(int YearToSet)
    {
-      if(isDateValid(this._day, this._month, YearToSet)
+      if(isDateValid(this._day, this._month, YearToSet))
       {
         this._year = YearToSet;
       }
