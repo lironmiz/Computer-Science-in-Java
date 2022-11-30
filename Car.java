@@ -102,7 +102,6 @@ public class Car
       {
           this._id = id;
       }
-      this._id = id;
   }// end of setId method
   /**
   * Method set the car type
@@ -116,7 +115,6 @@ public class Car
       {
           this._type = type;
       }
-      this._type = type;
   }// end of setType method
   /**
   * Method set the car brand
