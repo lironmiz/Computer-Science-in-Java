@@ -147,7 +147,7 @@ public class Date
   */
    public boolean before (Date other)
    {
-        if ((this._month < other._month && this._year < other._year) || (this._month == other._month && this._year == other._year &&  this._day < other._day) || (this._month > other._month && this._year < other._year) || (this._year == other._year && this._month < other._month))
+        if ((this._month < other._month && this._year < other._year) || (this._day == other._day && this._month == other._month && this._year < other._year)  || (this._month == other._month && this._year == other._year &&  this._day < other._day) || (this._month > other._month && this._year < other._year) || (this._year == other._year && this._month < other._month))
         {
            return true;
         }
