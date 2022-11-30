@@ -161,7 +161,7 @@ public class Rent
   */
   public int getPrice()
   {
-      int rentDays = howManyDays(this);
+      int rentDays = this.howManyDays();
       int amountOfWeeksDiscount = rentDays / NUM_OF_DAYS_IN_WEEK;
       int numDaysWithoutDiscount = rentDays % NUM_OF_DAYS_IN_WEEK;
       // Price calculation according to the type of car
@@ -273,6 +273,6 @@ public class Rent
   */
    public String toString()
   { 
-      return "Name:" + this._name + " From:" + this._pickDate + " To:" + this._returnDate + " Type:" + _car.getType() + " Days:" + howManyDays(this) + " Price:" + this.getPrice(); 
+      return "Name:" + this._name + " From:" + this._pickDate + " To:" + this._returnDate + " Type:" + _car.getType() + " Days:" + this.howManyDays() + " Price:" + this.getPrice(); 
   }// end of toString method
 }// end of class Rent
