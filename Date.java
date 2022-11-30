@@ -214,9 +214,7 @@ public class Date
    public Date tomorrow()
    {
        int tomorrowDay = (daysInMonth(this._month, this._year) == this._day) ? 1 : this._day + 1;
-       System.out.println(this._day + " wow day ");
        int tomorrowMonth = (tomorrowDay == 1) ? this._month + 1 : this._month;
-       System.out.println(this._month + " wow month ");
        if ( tomorrowMonth > MAX_MONTH)
        {
             tomorrowMonth = 1;
