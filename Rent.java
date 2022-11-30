@@ -191,7 +191,7 @@ public class Rent
           int price_increase = this.getPrice() - priceCarBeforeUpgrade;
           return price_increase;
       }
-      return this.getPrice();
+      return 0;
   }// end of upgrade method
   /**
   * Methed check if there overlap between two Rents
