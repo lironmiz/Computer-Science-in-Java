@@ -15,7 +15,7 @@ public class Rent
   private static final int TYPE_C_PRICE = 18O; 
   private static final int TYPE_D_PRICE = 240; 
   private static final int NUM_OF_DAYS_IN_WEEK = 7; 
-  private static final double DISCOUNT = 9/10; 
+  private static final double DISCOUNT = 0.9; 
    
   /**
   * Constructor for class Rent
@@ -209,50 +209,62 @@ public class Rent
     // Chcking if the name isn't the same or the cars isn't the same
     if (!this._name.equals(other._name) || !this._car.equals(other._car))
     {
+      System.out.println(" wow we in the first if in overlap ");
       return null;
     }
     // Checking if there are intersection in dates
-    if (pickDate.after(otherReturnDate) || returnDate.before(otherPickDate))
+    if (returnDate.before(otherPickDate) || otherReturnDate.before(pickDate))
     {
       return null;
     }
     // Checking if there same dates
-    if (pickDate.before(otherPickDate) && returnDate.after(otherReturnDate))
-    {
-      return this;
-    }
     else if (pickDate.equals(otherPickDate) && returnDate.equals(otherReturnDate))
     {
       return this;
     }
     // Checking if same pickDates and other returnDates
-    if(pickDate.before(otherPickDate) && returnDate.after(otherPickDate) && returnDate.before(otherReturnDate))
+    else if(pickDate.equals(otherPickDate) && !returnDate.equals(otherReturnDate))
     {
-      return new Rent (this._name, this._car, pickDate, otherReturnDate);
+      if(otherReturnDate.after(returnDate))
+      {
+          return new Rent (this._name, this._car, pickDate, otherReturnDate);
+      }
+      return new Rent (this._name, this._car, pickDate, returnDate);
     }
-    else if (pickDate.equals(otherPickDate) && returnDate.before(otherReturnDate))
+    // Checking if other pickDates and same returnDates
+    else if(returnDate.equals(otherReturnDate) &&  !pickDate.equals(otherPickDate))
     {
-       return new Rent (this._name, this._car, pickDate, otherReturnDate);
+      if(pickDate.after(otherPickDate))
+      {
+           return new Rent (this._name, this._car, otherPickDate, returnDate);
+      }
+      return new Rent (this._name, this._car, pickDate, returnDate);
     }
-    else if (returnDate.equals(otherPickDate))
+    // pick the smaller pick date and the larger return date
+    else
     {
-       return new Rent (this._name, this._car, pickDate, otherReturnDate);
+        Date smallerPick = null;
+        Date largerReturn = null;
+        // pick date 
+        if(pickDate.after(otherPickDate))
+        {
+            smallerPick = otherPickDate;
+        }
+        else
+        {
+            smallerPick = pickDate;
+        }
+        // return date
+        if(returnDate.after(otherReturnDate))
+        {
+            largerReturn = returnDate;
+        }
+        else
+        {
+            largerReturn = otherReturnDate;
+        }
+        return new Rent (this._name, this._car, smallerPick, largerReturn);
     }
-    // returns other pickDate and amse returnDate
-    if(pickDate.after(otherPickDate) && pickDate.before(other.returnDate) && returnDate.after(otherReturnDate))
-    {
-      return new Rent (this._name, this._car, otherPickDate, returnDate);
-    }
-    else if (pickDate.equals(otherPickDate) && returnDate.after(otherReturnDate))
-    {
-       return new Rent (this._name, this._car, otherPickDate, returnDate);
-    }
-    else if (pickDate.equals(other._returnDate))
-    {
-       return new Rent (this._name, this._car, otherPickDate, returnDate);
-    }
-    // returns other pickDate and other returnDate
-    return new Rent (this._name, this._car, otherPickDate, otherReturnDate);
   }// end of overlap method
   /**
   * Method returns the Rant data as a string
