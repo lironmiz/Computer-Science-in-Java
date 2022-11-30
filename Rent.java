@@ -209,7 +209,6 @@ public class Rent
     // Chcking if the name isn't the same or the cars isn't the same
     if (!this._name.equals(other._name) || !this._car.equals(other._car))
     {
-      System.out.println(" wow we in the first if in overlap ");
       return null;
     }
     // Checking if there are intersection in dates
