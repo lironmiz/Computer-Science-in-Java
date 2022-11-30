@@ -46,7 +46,7 @@ public class Rent
       this._name = other._name;
       this._car = new Car (other._car);
       this._pickDate = new Date (other._pickDate);
-      this._returnDate = new date (other._returnDate);
+      this._returnDate = new Date (other._returnDate);
   }// end of Rent method
   /**
   * Method return the name of the renter
@@ -64,7 +64,7 @@ public class Rent
   */
   public Car getCar()
   {
-      return this._car;
+      return new Car (this._car);
   }// end of getCar method
   /**
   * Method return the date the renter pick the car
@@ -82,7 +82,7 @@ public class Rent
   */
   public Date getReturnDate()
   {
-      return this._returnDate;
+      return new Date (this._returnDate);
   }// end of getReturnDate method
   /**
   * Method set the name of the renter
@@ -100,7 +100,7 @@ public class Rent
   */
   public void setCar(Car car)
   {
-       this._car = car;
+       this._car = New Car (car);
   }// end of setCar method
   /**
   * Method set the pick date of the renter
@@ -111,9 +111,8 @@ public class Rent
   {
       if(pickDate.after(this._returnDate))
       {
-        this._pickDate = pickDate;
+        this._pickDate = new Date (pickDate);
       }
-      this._pickDate = pickDate;
   }// end of setPickDate method
   /**
   * Method set the returen date of the renter
@@ -124,9 +123,8 @@ public class Rent
   {
        if(retuernDate.before(this._pickDate))
        {
-          this._returnDate = retuernDate;
+          this._returnDate = new Date(retuernDate);
        }
-       this._returnDate = retuernDate;
   }// end of SetReturnDate method
   /**
   * Method check if two Rent are equals
