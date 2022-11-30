@@ -100,7 +100,7 @@ public class Rent
   */
   public void setCar(Car car)
   {
-       this._car = New Car (car);
+       this._car = new Car (car);
   }// end of setCar method
   /**
   * Method set the pick date of the renter
@@ -191,7 +191,7 @@ public class Rent
           int price_increase = this.getPrice() - priceCarBeforeUpgrade;
           return price_increase;
       }
-      return this.getPrice()
+      return this.getPrice();
   }// end of upgrade method
   /**
   * Methed check if there overlap between two Rents
