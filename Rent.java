@@ -5,9 +5,9 @@
 public class Rent
 {
   private String _name;
-  Car _car;
-  Date _pickDate;
-  Date _returnDate;
+  private Car _car;
+  private Date _pickDate;
+  private Date _returnDate;
   
   // Constant in the class
   private static final int TYPE_A_PRICE = 1OO; 
@@ -25,11 +25,11 @@ public class Rent
   public Rent(String name, Car car, Date pick, Date ret)
   {
       this._name = name;
-      this._car = car;
-      this._pickDate = pick;
+      this._car = new Car(car);
+      this._pickDate = new Date (pick);
       if(this._pickDate.before(ret))
       {
-          this._returnDate = ret;
+          this._returnDate = new Date (ret);
       }
       else
       {
@@ -44,9 +44,9 @@ public class Rent
   public Rent(Rent other)
   {
       this._name = other._name;
-      this._car = other._car;
-      this._pickDate = other._pickDate;
-      this._returnDate = other._returnDate;
+      this._car = new Car (other._car);
+      this._pickDate = new Date (other._pickDate);
+      this._returnDate = new date (other._returnDate);
   }// end of Rent method
   /**
   * Method return the name of the renter
