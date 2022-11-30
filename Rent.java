@@ -73,7 +73,7 @@ public class Rent
   */
   public Date getPickDate()
   {
-      return this._pickDate;
+      return new Date (this._pickDate);
   }// end of getPickDate method
   /**
   * Method return the date the renter need to return the car
