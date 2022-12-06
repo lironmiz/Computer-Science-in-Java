@@ -140,10 +140,25 @@ public class Ex13
     * @param arr, int 
     * @return true if there valid route or false if not
     */
+     public static boolean isWay(int[] a)
+    {
+        if (0 == a.length-1)
+        {
+           return true; 
+        }
+        return isWay(a, 0);
+    }// end of method isWay
+    
     public static boolean isWay(int[] a, int index)
     {
-        if (index == a.length-1) return true;
-        if (index > a.length-1 || index < 0) return false;
+        if (index == a.length-1)
+        {
+           return true; 
+        }
+        if (index > a.length-1 || index < 0)
+        {
+            return false;
+        }
         return isWay(a, index+a[index]) || isWay(a, index-a[index]);
     }// end of method isWay
     /**
