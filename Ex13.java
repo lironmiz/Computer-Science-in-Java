@@ -151,15 +151,20 @@ public class Ex13
     
     public static boolean isWay(int[] a, int index)
     {
-        if (index == a.length-1)
-        {
-           return true; 
-        }
-        if (index > a.length-1 || index < 0)
+        if (index > a.length-1 || index < 0 || a[index] != -1)
         {
             return false;
         }
-        return isWay(a, index+a[index]) || isWay(a, index-a[index]);
+        if (index == a.length-1)
+        {
+           return true; 
+        }    
+        int temp = a[index];
+        a[index] = -1;
+        boolean rightCheck =  isWay(a, index + temp]));
+        boolean leftCheck =  isWay(a,isWay(a, index-temp); 
+        a[index] = temp;
+        return leftCheck || rightCheck;
     }// end of method isWay
     /**
     * Ex4
