@@ -10,7 +10,8 @@ public class DateDriver
     {
         Scanner scanner = new Scanner(System.in);
         // print to user
-        System.out.println("Please enter the day, month, year" + " of the first date");
+        System.out.println("This program demonstrates the " + " usage of Date class");
+        System.out.println("Please enter the day, month, year");
         // take user input
         int day = scanner.nextInt();
         int month = scanner.nextInt();
