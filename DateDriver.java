@@ -16,12 +16,12 @@ public class DateDriver
         int month = scanner.nextInt();
         int year = scanner.nextInt();
         // making 2 Date object
-        Date date1 = new Date(day, month, year);
-        Date date2 = new Date(date1.getDay(), date1.getMonth(), date1.getYear());
-        System.out.println("date1 = " + date1.toString());
-        System.out.println("date2 = " + date2.toString());
+        Date d1 = new Date(day, month, year);
+        Date d2 = new Date(d1.getDay(), d1.getMonth(), d1.getYear());
+        System.out.println("d1 = " + d1.toString());
+        System.out.println("d2 = " + d2.toString());
         // test the methods in the class
-        if (date1.equals(date2))
+        if (d1.equals(d2))
         {
             System.out.println("Same Date");
         }
@@ -29,12 +29,13 @@ public class DateDriver
         {
             System.out.println("Different Dates");
         }
-        date1.setMonth(6);
-        System.out.println("new month in date1: " + date1.getMonth());
-        date2.setYear(2022);
-        System.out.println("Updated year in date2: " + date2.getYear());
-        System.out.println("Updated date2 = " + date2.getDay() + "/" + date2.getMonth() + "/" + date2.getYear());
-        if (date1.equals(date2)) 
+        d1.setMonth(6);
+        System.out.println("new month in d1: " + d1.getMonth());
+         System.out.println("d1 = " + d1.toString());
+        d2.setYear(2022);
+        System.out.println("Updated year in d2: " + d2.getYear());
+        System.out.println("Updated d2 = " + d2.getDay() + "/" + d2.getMonth() + "/" + d2.getYear());
+        if (d1.equals(d2)) 
         {
             System.out.println("Same Date");
         } else if (date2.before(date1))
