@@ -161,8 +161,8 @@ public class Ex13
         }    
         int temp = a[index];
         a[index] = -1;
-        boolean rightCheck =  isWay(a, index + temp]));
-        boolean leftCheck =  isWay(a,isWay(a, index-temp); 
+        boolean rightCheck =  isWay(a, index + temp]);
+        boolean leftCheck =  isWay(a, index-temp); 
         a[index] = temp;
         return leftCheck || rightCheck;
     }// end of method isWay
@@ -173,46 +173,51 @@ public class Ex13
     * @param drm (int [][]), i (int), j (int) 
     * @return the numbers of steps to get to the evil person and if there no such legal route to him the method will return -1
     */
-    public static int prince(int[][] drm, int i, int j, int count)
+    public static int prince(int[][] drm, int i, int j)
     {
-        //Checking if the cell he arrived at is the desired cell  
+        int result = prince(drm, i, j, 1, drm[i][j]);
+        if(result == Integer.MAX_VALUE)
+        {
+            return -1;
+        }
+        else
+        {
+            return result;
+        }
+    }// end of method prince 
+    
+    private static int prince(int[][] drm, int i, int j, int steps, int height)
+    {
+        if( i < 0 || i>= drm.length || j < 0 || j >= drm[0].length || drm[i][j] == Integer.MAX_VALUE || height > drm[i][j] + 2 || drm[i][j] > height + 1)
+        {
+            return Integer.MAX_VALUE;
+        }
         if(drm[i][j] == -1)
-        {
-            return count;
+        {   
+            return steps;
         }
-        else if(
-        if ( i + 1 = drm.length)
+        if(nextToVillain(drm, i, j))
         {
-            drm[i + 1][j] += drm[i][j] + 5;
+            return steps + 1;
         }
-        else if(drm[i][j] == drm[i + 1][j] || drm[i + 1][j] == drm[i + 1][j] + 1 || drm[i + 1][j] == drm[i + 1][j] -1 || drm[i + 1][j] == drm[i + 1][j] -2)
+        
+        int tempVal = drm[i][j];
+        drm[i][j] = Integer.MAX_VALUE;
+        
+        int option1 = prince(drm, i+1, j,steps+1, tempVal);
+        int option2 = prince(drm, i, j-1, steps+1,tempVal);
+        int option3 = prince(drm, i-1, j, steps+1, tempVal);
+        int option4 = prince(drm, i, j+1, steps+1, tempVal);
+        drm[i][j] = tempVal;
+        return Math.min(Math.min(option2, option4), Math.min(option1,option3));
+    }// end of method prince 
+    
+    private static boolean nextToVillain(int[][] drm, int i, int j)
+    {
+        if(( i+1<=drm.length -1 && drm[i+1][j]  == -1) || (j-1 >= 0 && drm[i][j-1] == -1) || i -1 >= 0 && drm[i-1][j] == -1 || (j+1 <= drm[0].length -1 && drm[i][j+1] == -1))
         {
-            count++;
-            prince(drm, i + 1, j, count);
-            drm[i + 1][j] += drm[i][j] + 5;
-            prince(drm, i, j, count);
+            return true;
         }
-        else if(drm[i][j] == drm[i - 1][j] || drm[i - 1][j] == drm[i][j] + 1 || drm[i - 1][j] == drm[i][j] -1 || drm[i - 1][j] == drm[i][j] -2)
-        {
-            count++;
-            prince(drm, i - 1, j, count);
-            drm[i - 1][j] += drm[i][j] + 5;
-            prince(drm, i, j, count);
-        }
-        else if(drm[i][j] == drm[i][j +1] || drm[i][j + 1] == drm[i][j] + 1 || drm[i][j + 1] == drm[i][j] -1 || drm[i][j + 1] == drm[i][j] -2)
-        {
-            count++;
-            prince(drm, i, j + 1, count);
-            drm[i][j + 1] += drm[i][j] + 5;
-            prince(drm, i, j, count);
-        }
-        else if(drm[i][j] == drm[i][j - 1] || drm[i][j - 1] == drm[i][j] + 1 || drm[i][j - 1] == drm[i][j] -1 || drm[i][j - 1] == drm[i][j] -2)
-        {
-            count++;
-            prince(drm, i, j - 1, count);
-            drm[i][j - 1] += drm[i][j] + 5;
-            prince(drm, i, j, count);
-        }
-        return count;
-      }// end of mehtod prince
+        return false;
+    }// end of method nextToVillain
 }// end of class Ex13
