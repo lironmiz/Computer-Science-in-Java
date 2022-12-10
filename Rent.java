@@ -10,9 +10,9 @@ public class Rent
   private Date _returnDate;
   
   // Constant in the class
-  private static final int TYPE_A_PRICE = 1OO; 
+  private static final int TYPE_A_PRICE = 100; 
   private static final int TYPE_B_PRICE = 150; 
-  private static final int TYPE_C_PRICE = 18O; 
+  private static final int TYPE_C_PRICE = 180; 
   private static final int TYPE_D_PRICE = 240; 
   private static final int NUM_OF_DAYS_IN_WEEK = 7; 
   private static final double DISCOUNT = 0.9; 
