@@ -192,7 +192,7 @@ public class Exam2022Bjune86
      * list1.what(3) will return 4
      * list1.what(4) will return 5
      * answer: 
-     * 
+     * 0->1->0->0->0
      *
      */
 }// end of class Exam2022Bjune86
