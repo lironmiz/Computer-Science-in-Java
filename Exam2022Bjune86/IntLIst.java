@@ -2,7 +2,7 @@
 /**
  * IntList.java
  */
-public class IntLIst
+public class IntList
 {
     private IntNode _head;
     
