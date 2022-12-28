@@ -1,0 +1,247 @@
+ex1 -> Class b - בגלל מנגנון ה - polymorphism
+ex2 -> public void method1(float y)
+ex3 -> אם הרשאת הגישה לשיטה f שבמחלקה A היא protected והרשאת הגישה לשיטה f שבמחלקה B  היא private.
+ex4 ->המחלקות Computer ו-TV יורשות מהמחלקה ElectronicDevice והמחלקה Laptop  יורשת מהמחלקה 
+ex5 -> הפלט יהיה: B
+ex6 -> המחלקה A מכילה שיטה בשם f שאינה מקבלת פרמטרים. 
+ex7 ->  שגיאת קומפליציה
+ex8 -> שגיאת זמן ריצה 
+ex12 -> על הפלט יודפס dd
+ex13 -> שגיאת קומפליציה 
+ex14 -> על הפלט יודפס 3 ובשורה שאחריה יודפס 10
+ex15 ->  שגיאת קומפליציה
+ex16 -> על הפלט יודפס 1
+ex17 -> Card
+ex18 -> כל קטע קוד הנכתב באחת מן המחלקות היורשות זמין באופן מיידי במחלקה - האם ובכל אחיותיה בעת הירושה
+ex19 -> המחלקות poodle , dalmation יורשות מהמחלקה dog והמחלקות dog and cat  יורשות מהמחלקה mammal
+ex20 -> כל התשובות האחרות אינן נכונות
+
+public class ClassA
+{
+    public ClassA()
+    {
+        f();
+    }// end of method ClassA
+    
+    public void f()
+    {
+        System.out.println("Class a");
+    }// end of method f
+    
+    public static void main(String[] args)
+    {
+        new ClassB();
+    }// end of method main
+}// end of class ClassA
+
+
+public class ClassB extends ClassA
+
+{
+
+    public ClassB() {} 
+
+
+
+    public void f()
+
+    {
+
+        System.out.println("Class b");
+
+    }
+
+}
+
+public class A {
+
+    public void method1(float x){ … }
+
+}
+
+public class A
+{
+    public void a1()
+    {
+        System.out.println("A");
+    }// end of method a1
+    
+    public void a2()
+    {
+        a1();
+    }// end of method a2
+}// end of class A
+
+
+
+public class B extends A
+{
+    @Override
+    public void a1()
+    {
+        System.out.println("B");
+    }// end of method a1
+}// end of class B
+
+
+public class C
+{
+    public void foo(D d)
+    {
+        System.out.println("cd");
+    }
+}// end of class C
+
+
+
+
+public class D extends C
+{
+    public void foo(C c)
+    {
+        System.out.println("dc");
+    }// end of methdo foo
+    
+    public void foo(D d)
+    {
+        System.out.println("dd");
+    }
+    
+}// end of method class D
+
+
+public class A
+{
+    public void doSomething(int x)
+    {
+        System.out.println("1");
+    }// end of method doSomething
+    
+    public void doSomethingElse(int x, int y)
+    {
+        System.out.println("2");
+    }// end of method doSomethingElse
+    
+    public int calc (int x)
+    {
+        System.out.println("3");
+        return x + 1;
+    }// end of method calc
+    
+}// end of class A
+
+
+public class B extends A
+{
+    public void doSomethingElse(int x)
+    {
+        System.out.println("4");
+    }// end of method doSomethingElse
+}// end of class B
+
+
+public class D extends A
+{
+    public void calc(int x, int y)
+    {
+        System.out.println(7+y+x);
+    }// end of method calc 
+}// end of class D
+
+
+public class C extends A
+{
+    public void doSomething(int x)
+    {
+        System.out.println("5");
+    }// end of method doSomething
+}// end of class C
+
+
+public class E extends C
+{
+    public int calc(int x)
+    {
+        System.out.println("8");
+        return x + 3;
+    }// end of method calc 
+}// end of class E
+
+public abstract class A
+{
+    public abstract boolean f(int x);
+}// end of abstract class A
+
+
+public abstract class B extends A
+{
+    public boolean f(int x)
+    {
+        return x == 2;
+    }
+}// end of abstract class B
+
+public class A
+{
+    private int _x;
+    public A(int x)
+    {
+        _x = x;
+    }// end of method A
+    
+    public int getX()
+    {
+        return _x;
+    }// end of method  getX
+    
+    public int doubleX()
+    {
+        return 2 * getX();
+    }// end of method  doubleX
+    
+    public int tripleX()
+    {
+        return 3 * _x;
+    }// end of method tripleX
+    
+    public int subXhelper()
+    {
+        return _x -1;
+    }// end of method subXhelper
+    
+    public int subX()
+    {
+        return subXhelper();
+    }// end of method subX
+}// end of class A
+
+public class B extends A
+{
+    private int _x;
+    
+    public B(int xA, int xB)
+    {
+        super(xA);
+        _x = xB;
+    }// end of method B
+    
+    public int getX()
+    {
+        return _x;
+    }// end of method getX
+    
+    public int superX()
+    {
+        return super.getX();
+    }// end of method superX
+    
+    public int tenTimesX()
+    {
+        return 10 * _x;
+    }// end of method tenTimesX
+    
+    public int subXhelper()
+    {
+        return _x * 2;
+    }// end of method subXhelper
+}// end of class B
