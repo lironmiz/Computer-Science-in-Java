@@ -186,7 +186,7 @@ public class Rent
   {
       if(newCar.better(this._car))
       {
-          priceCarBeforeUpgrade  = this.getPrice();
+          int priceCarBeforeUpgrade  = this.getPrice();
           _car = new Car(newCar);
           int price_increase = this.getPrice() - priceCarBeforeUpgrade;
           return price_increase;

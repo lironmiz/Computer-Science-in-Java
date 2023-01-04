@@ -143,9 +143,9 @@ public class Car
   {
     if (this._isManual)
     {
-      return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: manual";
+      return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear:manual";
     }
-    return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear: auto";
+    return "id:" + this._id + " type:" + this._type + " brand:" + this._brand + " gear:auto";
   }// end of toString method
   /**
   * Check if two cars are the same
