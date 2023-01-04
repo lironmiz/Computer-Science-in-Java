@@ -192,7 +192,6 @@ public class Date
        else
        {
            dayAsString = "" + this._day;
-           System.out.println(dayAsString);
        }
        if(this._month < 10)
        {
@@ -201,7 +200,6 @@ public class Date
        else
        {
            monthAsString = "" + this._month;
-           System.out.println(monthAsString);
        }
        String date = dayAsString + "/" + monthAsString + "/" + this._year;
        return date;
