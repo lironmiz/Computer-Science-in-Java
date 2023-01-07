@@ -100,34 +100,34 @@ public class Ex13
     * Function find the maximum length of subarray such that sum of the subarray is even 
     * Time Complexity: O(N^3) ( loop inside loop inside loop with at least 1 time each loop run in the size of the arr )
     * Auxiliary Space: O(1) ( Because In relation to the size of the input, the memory used is a fixed size and known in advance ) 
-    * @param a (int arr) n (int)
+    * @param a (int arr)
     * @return  len (int)
     * Time Complexity of my function is O(N). Because of two loops whose complexity is n
     * Auxiliary Space of my function is O(1). Because In relation to the size of the input, the memory I use is a fixed size and known in advance
     */
-    static int MaximumLengthOfSubArray(int a[], int n)
+    static int MaximumLengthOfSubArray(int a[])
     {
         int sum = 0, len = 0;
     
         // Check if sum of complete array is even
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.length; i++)
         {
             sum += a[i];
         }
     
         if (sum % 2 == 0) // total sum is already even
         {
-            return n;
+            return arr.length;
         }
     
         // Find an index i such the a[i] is odd
         // and compare length of both halfs excluding
         // a[i] to find max length subarray
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.length; i++)
         {
             if (a[i] % 2 == 1)
             {
-                len = Math.max(len, Math.max(n - i - 1, i));
+                len = Math.max(len, Math.max(arr.length - i - 1, i));
             }
         }
     
