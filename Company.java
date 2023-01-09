@@ -217,6 +217,10 @@ public class Company
         // Creating an array of counters
         char[] rates = { 'A', 'B', 'C', 'D' };
         int[] frequencies = new int[rates.length];
+        for(int i = 0; i < rates.lenght; i++)
+        {
+            frequencies[i] = 0;
+        }
         // loopint all the rent and using switch case and increases the value in the array appropriate for the current car type
         for (int i = 0; i < _noOfRents; i++)
         {
@@ -309,7 +313,7 @@ public class Company
         for (int i = 0; i < _noOfRents; i++)
         {
             str += _rents[i].toString();
-            if (i != _noOfRents - 1)
+            if (i == _noOfRents - 1)
             {
                 str += "\n";
             }
