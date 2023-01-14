@@ -37,32 +37,12 @@ public class Ex13
        //System.out.println(isWay(arr1, 0)); // false
        //System.out.println(isWay(arr2, 0)); // true
        // tester for prince method
-       int [][] twoDArr = new int[5][5];
-       twoDArr[0][0] = 2;
-       twoDArr[0][1] = 0;
-       twoDArr[0][2] = 1;
-       twoDArr[0][3] = 2;
-       twoDArr[0][4] = 3;
-       twoDArr[1][0] = 2;
-       twoDArr[1][1] = 3;
-       twoDArr[1][2] = 5;
-       twoDArr[1][3] = 5;
-       twoDArr[1][4] = 4;
-       twoDArr[2][0] = 8;
-       twoDArr[2][1] = -1;
-       twoDArr[2][2] = 6;
-       twoDArr[2][3] = 8;
-       twoDArr[2][4] = 7;
-       twoDArr[3][0] = 3;
-       twoDArr[3][1] = 4;
-       twoDArr[3][2] = 7;
-       twoDArr[3][3] = 2;
-       twoDArr[3][4] = 4;
-       twoDArr[4][0] = 2;
-       twoDArr[4][1] = 4;
-       twoDArr[4][2] = 3;
-       twoDArr[4][3] = 1;
-       twoDArr[4][4] = 2;
+       int[][] twoDArr = {{2,0,1,2,3},
+                  {2,3,5,5,4},
+                  {8,-1,6,8,7},
+                  {3,4,7,2,4},
+                  {2,4,3,1,2}};
+       
        System.out.println(prince(twoDArr, 0, 0, 0)); // 4
     }// end of method main
 
@@ -125,7 +105,7 @@ public class Ex13
         // a[i] to find max length subarray
         for (int i = 0; i < arr.length; i++)
         {
-            if (a[i] % 2 == 1 or a[i] % 2 == -1)
+            if (a[i] % 2 == 1 || a[i] % 2 == -1)
             {
                 len = Math.max(len, Math.max(a.length - i - 1, i));
             }
