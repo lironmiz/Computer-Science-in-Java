@@ -125,7 +125,7 @@ public class Ex13
         // a[i] to find max length subarray
         for (int i = 0; i < arr.length; i++)
         {
-            if (a[i] % 2 == 1 or a[i] % 2 == -1)
+            if (a[i] % 2 == 1 || a[i] % 2 == -1)
             {
                 len = Math.max(len, Math.max(a.length - i - 1, i));
             }
