@@ -620,8 +620,51 @@ class OneDimensionalArrayExample
     }// end of method main 
 }// end of method OneDimensionalArrayExample
 ```
-
 ### 9.2 TWO DIMENSIONAL ARRAY 
+| Key Point  | Description |
+| ---------- | ----------- |
+| Size       | The size of a two-dimensional array is the number of rows multiplied by the number of columns |
+| Usage       | Two-dimensional arrays are typically used to store and manipulate data in a tabular format |
+| Creation    | They can be created using the `new` keyword and specifying the number of rows and columns |
+| Accessing Elements | Elements in a two-dimensional array can be accessed using the `array[row][column]` notation |
+| Iteration | They can be iterated using nested loops to access each element individually |
+| Pass as a parameter | They can be passed as a parameter to a method just like a one-dimensional array |
+| Applications | Two-dimensional arrays are commonly used in many applications such as image processing, game development, and scientific computing.
 
 ### 9.3 TWO DIMENSIONAL ARRAY EXAMPLE
+```java
+public class TwoDimensionalArrayExample
+{
+    public static void main(String[] args)
+    {
+    	// create a 2D array with 3 rows and 3 columns
+        // and initialize it with values
+        int[][] arr = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
 
+        System.out.println("The original array:");
+        //printing the original array using two for loops
+        for (int i = 0; i < arr.length; i++)
+	{
+            for (int j = 0; j < arr[i].length; j++)
+	    {
+                System.out.print(arr[i][j] + " ");
+            }// end of nested loop
+            System.out.println();
+        }// end of first loop
+
+        //modifying the array
+        arr[1][2] = 8;
+
+        System.out.println("\nThe modified array:");
+        //printing the modified array
+        for (int i = 0; i < arr.length; i++)
+	{
+            for (int j = 0; j < arr[i].length; j++)
+	    {
+                System.out.print(arr[i][j] + " ");
+            }// end of nested loop
+            System.out.println();
+        }// end of first loop
+    }// end of method main
+}// TwoDimensionalArrayExample
+```
