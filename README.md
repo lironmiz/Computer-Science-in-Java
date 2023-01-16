@@ -92,6 +92,7 @@ Computational
 - [7. CONDITIONAL STATEMENTS](#7-conditional-statements)
 - [8. LOOPS](#8-loops)
 - [9. ARRAYS](#9-arrays)
+- [10. SORTING ALGORITHMS](#10-sorting-algorithms)
 
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
@@ -668,3 +669,206 @@ public class TwoDimensionalArrayExample
     }// end of method main
 }// TwoDimensionalArrayExample
 ```
+### the table after the code: 
+
+| 1 | 2 | 3 |
+|:-:|---|---|
+| 4 | 5 | 8 |
+| 7 | 8 | 9 |
+
+## 10. SORTING ALGORITHMS
+
+Sorting algorithms are used to order a collection of items in a specific way. 
+
+summary of some common sorting algorithms:
+
+| Algorithm | Best Case | Worst Case | Average Case | Space Complexity |
+|-----------|-----------|------------|--------------|------------------|
+| bubble sort|  O(n)     | O(n^2)     |   O(n^2)     |       O(1)       |
+| insertion sort| O(n)    | O(n^2)     |   O(n^2)     |       O(1)       |
+| selection sort| O(n^2)  | O(n^2)     |   O(n^2)     |       O(1)       |
+| merge sort | O(n log n)| O(n log n) | O(n log n)   |       O(n)       |
+| quick sort  | O(n log n)| O(n^2)     | O(n log n)   |       O(log n)   |
+| heap sort   | O(n log n)| O(n log n) | O(n log n)   |       O(1)       |
+
+### 10.1 bubble sort
+
+Bubble sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order. It repeatedly passes through the list, comparing elements and swapping them as needed, until the list is sorted.
+
+**Time Complexity**:
+
+**Best Case:** O(n) when the list is already sorted, no swapping will be done.
+
+**Worst Case:** O(n^2) when the list is reverse sorted, each element will be compared n times before getting to its correct position.
+
+**Average Case:** O(n^2)
+
+**Space Complexity:** O(1) as it only uses a single additional memory space to keep track of the last swap.
+
+**Stability:** Stable, it preserves the relative order of elements with equal values.
+
+**In-Place:** Yes, it doesn't require extra memory to perform the sort.
+```java
+class BubbleSort
+{
+    public static void main(String[] args)
+    {
+    	// the array before sorting 
+        int[] arr = {5, 3, 8, 6, 2, 1, 9, 4, 7};
+	// print the array before sorting 
+        System.out.println("Original Array: " + Arrays.toString(arr));
+	// sort the array
+        bubbleSort(arr);
+	// print the array after sorting 
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
+    }// end of method main
+ 
+    public static void bubbleSort(int[] arr)
+    {
+        int temp;
+        for (int i = 0; i < arr.length - 1; i++)
+	{
+            for (int j = 1; j < arr.length - i; j++)
+	    {
+                if (arr[j - 1] > arr[j])
+		{
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                }// end of if 
+            }// end of nested for loops 
+        }// end of for loop
+    }// end of method bubbleSort
+}// end of class BubbleSort
+```
+### 10.2 insertion sort
+Insertion sort is a simple sorting algorithm that builds up the final sorted list one item at a time, by inserting each new item into its correct position in the already sorted portion of the list.
+
+**Time Complexity**:
+
+**Best Case:** O(n) when the list is already sorted, each element will be inserted in the first position.
+
+**Worst Case:** O(n^2) when the list is reverse sorted, each element will be compared n times before 
+getting to its correct position.
+
+**Average Case:** O(n^2)
+
+**Space Complexity:** O(1) as it only uses a single additional memory space to keep track of the current element and its position.
+
+**Stability:** Stable, it preserves the relative order of elements with equal values.
+
+**In-Place:** Yes, it doesn't require extra memory to perform the sort.
+
+```java
+class InsertionSort
+{
+    public static void main(String[] args)
+    {
+    	// the array before sorting 
+        int[] arr = {5, 3, 8, 6, 2, 1, 9, 4, 7};
+	// print the array before sorting 
+        System.out.println("Original Array: " + Arrays.toString(arr));
+	// sort the array
+        insertionSort(arr);
+	// print the array after sorting 
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
+    }// end of method main 
+ 
+    public static void insertionSort(int[] arr)
+    {
+        int key, j;
+        for (int i = 1; i < arr.length; i++)
+	{
+            key = arr[i];
+            j = i - 1;
+            while (j >= 0 && arr[j] > key)
+	    {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }// end of while loop
+            arr[j + 1] = key;
+        }// end of foor loop 
+    }// end of method insertionSort
+}// end of class InsertionSort
+```
+### 10.3 selection sort 
+
+election sort is a simple sorting algorithm that repeatedly selects the smallest (or largest) element from the unsorted portion of the list and moves it to the sorted portion. It repeatedly finds the minimum element from the unsorted part and moves it to the end of the sorted array.
+
+**Time Complexity**:
+
+**Best Case:** O(n^2) when the list is already sorted or reverse sorted.
+
+**Worst Case:** O(n^2) when the list is reverse sorted.
+
+**Average Case:** O(n^2)
+
+**Space Complexity:** O(1) as it only uses a single additional memory space to keep track of the current minimum element and its position.
+
+**Stability:** Unstable, it doesn't preserves the relative order of elements with equal values.
+
+**In-Place:** Yes, it doesn't require extra memory to perform the sort.
+
+```java
+public class SelectionSort
+{
+
+    public static void main(String[] args)
+    {
+        int[] arr = {5, 3, 6, 2, 10};
+	
+        // Print the original array
+        System.out.print("Original Array: ");
+        for (int i : arr)
+	{
+            System.out.print(i + " ");
+        }// end of for loop 
+
+        // Sort the array using selection sort
+        selectionSort(arr);
+
+        // Print the sorted array
+        System.out.print("\nSorted Array: ");
+        for (int i : arr)
+	{
+            System.out.print(i + " ");
+        }// end of for loop 
+    }// end of method main
+
+    public static void selectionSort(int[] arr)
+    {
+        // Loop through the array
+        for (int i = 0; i < arr.length - 1; i++)
+	{
+            // Find the index of the minimum element
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++)
+	    {
+                if (arr[j] < arr[minIndex])
+		{
+                    minIndex = j;
+                }// end of if
+            }// end of for loop
+            // Swap the minimum element with the current element
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }// end of for loop
+    }// end of method selectionSort
+}// end of class SelectionSort
+```
+
+### 10.4 merge sort 
+Merge sort is a divide-and-conquer sorting algorithm that repeatedly divides an array or list into two halves until each half contains only one element, and then combines them back together in a sorted order.
+
+The algorithm begins by dividing the array into two equal halves.
+
+It then recursively sorts each half by calling the merge sort function on each half.
+
+Once both halves are sorted, the merge function is called to merge the two sorted halves back together, in a sorted order.
+
+The merge function compares the first element of each half and adds the smaller element to a new array. It then continues this process until one half is exhausted and adds the remaining elements of the other half.
+
+The new array is then returned as the sorted version of the original array.
+
+The merge sort algorithm has a time complexity of O(n log n), making it more efficient than other sorting algorithms such as bubble sort or insertion sort. It is a stable sort, meaning that it preserves the relative order of elements with equal keys. It also requires O(n) extra space to perform the sorting.
