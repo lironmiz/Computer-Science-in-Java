@@ -459,18 +459,130 @@ A switch statement in Java is used to execute different code based on the value 
 
 ### 7.4 EXAMPLE
 
+```java
+public class WeekDayChecker 
+{
+    public static void main(String[] args)
+    {
+        int day = 2;
+        // switch statement to check the day of the week
+        switch(day)
+	{
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day of the week");
+                break;
+        }
+    }// end of method main
+}// end of class WeekDayChecker 
+```
 ## 8. LOOPS
+
+Java provides several types of loops for different use cases:
+
+| Loop Type | Description | Best use |
+| --- | --- | --- |
+| for | Iterating through a range of values or an array | Counting loops |
+| while | Executing a block of code as long as a certain condition is true | Conditional loops |
+| do-while | Executing a block of code at least once before the condition is checked | Loop should always execute at least one time |
+
+Additionally, Java provides two keywords for controlling the flow of loops:
+
+| Keyword | Description |
+| --- | --- |
+| break | Break out of a loop early |
+| continue | Skip an iteration of a loop |
 
 ### 8.1 FOR LOOP
 
+A for loop is used for iterating through a range of values or an array. It consists of three parts:
+
+1. initialization
+2. termination condition
+3. increment/decrement.
+
 ### 8.2 FOR LOOP EXAMPLE
 
+```java
+public class ForLoopExample
+{
+    public static void main(String[] args) 
+    {
+        // for loop to print the numbers from 0 to 10
+        for (int i = 0; i < 11; i++)
+	{
+            System.out.println(i);
+     	}// end of for loop
+    }// end of method main
+}// end of class ForLoopExample
+```
 ### 8.3 WHILE LOOP
+While loop in Java consists of two parts: initialization and termination condition
 
+Initialization : set the initial value for the loop variable before the start of the loop.
+
+Termination condition: the condition that must be met for the loop to continue, if the condition is true the code inside the loop is executed, otherwise the loop is terminated.
+
+It is important to be sure that the termination condition will be false at some point, otherwise the loop will keep running forever, this is called an infinite loop.
 ### 8.4 WHILE LOOP EXAMPLE
-
+```java
+public class WhileLoopExample
+{
+    public static void main(String[] args)
+    {
+        int i = 0; // initialization
+        // while loop to iterate through numbers 0 to 10
+        while (i < 11) // termination condition
+	{ 
+            System.out.println(i);
+            i++; // increment
+        }// end of while loop
+    }// end of method main
+}// end of class WhileLoopExample
+```
 ### 8.5 DO WHILE LOOP
+Do-while loop in Java consists of two parts: initialization and termination condition
+
+Initialization : set the initial value for the loop variable before the start of the loop.
+
+Termination condition: the condition that must be met for the loop to continue, if the condition is true the code inside the loop is executed, otherwise the loop is terminated.
+
+The main difference between a while loop and a do-while loop is that the code inside a do-while loop is executed at least once before the termination condition is checked.
+It's important to be sure that the termination condition will be false at some point, otherwise the loop will keep running forever, this is called an infinite loop.
 
 ### 8.6 DO WHILE LOOP EXAMPLE
-
+```java
+public class DoWhileLoopExample
+{
+    public static void main(String[] args)
+    {
+        int counter = 0;
+        do 
+	{
+            System.out.println(counter);
+            counter++;
+        } while (counter < 10);
+    }// end of method main
+}// end of class DoWhileLoopExample
+```
 
