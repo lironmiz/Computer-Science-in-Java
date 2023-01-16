@@ -91,6 +91,7 @@ Computational
 - [6. RELATIONAL AND LOGICAL EXPRESSIONS](#6-relational-and-logical-expressions)
 - [7. CONDITIONAL STATEMENTS](#7-conditional-statements)
 - [8. LOOPS](#8-loops)
+- [9. ARRAYS](#9-arrays)
 
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
@@ -585,4 +586,42 @@ public class DoWhileLoopExample
     }// end of method main
 }// end of class DoWhileLoopExample
 ```
+## 9. ARRAYS
+
+| Concept | Description |
+|----------|-------------|
+| Array | A container object that holds a fixed number of values of a single type. |
+| Creating an Array | Use the keyword "new" followed by the data type of the array and the size of the array in brackets.  |
+| Accessing Array Elements | Elements can be accessed using their index, which starts at 0. |
+| Modifying Array Elements | Elements can be modified by assigning a new value to a specific index. |
+| Array Methods | Java provides various methods in the Arrays class for sorting, searching, and manipulating arrays. |
+
+### 9.1 ONE DIMENSIONAL ARRAY EXAMPLE
+```java
+class OneDimensionalArrayExample
+{
+    public static void main(String[] args)
+    {
+        // Declare a one-dimensional array of integers
+        int[] myArray = new int[5];
+
+        // Assign values to the elements of the array
+        myArray[0] = 1;
+        myArray[1] = 2;
+        myArray[2] = 3;
+        myArray[3] = 4;
+        myArray[4] = 5;
+	// the array
+	//  - - - - -
+	// |1|2|3|4|5|
+	//  - - - - -
+        // Print out the third element of the array
+        System.out.println("The third element of the array is: " + myArray[2]);
+    }// end of method main 
+}// end of method OneDimensionalArrayExample
+```
+
+### 9.2 TWO DIMENSIONAL ARRAY 
+
+### 9.3 TWO DIMENSIONAL ARRAY EXAMPLE
 
