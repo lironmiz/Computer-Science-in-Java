@@ -97,6 +97,7 @@ Computational
 - [12. MATH CLASS](#12-math-class)
 - [13. STRING CLASS](#13-string-class)
 - [14. STRING BUFFER CLASS](#14-string-buffer-class)
+- [15. METHODS](#15-methods)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1705,3 +1706,83 @@ Some common methods of the StringBuffer class include append, insert, and revers
 | `subSequence(int start,int end)` | Returns a new character sequence that is a subsequence of this sequence. |
 | `substring(int start,int end)` | Returns a new String that contains a subsequence of characters currently contained in this sequence. |
 | `trimToSize()` | Attempts to reduce storage used for the character sequence. |
+
+## 15. METHODS
+
+<img src="https://media.giphy.com/media/lS0uY9t6lCi69FcWRA/giphy-downsized.gif">
+
+In Java, methods are blocks of code that perform a specific task. They are used to encapsulate functionality and can be called multiple times within a program.
+
+A method that has a return type of void, which means it does not return any value.
+
+A method that has a return type and a method name, which means it returns a value of the specified type.
+
+A method can be marked as static, which means it can be called without creating an instance of the class.
+
+A method can take in parameters of different types and names, for example methodName(parameterType parameterName, parameterType parameterName)
+A method can be marked as final, which means it cannot be overridden by subclasses.
+A method can be marked as abstract, which means it has no implementation and must be implemented by subclasses.
+
+It's worth noting that the return type can be any valid Java data type, including primitives, objects, and arrays. Also, the naming convention of methods are camelCase and the first letter is lowercase.
+
+| Method | Description |
+| --- | --- |
+| `void returnType()` |  A method that has a return type of void, which means it does not return any value. |
+| `returnType methodName()` | A method that has a return type and a method name, which means it returns a value of the specified type. |
+| `static returnType methodName()` | A method that is marked as static, which means it can be called without creating an instance of the class. |
+| `methodName(parameterType parameterName)` | A method that takes in a parameter of the specified type and name. |
+| `methodName(parameterType parameterName, parameterType parameterName)` | A method that takes in multiple parameters of different types and names. |
+| `final returnType methodName()` | A method that is marked as final, which means it cannot be overridden by subclasses. |
+| `abstract returnType methodName()` | A method that is marked as abstract, which means it has no implementation and must be implemented by subclasses. |
+
+```java
+public class MethodExample
+{
+    public static void main(String[] args)
+    {
+        printMessage();
+        int result = add(5, 10);
+        System.out.println("Result of addition: " + result);
+        double quotient = divide(20, 10);
+        System.out.println("Result of division: " + quotient);
+        int product = multiply(5, 10);
+        System.out.println("Result of multiplication: " + product);
+    }// end of main method 
+    /**
+    * method print message 
+    * @param None
+    * @return None
+    */
+    public static void printMessage()
+    {
+        System.out.println("Hello, this is a message from the print method.");
+    }// end of method printMessage 
+    /**
+    * method add two numbers 
+    * @param int a, int b
+    * @return int
+    */
+    public static int add(int a, int b)
+    {
+        return a + b;
+    }// end of method add
+    /**
+    * method divide two numbers 
+    * @param double a, double b
+    * @return double
+    */
+    public static double divide(double a, double b)
+    {
+        return a / b;
+    }// end of method divide
+    /**
+    * method multiply two numbers 
+    * @param int a, int b
+    * @return int 
+    */
+    public static int multiply(int a, int b)
+    {
+        return a * b;
+    }// end of method multiply
+}// end of class MethodExample
+```
