@@ -95,6 +95,7 @@ Computational
 - [10. SORTING ALGORITHMS](#10-sorting-algorithms)
 - [11. SEARCHING ALGORITHMS](#11-searching-algorithms)
 - [12. MATH CLASS](#12-math-class)
+- [13. STRING CLASS](#13-string-class)
 
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
@@ -1580,4 +1581,66 @@ class MathClassExample
     }// end of main method 
 }// end of class MathClassExample
 ```
+## 13. STRING CLASS
+The String class in Java is a built-in class that represents a sequence of characters. It is one of the most widely used classes in Java, and it is used to represent text. Some of the key features of the String class include:
 
+Immutable: Once a String object is created, its value cannot be changed. Any operation that modifies the value of a String will create a new String object.
+
+Concatenation: The + operator can be used to concatenate two String objects. The concat() method can also be used to concatenate String objects.
+
+Comparison: The equals() method can be used to compare the values of two String objects. The compareTo() method can be used to compare the lexicographic order of two String objects.
+
+Searching: The indexOf() method can be used to find the index of a specific character or substring within a String. The lastIndexOf() method can be used to find the last occurrence of a specific character or substring within a String.
+
+Substring: The substring() method can be used to extract a portion of a String.
+
+Manipulation: The toLowerCase(), toUpperCase(), trim() method can be used to manipulate the string.
+
+Split: The split() method can be used to split a String into an array of substrings based on a specified delimiter.
+
+Formatting: The format() method can be used to format String in a specific way.
+
+Regular expression: String class has matches() method that can be used to check if the string matches a specific regular expression.
+
+These are some of the most common and useful methods of the String class. It also has many other methods that provide additional functionality.
+
+
+Method | Description
+--------- | -----------
+char charAt(int index) | Returns the char value at the specified index
+int compareTo(String anotherString) | Compares two strings lexicographically
+int compareToIgnoreCase(String str) | Compares two strings lexicographically, ignoring case differences
+String concat(String str) | Concatenates the specified string to the end of this string
+boolean contains(CharSequence s) | Returns true if and only if this string contains the specified sequence of char values
+static String copyValueOf(char[] data) | Equivalent to valueOf(char[])
+static String copyValueOf(char[] data, int offset, int count) | Equivalent to valueOf(char[], int, int)
+boolean endsWith(String suffix) | Tests if this string ends with the specified suffix
+boolean equals(Object anObject) | Compares this string to the specified object
+boolean equalsIgnoreCase(String anotherString) | Compares this String to another String, ignoring case considerations
+void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin) | Copies characters from this string into the destination character array
+int indexOf(int ch) | Returns the index within this string of the first occurrence of the specified character
+int indexOf(int ch, int fromIndex) | Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index
+int indexOf(String str) | Returns the index within this string of the first occurrence of the specified substring
+int indexOf(String str, int fromIndex) | Returns the index within this string of the first occurrence of the specified substring, starting at the specified index
+boolean isEmpty() | Returns true if, and only if, length() is 0
+int lastIndexOf(int ch) | Returns the index within this string of the last occurrence of the specified character
+int lastIndexOf(int ch, int fromIndex) | Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index
+int lastIndexOf(String str) | Returns the index within this string of the last occurrence of the specified substring
+int lastIndexOf(String str, int fromIndex) | Returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index
+int length() | Returns the length of this string
+String replace(char oldChar, char newChar) | Returns a string resulting from replacing all occurrences of oldChar in this string with newChar
+String replace(CharSequence target, CharSequence replacement) | Replaces each substring of this string that matches the literal target sequence with the specified literal replacement sequence
+String replaceAll(String regex, String replacement) | Replaces each substring of this string that matches the given regular expression with the given replacement
+String replaceFirst(String regex, String replacement) | Replaces the first substring of this string that matches the given regular expression with the given replacement
+String[] split(String regex) | Splits this string around matches of the given regular expression
+String[] split(String regex, int limit) | Splits this string around matches of the given regular expression
+boolean startsWith(String prefix) | Tests if this string starts with the specified prefix.
+boolean startsWith(String prefix, int toffset) | Tests if the substring of this string beginning at the specified index starts with the specified prefix
+CharSequence subSequence(int beginIndex, int endIndex) | Returns a character sequence that is a subsequence of this sequenc
+String substring(int beginIndex) | Returns a string that is a substring of this string
+char[] toCharArray() | Converts this string to a new character array
+String toLowerCase() | Converts all of the characters in this String to lower case using the rules of the default locale
+String toLowerCase(Locale locale) | Converts all of the characters in this String to lower case using the rules of the given Locale
+String toUpperCase() | Converts all of the characters in this String to upper case using the rules of the default locale
+String toUpperCase(Locale locale) | Converts all of the characters in this String to upper case using the rules of the given Locale
+String trim() | Returns a string whose value is this string, with any leading and trailing whitespace removed
