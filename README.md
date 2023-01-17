@@ -93,6 +93,7 @@ Computational
 - [8. LOOPS](#8-loops)
 - [9. ARRAYS](#9-arrays)
 - [10. SORTING ALGORITHMS](#10-sorting-algorithms)
+- [11. SEARCHING ALGORITHMS](#11-searching-algorithms)
 
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
@@ -108,7 +109,7 @@ In Java, variables are used to store and manipulate data. There are several type
 | float | 44.22, -89, 8.6 | 4 bytes | -3.4*10^38 to 3.4*10^38 |
 | boolean | true / false | 1 byte | true / false |
 
-### 2.1 EXAMPLE
+### 2.1 Example 
 ```java
   public class ExamplesOfBasicVariablesTypes
   {
@@ -136,7 +137,10 @@ In Java, variables are used to store and manipulate data. There are several type
 ## 3. TAKING INPUT
 in this table we use: 
 Scanner scan = new Scanner(System.in) <br>
-In Java, there are several ways to take input from a user. Here the Scanner method:
+In Java, there are several ways to take input from a user. 
+
+**Here the Scanner method**:
+
 (Remember to use the Scanner class you need to import it using import java.util.Scanner;
 It should be used at the very beginning of your java file before any other code written.
 So, you can use the methods in the table below after importing the class.)
@@ -154,7 +158,7 @@ So, you can use the methods in the table below after importing the class.)
 | String | in.next() |
 | A string across an entire line including spaces | in.nextLine() |
 
-### 3.1 EXAMPLE
+### 3.1 Example 
 ```java
 import java.util.Scanner;
 
@@ -213,7 +217,7 @@ In Java, arithmetic operations are used to perform mathematical calculations on 
 | Division | / |
 | Modulus | % |
 
-### 4.1 EXAMPLE
+### 4.1 Example 
 
 ```java
 public class Arithmetic
@@ -246,7 +250,7 @@ public class Arithmetic
     
 }// end of class Arithmetic
 ```
-### 4.2 SHORTHAND EXPRESSIONS 
+### 4.2 Shorthand Experssions 
 
 | Shorthand Expressions | Symbol |
 | --- | --- |
@@ -256,7 +260,7 @@ public class Arithmetic
 | Division Assignment | /= |
 | Modulus Assignment | %= |
 
-### 4.3 SHORTHAND EXPRESSIONS EXAMPLE
+### 4.3 Shorthand Experssions Example
 ```java
 public class ShorthandExpressions 
 {
@@ -295,7 +299,7 @@ In Java, casting is the process of converting one data type to another.
 | Implicit casting | Also known as automatic casting, it occurs when a smaller type is converted to a larger type without the need for explicit casting. |
 | Explicit casting | Also known as manual casting, it occurs when a larger type is converted to a smaller type. |
 
-### 5.1 EXAMPLE
+### 5.1 Example
 
 ```java
 public class Casting 
@@ -332,7 +336,7 @@ In Java, relational and logical expressions are used to make comparisons and con
 | Not equal to | != | Returns true if the operands are not equal |
 | Equal to | == | Returns true if the operands are equal |
 
-### 6.1 EXAMPLE
+### 6.1 Example 
 
 ```java
 public class RelationalAndLogicalExpressions
@@ -402,7 +406,7 @@ public class RelationalAndLogicalExpressions
 ## 7. CONDITIONAL STATEMENTS
 In Java, conditional statements are used to control the flow of a program based on certain conditions. The most basic and commonly used conditional statement is the if statement.
 
-### 7.1 IF STATEMENT
+### 7.1 If Statement
 
 The if statement allows you to execute a block of code only if a certain condition is true. The basic syntax for an if statement is as follows:
 
@@ -412,7 +416,7 @@ The if statement allows you to execute a block of code only if a certain conditi
 | `if (condition) ` <br> ` {` <br> `// code to be executed if the condition is true` <br> `} ` <br> ` else ` <br> ` {` <br> `// code to be executed if the condition is false` <br> `}` | Executes a block of code if the specified condition is true, and another block of code if the condition is false |
 | `if (condition1) ` <br> ` {` <br> `// code to be executed if condition1 is true` <br> `} ` <br> ` else if ` <br> ` (condition2) {` <br> `// code to be executed if condition2 is true` <br> `} ` <br> ` else ` <br> ` {` <br> `// code to be executed if both conditions are false` <br> `}` | Executes a block of code for the first true condition, and another block of code if none of the conditions are true |
 
-### 7.2 EXAMPLE
+### 7.2 Example 
 
 ```java
 public class IfElseExample
@@ -455,11 +459,11 @@ public class IfElseExample
 }// end of class IfElseExample
 ```
 
-### 7.3 SWITCH STATEMENT
+### 7.3 Switch Statement
 
 A switch statement in Java is used to execute different code based on the value of an expression. The expression is evaluated, and the corresponding branch of the switch statement is executed. 
 
-### 7.4 EXAMPLE
+### 7.4 Example
 
 ```java
 public class WeekDayChecker 
@@ -515,7 +519,7 @@ Additionally, Java provides two keywords for controlling the flow of loops:
 | break | Break out of a loop early |
 | continue | Skip an iteration of a loop |
 
-### 8.1 FOR LOOP
+### 8.1 For Loop
 
 A for loop is used for iterating through a range of values or an array. It consists of three parts:
 
@@ -523,7 +527,7 @@ A for loop is used for iterating through a range of values or an array. It consi
 2. termination condition
 3. increment/decrement.
 
-### 8.2 FOR LOOP EXAMPLE
+### 8.2 For Loop Example
 
 ```java
 public class ForLoopExample
@@ -538,7 +542,7 @@ public class ForLoopExample
     }// end of method main
 }// end of class ForLoopExample
 ```
-### 8.3 WHILE LOOP
+### 8.3 While Loop
 While loop in Java consists of two parts: initialization and termination condition
 
 Initialization : set the initial value for the loop variable before the start of the loop.
@@ -546,7 +550,7 @@ Initialization : set the initial value for the loop variable before the start of
 Termination condition: the condition that must be met for the loop to continue, if the condition is true the code inside the loop is executed, otherwise the loop is terminated.
 
 It is important to be sure that the termination condition will be false at some point, otherwise the loop will keep running forever, this is called an infinite loop.
-### 8.4 WHILE LOOP EXAMPLE
+### 8.4 While Loop Example
 ```java
 public class WhileLoopExample
 {
@@ -562,7 +566,7 @@ public class WhileLoopExample
     }// end of method main
 }// end of class WhileLoopExample
 ```
-### 8.5 DO WHILE LOOP
+### 8.5 Do While Loop
 Do-while loop in Java consists of two parts: initialization and termination condition
 
 Initialization : set the initial value for the loop variable before the start of the loop.
@@ -570,9 +574,10 @@ Initialization : set the initial value for the loop variable before the start of
 Termination condition: the condition that must be met for the loop to continue, if the condition is true the code inside the loop is executed, otherwise the loop is terminated.
 
 The main difference between a while loop and a do-while loop is that the code inside a do-while loop is executed at least once before the termination condition is checked.
+
 It's important to be sure that the termination condition will be false at some point, otherwise the loop will keep running forever, this is called an infinite loop.
 
-### 8.6 DO WHILE LOOP EXAMPLE
+### 8.6 Do While Loop Example
 ```java
 public class DoWhileLoopExample
 {
@@ -597,7 +602,7 @@ public class DoWhileLoopExample
 | Modifying Array Elements | Elements can be modified by assigning a new value to a specific index. |
 | Array Methods | Java provides various methods in the Arrays class for sorting, searching, and manipulating arrays. |
 
-### 9.1 ONE DIMENSIONAL ARRAY EXAMPLE
+### 9.1 One Dimensional Array Example
 ```java
 class OneDimensionalArrayExample
 {
@@ -621,7 +626,7 @@ class OneDimensionalArrayExample
     }// end of method main 
 }// end of method OneDimensionalArrayExample
 ```
-### 9.2 TWO DIMENSIONAL ARRAY 
+### 9.2 Two Dimensional Array 
 | Key Point  | Description |
 | ---------- | ----------- |
 | Size       | The size of a two-dimensional array is the number of rows multiplied by the number of columns |
@@ -632,7 +637,7 @@ class OneDimensionalArrayExample
 | Pass as a parameter | They can be passed as a parameter to a method just like a one-dimensional array |
 | Applications | Two-dimensional arrays are commonly used in many applications such as image processing, game development, and scientific computing.
 
-### 9.3 TWO DIMENSIONAL ARRAY EXAMPLE
+### 9.3 Two Dimensional Array Example
 ```java
 public class TwoDimensionalArrayExample
 {
@@ -691,7 +696,7 @@ summary of some common sorting algorithms:
 | quick sort  | O(n log n)| O(n^2)     | O(n log n)   |       O(log n)   |
 | heap sort   | O(n log n)| O(n log n) | O(n log n)   |       O(1)       |
 
-### 10.1 bubble sort
+### 10.1 Bubble Sort
 
 Bubble sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order. It repeatedly passes through the list, comparing elements and swapping them as needed, until the list is sorted.
 
@@ -722,7 +727,11 @@ class BubbleSort
 	// print the array after sorting 
         System.out.println("Sorted Array: " + Arrays.toString(arr));
     }// end of method main
- 
+    /**
+    * sort the array using bubble sort method 
+    * @param array - the original array
+    * @return None
+    */
     public static void bubbleSort(int[] arr)
     {
         int temp;
@@ -741,7 +750,7 @@ class BubbleSort
     }// end of method bubbleSort
 }// end of class BubbleSort
 ```
-### 10.2 insertion sort
+### 10.2 Insertion Sort
 Insertion sort is a simple sorting algorithm that builds up the final sorted list one item at a time, by inserting each new item into its correct position in the already sorted portion of the list.
 
 **Time Complexity**:
@@ -773,7 +782,11 @@ class InsertionSort
 	// print the array after sorting 
         System.out.println("Sorted Array: " + Arrays.toString(arr));
     }// end of method main 
- 
+    /**
+    * sort the array using insertion sort sort method 
+    * @param array - the original array
+    * @return None
+    */
     public static void insertionSort(int[] arr)
     {
         int key, j;
@@ -791,9 +804,11 @@ class InsertionSort
     }// end of method insertionSort
 }// end of class InsertionSort
 ```
-### 10.3 selection sort 
+### 10.3 Selection Sort 
 
-election sort is a simple sorting algorithm that repeatedly selects the smallest (or largest) element from the unsorted portion of the list and moves it to the sorted portion. It repeatedly finds the minimum element from the unsorted part and moves it to the end of the sorted array.
+election sort is a simple sorting algorithm that repeatedly selects the smallest (or largest) element from the unsorted portion of the list and moves it to the sorted portion.
+
+It repeatedly finds the minimum element from the unsorted part and moves it to the end of the sorted array.
 
 **Time Complexity**:
 
@@ -834,7 +849,11 @@ public class SelectionSort
             System.out.print(i + " ");
         }// end of for loop 
     }// end of method main
-
+    /**
+    * sort the array using selection sort method 
+    * @param array - the original array
+    * @return None
+    */
     public static void selectionSort(int[] arr)
     {
         // Loop through the array
@@ -858,7 +877,7 @@ public class SelectionSort
 }// end of class SelectionSort
 ```
 
-### 10.4 merge sort 
+### 10.4 Merge Sort 
 Merge sort is a divide-and-conquer sorting algorithm that repeatedly divides an array or list into two halves until each half contains only one element, and then combines them back together in a sorted order.
 
 The algorithm begins by dividing the array into two equal halves.
@@ -872,3 +891,417 @@ The merge function compares the first element of each half and adds the smaller 
 The new array is then returned as the sorted version of the original array.
 
 The merge sort algorithm has a time complexity of O(n log n), making it more efficient than other sorting algorithms such as bubble sort or insertion sort. It is a stable sort, meaning that it preserves the relative order of elements with equal keys. It also requires O(n) extra space to perform the sorting.
+
+```java
+public class MergeSort 
+{
+    public static void main(String[] args) 
+    {
+        int[] array = {5, 1, 9, 3, 7, 6, 8, 2, 4};
+        mergeSort(array);
+        for (int i : array) 
+	{
+            System.out.print(i + " ");
+        }// end of for 
+    }// end of main method 
+	
+    /**
+    * Sorts an array using the merge sort algorithm
+    * @param: array - the array to be sorted
+    * @return: None
+    */
+    public static void mergeSort(int[] array) 
+    {
+        if (array.length > 1) 
+	{
+	    // Split the array into left and right halves
+            int[] left = leftHalf(array);
+            int[] right = rightHalf(array);
+	    
+	    // Recursively sort the left and right halves
+            mergeSort(left);
+            mergeSort(right);
+            // Merge the sorted left and right halves back together
+            merge(array, left, right);
+        }
+    }// end of mergeSort method 
+    /**
+    * Returns the left half of an array
+    * @param array - the original array
+    * @return array - the left half of the array
+    */
+    public static int[] leftHalf(int[] array) 
+    {
+        int size1 = array.length / 2;
+        int[] left = new int[size1];
+        for (int i = 0; i < size1; i++)
+	{
+            left[i] = array[i];
+        }
+        return left;
+    }// end of leftHalf method 
+    /**
+    * Returns the right half of an array
+    * @param array - the original array
+    * @return array - the right half of the array
+    */
+    public static int[] rightHalf(int[] array)
+    {
+        int size1 = array.length / 2;
+        int size2 = array.length - size1;
+        int[] right = new int[size2];
+        for (int i = 0; i < size2; i++) {
+            right[i] = array[i + size1];
+        }
+        return right;
+    }// end of method rightHalf
+    /**
+    * Merges two sorted arrays into a single sorted array
+    * @param result - the final sorted array, left - the left half of the array, right - the right half of the array
+    @ @return None
+    */
+    public static void merge(int[] result, int[] left, int[] right)
+    {
+        int i1 = 0;
+        int i2 = 0;
+
+        for (int i = 0; i < result.length; i++)
+	{
+            if (i2 >= right.length || (i1 < left.length && left[i1] <= right[i2]))
+	    {
+                result[i] = left[i1];
+                i1++;
+            }
+	    else
+	    {
+                result[i] = right[i2];
+                i2++;
+            }
+        }// end of for loop 
+    }// end of merge method 
+}// end of class  MergeSort
+```
+### 10.5 Quick Sort 
+Quick Sort is a sorting algorithm that uses the divide-and-conquer strategy to sort an array or a list of elements.
+
+The basic idea behind the algorithm is to partition the array into two sub-arrays, one containing elements that are less than a chosen pivot element, and the other containing elements that are greater than the pivot.
+
+The pivot element can be chosen in different ways, but a common approach is to select the last element of the array as the pivot.
+
+Once the array is partitioned, the pivot element is in its final position in the sorted array. The algorithm then recursively sorts the left and right sub-arrays.
+```java
+public class QuickSort
+{
+
+    public static void main(String[] args)
+    {
+        int[] array = {5, 1, 9, 3, 7, 6, 8, 2, 4};
+        sort(array);
+        for (int i : array)
+	{
+            System.out.print(i + " ");
+        }
+    }// end of main method 
+
+    /**
+    * Sorts an array using the quick sort algorithm
+    * @param array - the array to be sorted
+    * @return none
+    */
+    public static void sort(int[] array)
+    {
+        sort(array, 0, array.length - 1);
+    }// end of sort method 
+
+    /**
+    * Sorts an array within a given range using the quick sort algorithm
+    * @param array - the array to be sorted, int - low - the lower bound of the range to be sorted int - high - the upper bound of the range to be sorted
+    * @return None
+    */
+    private static void sort(int[] array, int low, int high)
+    {
+        if (low < high)
+	{
+            // Choose pivot and partition the array
+            int pivotIndex = partition(array, low, high);
+            // Recursively sort the left and right partitions
+            sort(array, low, pivotIndex);
+            sort(array, pivotIndex + 1, high);
+        }
+    }// end of sort method 
+
+    /**
+    * Partitions an array within a given range and returns the pivot index
+    * @param array - the array to be partitioned, int - low - the lower bound of the range to be partitioned, int high - the upper bound of the range to be partitioned
+    * @return the pivot index
+    */
+    private static int partition(int[] array, int low, int high)
+    {
+        int pivot = array[high];
+        int i = low - 1;
+        for (int j = low; j < high; j++)
+	{
+            if (array[j] <= pivot)
+	    {
+                i++;
+                // Swap array[i] and array[j]
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        // Swap array[i + 1] and array[high]
+        int temp = array[i + 1];
+        array[i + 1] = array[high];
+        array[high] = temp;
+        return i + 1;
+    }// end of partition method 
+}// end of QuickSort class 
+```
+### 10.6 Heap Sort 
+Heap sort is a comparison-based sorting algorithm that is based on the binary heap data structure.
+
+In Java, it can be implemented by first creating a max heap out of the input array, and then repeatedly extracting the maximum element from the heap and placing it at the end of the sorted array. 
+
+The process continues until the heap is empty, resulting in a sorted array in ascending order. It has a time complexity of O(n log n) and requires O(1) extra space.
+```java
+class HeapSort
+{
+
+    // Heap sort method
+    public static void heapSort(int[] arr)
+    {
+        int n = arr.length;
+
+        // Build heap (rearrange array)
+        for (int i = n / 2 - 1; i >= 0; i--)
+	{
+	   heapify(arr, n, i);
+	}
+        // One by one extract an element from heap
+        for (int i=n-1; i>=0; i--)
+	{
+            // Move current root to end
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+
+            // call max heapify on the reduced heap
+            heapify(arr, i, 0);
+        }
+    }// end of method heapSort
+
+    // To heapify a subtree rooted with node i which is
+    // an index in arr[]. n is size of heap
+    static void heapify(int[] arr, int n, int i) 
+    {
+        int largest = i;  // Initialize largest as root
+        int l = 2*i + 1;  // left = 2*i + 1
+        int r = 2*i + 2;  // right = 2*i + 2
+
+        // If left child is larger than root
+        if (l < n && arr[l] > arr[largest])
+	{
+	   largest = l;
+	}
+            
+        // If right child is larger than largest so far
+        if (r < n && arr[r] > arr[largest])
+	{
+	     largest = r;
+	}
+	
+        // If largest is not root
+        if (largest != i)
+	{
+            int swap = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = swap;
+
+            // Recursively heapify the affected sub-tree
+            heapify(arr, n, largest);
+        }
+    }// end of heapify method 
+
+    public static void main(String args[])
+    {
+        int[] arr = {12, 11, 13, 5, 6, 7};
+        heapSort(arr);
+
+        System.out.println("Sorted array is:");
+        for (int i=0; i<arr.length; ++i)
+	{
+	    System.out.print(arr[i]+" ");
+	}      
+    }// end of main method 
+}// end of class HeapSort
+```
+## 11. SEARCHING ALGORITHMS
+Searching algorithms are a set of methods used to locate specific data within a larger data set. 
+
+The most common types of searching algorithms include linear search, binary search, jump search, interpolation search, depth-first search, and breadth-first search.
+
+| Algorithm        | Time Complexity           | Space Complexity |
+| ------------------|--------------------------|------------------|
+| Linear Search     | O(n)                      | O(1)             |
+| Binary Search     | O(log n)                  | O(1)             |
+| Jump Search       | O(√n)                     | O(1)             |
+| Interpolation Search | O(log log n)             | O(1)             |
+| Depth First Search| O(V + E)                   | O(V)             |
+| Breadth First Search| O(V + E)                  | O(V)    
+
+### 11.1 Linear Search
+inear search is the simplest search algorithm and involves iterating through each element of the data set until the desired element is found.
+
+The time complexity for this algorithm is O(n), where n is the number of elements in the data set.
+
+```java
+public class LinearSearch
+{
+    /**
+    * Method to implement Linear Search algorithm to find a specific element in an array. 
+    * If the element doesn't exist in the array, the method returns -1.
+    * @param array - array, int x - the number we want to find  
+    * @return int 
+    */
+    public static int linearSearch(int[] arr, int x)
+    {
+        for (int i = 0; i < arr.length; i++)
+	{
+            if (arr[i] == x)
+	    {
+                return i;
+            }
+        }
+        return -1;
+    }// end of linearSearch method 
+
+    public static void main(String[] args)
+    {
+        int[] arr = {2, 3, 4, 10, 40};
+        int x = 10;
+
+        int result = linearSearch(arr, x);
+        if (result == -1)
+	{
+            System.out.println("Element not present in array.");
+        } 
+	else
+	{
+            System.out.println("Element found at index: " + result);
+        }
+    }// end of main method 
+}// end of class LinearSearch
+```
+
+### 11.1 Binary Search 
+Binary search is a more efficient search algorithm that works by repeatedly dividing the search interval in half.
+
+The time complexity for this algorithm is O(log n), which makes it more efficient than linear search for large data sets.
+```java
+public class BinarySearch
+{
+    /**
+    * Method to implement Binary Search algorithm to find a specific element in an array. 
+    * If the element doesn't exist in the array, the method returns -1.
+    * @param array, int x
+    * @return int 
+    */
+    public static int binarySearch(int[] arr, int x)
+    {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right)
+	{
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == x)
+	    {
+                return mid;
+            } 
+	    else if (arr[mid] < x)
+	    {
+                left = mid + 1;
+            }
+	    else
+	    {
+                right = mid - 1;
+            }
+        }
+        return -1;
+    }// end of method binarySearch
+
+    public static void main(String[] args)
+    {
+        int[] arr = {2, 3, 4, 10, 40};
+        int x = 10;
+
+        int result = binarySearch(arr, x);
+        if (result == -1)
+	{
+            System.out.println("Element not present in array.");
+        }
+	else
+	{
+            System.out.println("Element found at index: " + result);
+        }
+    }// end of main method 
+}// end of class BinarySearch
+```
+
+### 11.2 Jump Search
+Jump search is an algorithm that works by jumping a fixed number of elements at a time instead of iterating through each element. The time complexity for this algorithm is O(√n).
+
+```java
+public class JumpSearch
+{
+    /**
+    * Method to implement Jump Search algorithm to find a specific element in an array. 
+    * If the element doesn't exist in the array, the method returns -1.
+    * @param array - the array to search through, int x - the element to search for
+    * @return int - the index of the element if found, -1 if not found
+    */
+    public static int jumpSearch(int[] array, int x)
+    {
+        int n = array.length;
+        int step = (int) Math.sqrt(n);
+        int prev = 0;
+        while (array[Math.min(step, n) - 1] < x)
+	{
+            prev = step;
+            step += (int) Math.sqrt(n);
+            if (prev >= n)
+	    {
+                return -1;
+            }
+        }
+        while (array[prev] < x)
+	{
+            prev++;
+            if (prev == Math.min(step, n))
+	    {
+                return -1;
+            }
+        }
+        if (array[prev] == x)
+	{
+            return prev;
+        }
+        return -1;
+    }// end of method jumpSearch
+
+    public static void main(String[] args)
+    {
+        int[] array = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144};
+        int x = 55;
+        int index = jumpSearch(array, x);
+        if (index != -1)
+	{
+            System.out.println("Element found at index: " + index);
+        }
+	else
+	{
+            System.out.println("Element not found in array.");
+        }
+    }// end of main method 
+}// end of class JumpSearch
+```
