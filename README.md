@@ -97,6 +97,8 @@ Computational
 - [12. MATH CLASS](#12-math-class)
 - [13. STRING CLASS](#13-string-class)
 
+<img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
+
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
 
@@ -136,7 +138,12 @@ In Java, variables are used to store and manipulate data. There are several type
 	 }// end of method main 
   }// end of class ExamplesOfBasicVariablesTypes
 ```
+<img src="https://media.giphy.com/media/RkclJYmYQmCrOPQFZn/giphy.gif">
+
 ## 3. TAKING INPUT
+
+<img src="https://media.giphy.com/media/ZBEMh8FGeNANCeBaEd/giphy.gif">
+
 in this table we use: 
 Scanner scan = new Scanner(System.in) <br>
 In Java, there are several ways to take input from a user. 
@@ -210,6 +217,8 @@ public class InputExample
 
 ## 4. ARITHMETIC
 In Java, arithmetic operations are used to perform mathematical calculations on variables.
+
+<img src="https://media.giphy.com/media/5UCpmbzvZKQCfuF2P2/giphy.gif">
 
 | Operations | Symbol |
 | --- | --- |
@@ -296,6 +305,8 @@ public class ShorthandExpressions
 ## 5. CASTING
 In Java, casting is the process of converting one data type to another.
 
+<img src="https://media.giphy.com/media/C9iYoljYrwIISmWBWg/giphy.gif">
+
 | Type | Description |
 | --- | --- |
 | Implicit casting | Also known as automatic casting, it occurs when a smaller type is converted to a larger type without the need for explicit casting. |
@@ -325,6 +336,8 @@ public class Casting
 ## 6. RELATIONAL AND LOGICAL EXPRESSIONS
 
 In Java, relational and logical expressions are used to make comparisons and control the flow of a program.
+
+<img src="https://media.giphy.com/media/2aWxyHllMdWS07RCnU/giphy.gif">
 
 | Logical And Relational Expressions | Symbol | Description |
 | --- | --- | --- |
@@ -407,6 +420,8 @@ public class RelationalAndLogicalExpressions
 
 ## 7. CONDITIONAL STATEMENTS
 In Java, conditional statements are used to control the flow of a program based on certain conditions. The most basic and commonly used conditional statement is the if statement.
+
+<img src="https://media.giphy.com/media/mDN2PrgD9VuQJG0LY2/giphy-downsized.gif">
 
 ### 7.1 If Statement
 
@@ -506,6 +521,8 @@ public class WeekDayChecker
 ```
 ## 8. LOOPS
 
+<img src="https://media.giphy.com/media/ieaUdBJJC19uw/giphy-downsized-large.gif">
+
 Java provides several types of loops for different use cases:
 
 | Loop Type | Description | Best use |
@@ -596,6 +613,8 @@ public class DoWhileLoopExample
 ```
 ## 9. ARRAYS
 
+<img src="https://media.giphy.com/media/LYBHgc2yiO07G3dkkQ/giphy.gif">
+
 | Concept | Description |
 |----------|-------------|
 | Array | A container object that holds a fixed number of values of a single type. |
@@ -684,6 +703,8 @@ public class TwoDimensionalArrayExample
 | 7 | 8 | 9 |
 
 ## 10. SORTING ALGORITHMS
+
+<img src="https://media.giphy.com/media/ezjd4NlY4w3io/giphy-downsized.gif">
 
 Sorting algorithms are used to order a collection of items in a specific way. 
 
@@ -1139,6 +1160,9 @@ class HeapSort
 }// end of class HeapSort
 ```
 ## 11. SEARCHING ALGORITHMS
+
+<img src="https://media.giphy.com/media/HdkzWcDvoRmLmkrWOt/giphy.gif" >
+
 Searching algorithms are a set of methods used to locate specific data within a larger data set. 
 
 The most common types of searching algorithms include linear search, binary search, jump search, interpolation search, depth-first search, and breadth-first search.
@@ -1512,6 +1536,9 @@ class Node
 }// end of class Node
 ```
 ## 12. MATH CLASS
+
+<img src="https://media.giphy.com/media/gEvab1ilmJjA82FaSV/giphy-downsized.gif">
+
 The java.lang.Math class contains a variety of mathematical functions and constants. Some of the most commonly used methods include:
 
 Function | Description
@@ -1582,6 +1609,9 @@ class MathClassExample
 }// end of class MathClassExample
 ```
 ## 13. STRING CLASS
+
+<img src="https://media.giphy.com/media/xT5LMLKAxV7XswLQsw/giphy.gif">
+
 The String class in Java is a built-in class that represents a sequence of characters. It is one of the most widely used classes in Java, and it is used to represent text. Some of the key features of the String class include:
 
 Immutable: Once a String object is created, its value cannot be changed. Any operation that modifies the value of a String will create a new String object.
