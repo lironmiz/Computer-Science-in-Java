@@ -1305,3 +1305,132 @@ public class JumpSearch
     }// end of main method 
 }// end of class JumpSearch
 ```
+### 11.3 Interpolation Search
+Interpolation search is a search algorithm for sorted arrays. 
+
+It works by making an educated guess about the position of the element in the array, based on the value of the element and the range of values in the array. 
+
+The algorithm then repeatedly narrows down the search space by determining if the guessed position is too high or too low, and then updating the guess based on this information.
+
+The algorithm terminates when the element is found or when the search space has been narrowed down to a single element that is not the target.
+
+Interpolation search is faster than a typical binary search when the elements in the array are uniformly distributed.
+
+```java
+public class InterpolationSearch
+{
+    /**
+    * Method to implement Interpolation Search algorithm to find a specific element in an array. 
+    * If the element doesn't exist in the array, the method returns -1.
+    * @param array - the array to search through, int x - the element to search for
+    * @return int - the index of the element if found, -1 if not found
+    */
+    public static int interpolationSearch(int[] array, int x)
+    {
+        int low = 0;
+        int high = array.length - 1;
+        while (low <= high && x >= array[low] && x <= array[high])
+	{
+            int pos = low + (((high - low) / (array[high] - array[low])) * (x - array[low]));
+            if (array[pos] == x)
+	    {
+                return pos;
+            }
+            if (array[pos] < x)
+	    {
+                low = pos + 1;
+            } 
+	    else
+	    {
+                high = pos - 1;
+            }
+        }
+        return -1;
+    }// end of method interpolationSearch
+
+    public static void main(String[] args)
+    {
+        int[] array = {10, 12, 13, 16, 18, 19, 20, 21, 22, 23, 24, 33, 35, 42, 47};
+        int x = 18;
+        int index = interpolationSearch(array, x);
+        if (index != -1)
+	{
+            System.out.println("Element found at index: " + index);
+        } 
+	else
+	{
+            System.out.println("Element not found in array.");
+        }
+    }// end of main method 
+}// end of InterpolationSearch class 
+```
+### 11.4 Depth First Search
+Depth First Search (DFS) is a graph traversal algorithm that explores as far as possible along each branch before backtracking.
+
+It starts at a specific vertex (or source node) and visits each vertex in the graph by following each edge as far as possible before backtracking.
+
+DFS can be implemented using a stack data structure, where the vertices that have yet to be visited are pushed onto the stack, and the last vertex added to the stack is the next vertex to be visited.
+
+The algorithm terminates when all vertices have been visited or when a specific goal vertex is found. DFS can be used to find the connected components of a graph, solve puzzles and games, and find the paths between two vertices in a graph.
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class DepthFirstSearch
+{
+    static class TreeNode
+    {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int val)
+	{
+            this.val = val;
+            this.left = null;
+            this.right = null;
+        }
+    }// end of class TreeNode
+
+    /**
+     * Method to implement Depth First Search algorithm to find a specific element in a tree.
+     * If the element doesn't exist in the tree, the method returns false.
+     * @param root - the root of the tree, int x - the element to search for
+     * @return boolean - true if the element is found, false if not found
+     */
+      public static boolean dfs(TreeNode root, int x)
+      {
+        if (root == null)
+	{
+            return false;
+        }
+        if (root.val == x)
+	{
+            return true;
+        }
+        boolean left = dfs(root.left, x);
+        boolean right = dfs(root.right, x);
+        return left || right;
+      }// end of method dfs
+
+    public static void main(String[] args)
+    {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        int x = 4;
+        boolean found = dfs(root, x);
+        if (found)
+	{
+            System.out.println("Element found in tree.");
+        }
+	else
+	{
+            System.out.println("Element not found in tree.");
+        }
+    }// end of method main
+}// end of class DepthFirstSearch
+```
