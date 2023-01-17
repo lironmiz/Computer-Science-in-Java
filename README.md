@@ -96,6 +96,7 @@ Computational
 - [11. SEARCHING ALGORITHMS](#11-searching-algorithms)
 - [12. MATH CLASS](#12-math-class)
 - [13. STRING CLASS](#13-string-class)
+- [14. STRING BUFFER CLASS](#14-string-buffer-class)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1674,3 +1675,33 @@ String toLowerCase(Locale locale) | Converts all of the characters in this Strin
 String toUpperCase() | Converts all of the characters in this String to upper case using the rules of the default locale
 String toUpperCase(Locale locale) | Converts all of the characters in this String to upper case using the rules of the given Locale
 String trim() | Returns a string whose value is this string, with any leading and trailing whitespace removed
+
+## 14. STRING BUFFER CLASS
+
+<img src="https://media.giphy.com/media/uurtMtTKqkJda4dk8Y/giphy-downsized.gif">
+
+StringBuffer is a class in Java that provides a mutable sequence of characters.
+
+It is similar to the String class, but it can be modified after it is created. StringBuffer is thread-safe, meaning that multiple threads can access a single StringBuffer object without causing any problems.
+
+Some common methods of the StringBuffer class include append, insert, and reverse. Additionally, StringBuffer has a capacity that can be increased if necessary to prevent reallocation of memory while concatenation.
+
+| Method | Description |
+| --- | --- |
+| `append(Object obj)` | Appends the string representation of the Object argument. |
+| `charAt(int index)` | Returns the char value in this sequence at the specified index. |
+| `delete(int start,int end)` | Removes the characters in a substring of this sequence. |
+| `deleteCharAt(int index)` | Removes the char at the specified position in this sequence. |
+| `getChars(int srcBegin,int srcEnd,char[] dst,int dstBegin)` | Characters are copied from this sequence into the destination character array dst. |
+| `equals(StringBuffer sb)` | Compares this object against the specified object. |
+| `indexOf(String str)` | Returns the index within this string of the first occurrence of the specified substring. |
+| `indexOf(String str,int fromIndex)` | Returns the index within this string of the first occurrence of the specified substring, starting at the specified index. |
+| `insert(int offset,String str)` | Inserts the string into this character sequence. |
+| `lastIndexOf(String str,int fromIndex)` | Returns the index within this string of the last occurrence of the specified substring. |
+| `length()` | Returns the length (character count). |
+| `replace(int start,int end,String str)` | Replaces the characters in a substring of this sequence with characters in the specified String. |
+| `reverse()` | Causes this character sequence to be replaced by the reverse of the sequence. |
+| `setCharAt(int index,char ch)` | The character at the specified index is set to ch. |
+| `subSequence(int start,int end)` | Returns a new character sequence that is a subsequence of this sequence. |
+| `substring(int start,int end)` | Returns a new String that contains a subsequence of characters currently contained in this sequence. |
+| `trimToSize()` | Attempts to reduce storage used for the character sequence. |
