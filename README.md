@@ -94,6 +94,7 @@ Computational
 - [9. ARRAYS](#9-arrays)
 - [10. SORTING ALGORITHMS](#10-sorting-algorithms)
 - [11. SEARCHING ALGORITHMS](#11-searching-algorithms)
+- [12. MATH CLASS](#12-math-class)
 
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
@@ -1509,3 +1510,8 @@ class Node
     }// end of method Node 
 }// end of class Node
 ```
+## 12. MATH CLASS
+The java.lang.Math class contains a variety of mathematical functions and constants. Some of the most commonly used methods include:
+
+
+All of these functions are static, which means that you can call them directly on the Math class, without needing to create an instance of the class.
