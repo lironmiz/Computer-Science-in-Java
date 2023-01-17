@@ -1434,3 +1434,78 @@ public class DepthFirstSearch
     }// end of method main
 }// end of class DepthFirstSearch
 ```
+### 11.5 Breadth First Search
+Breadth First Search (BFS) is a graph traversal algorithm that visits all the vertices of a graph in breadth-first order, meaning it visits all the vertices at a given depth level before moving on to the next level. 
+
+It starts at a specific vertex (or source node) and visits all its neighboring vertices first, before visiting the vertices at the next level.
+
+BFS can be implemented using a queue data structure, where the vertices to be visited are added to the queue, and the first vertex in the queue is the next vertex to be visited.
+
+The algorithm terminates when all vertices have been visited or when a specific goal vertex is found. BFS can be used to find the shortest path between two vertices in a graph, find the connected components of a graph and solve puzzles and games.
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BreadthFirstSearch
+{
+    /**
+    * method find a specific element in a tree using breadth first search
+    * if the element is not found, the method returns -1
+    * @param Node root - the root of the tree, int x - the element to search for
+    * @return int - the value of the element if found, -1 if not found
+    */
+    public static int bfs(Node root, int x)
+    {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty())
+	{
+            Node current = queue.poll();
+            if (current.value == x)
+	    {
+                return current.value;
+            }
+            if (current.left != null)
+	    {
+                queue.add(current.left);
+            }
+            if (current.right != null)
+	    {
+                queue.add(current.right);
+            }
+        }
+
+        return -1;
+      }// end of method bfs
+
+    public static void main(String[] args)
+    {
+        // create a sample tree for demonstration
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+
+        int elementToFind = 4;
+        int result = bfs(root, elementToFind);
+        System.out.println("Value of element " + elementToFind + ": " + result);
+    }// end of main method 
+}// end of class BreadthFirstSearch
+
+class Node
+{
+    int value;
+    Node left;
+    Node right;
+
+    public Node(int value)
+    {
+        this.value = value;
+        left = null;
+        right = null;
+    }// end of method Node 
+}// end of class Node
+```
