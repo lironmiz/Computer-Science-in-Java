@@ -1513,5 +1513,71 @@ class Node
 ## 12. MATH CLASS
 The java.lang.Math class contains a variety of mathematical functions and constants. Some of the most commonly used methods include:
 
+Function | Description
+--------- | -----------
+Math.abs(x) | Returns the absolute value of a given number.
+Math.ceil(x) | Returns the smallest integer greater than or equal to a given number.
+Math.floor(x) | Returns the largest integer less than or equal to a given number.
+Math.max(x, y) | Returns the larger of two given numbers.
+Math.min(x, y) | Returns the smaller of two given numbers.
+Math.pow(x, y) | Returns x raised to the power of y.
+Math.sqrt(x) | Returns the square root of a given number.
+Math.random() | Returns a random number between 0 and 1.
+Math.round(x) | Returns the closest integer to a given number.
+Math.sin(x) | Returns the sine of a given angle in radians.
+Math.cos(x) | Returns the cosine of a given angle in radians.
+Math.tan(x) | Returns the tangent of a given angle in radians.
+Math.asin(x) | Returns the arcsine of a given value in radians.
+Math.acos(x) | Returns the arccosine of a given value in radians.
+Math.atan(x) | Returns the arctangent of a given value in radians.
+Math.log(x) | Returns the natural logarithm of a given number.
+Math.log10(x) | Returns the base-10 logarithm of a given number.
+Math.E | The base of the natural logarithms (approximately 2.718).
+Math.PI | The ratio of the circumference of a circle to its diameter (approximately 3.14159).
 
 All of these functions are static, which means that you can call them directly on the Math class, without needing to create an instance of the class.
+
+### 12.1 Math Class Example
+
+```java
+class MathClassExample
+{
+    public static void main(String[] args)
+    {
+
+        // Using Math.abs()
+        int number = -5;
+        int absoluteValue = Math.abs(number);
+        System.out.println("Absolute value of " + number + " is " + absoluteValue);
+        
+        // Using Math.ceil()
+        double decimal = 4.3;
+        double ceilValue = Math.ceil(decimal);
+        System.out.println("Smallest integer greater than or equal to " + decimal + " is " + ceilValue);
+        
+        // Using Math.floor()
+        decimal = 5.8;
+        double floorValue = Math.floor(decimal);
+        System.out.println("Largest integer less than or equal to " + decimal + " is " + floorValue);
+        
+        // Using Math.max()
+        int x = 10;
+        int y = 15;
+        int maxValue = Math.max(x, y);
+        System.out.println("Larger of " + x + " and " + y + " is " + maxValue);
+        
+        // Using Math.min()
+        x = 20;
+        y = 25;
+        int minValue = Math.min(x, y);
+        System.out.println("Smaller of " + x + " and " + y + " is " + minValue);
+        
+        // Using Math.pow()
+        x = 2;
+        y = 3;
+        double powerValue = Math.pow(x, y);
+        System.out.println(x + " raised to the power of " + y + " is " + powerValue);
+    }// end of main method 
+}// end of class MathClassExample
+```
+
