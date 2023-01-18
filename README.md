@@ -1,8 +1,9 @@
 <h1 align="center"> 💻 Computer-Science-in-Java 💻 </h1>
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
-Intended for saving solutions for tests , exercises and assignments as part of an introductory course to computer science in the Java language at the Open University as part of a degree in computer science and physics 😎
+Intended for saving solutions for tests , exercises and assignments as part of an introductory course to computer science in the Java language at the Open University as part of a degree in computer science and physics 😎 
 
 <p align="center">
+
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/lironmiz/Computer-Science-in-Java?color=04D361&labelColor=000000">
   
  <img alt="Repository size" src="https://img.shields.io/github/repo-size/lironmiz/Computer-Science-in-Java?color=04D361&labelColor=000000">
@@ -12,33 +13,31 @@ Intended for saving solutions for tests , exercises and assignments as part of a
   </a>
 </p>
 
-Course material -
+# Course Material 💼
 
-Part a :
-Introduction and basics of the language
++ Introduction And Basics Of The Language
 
-object oriented programming
++ Object Oriented Programming
 
-flow control
-(conditional sentences and loops)
++ Flow Control (conditional sentences and loops)
 
-arrays
++ Arrays
 
-Extending object-oriented programming - inheritance, static methods and variables, loading of methods, cases, polymorphism and interfaces
++ Extending Object-Oriented-Programming - inheritance, static methods and variables, loading of methods, cases, polymorphism and interfaces
 
-complications
++ Complications
 
-Search and sort algorithms
++ Search And Sort Algorithms
 
-Recursion
++ Recursion
 
-linked lists
++ Linked Lists
 
-Stacks and queues
++ Stacks And Queues
  
-Trees and Binary Trees
++ Trees And Binary Trees
  
-Computational
++ Computational
 
 <!--🎨CAPSULE / 🌐WEBSITES: https://github.com/kyechan99/capsule-render -->
 <p align="center">
