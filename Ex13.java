@@ -6,6 +6,7 @@
 import java.util.Scanner;
 public class Ex13
 {
+    // note that the main it for check the code and you dont need him when you submit the code to the website
     public static void main(String[] args)
     {
        // tester for alternating method
@@ -123,7 +124,7 @@ public class Ex13
         // Find an index i such the a[i] is odd
         // and compare length of both halfs excluding
         // a[i] to find max length subarray
-        for (int i = 0; i < arr.length; i++)
+        for (int i = 0; i < a.length; i++)
         {
             if (a[i] % 2 == 1 || a[i] % 2 == -1)
             {
