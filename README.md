@@ -103,6 +103,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [19. LINKED LIST](#19-linked-list)
 - [20. STACKS](#20-stacks)
 - [21. TREE](#21-tree)
+- [22. ALIASING](#22-aliasing)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2300,3 +2301,20 @@ class BinaryTree
     }// end of method traverseInOrder 
 }// end of class BinaryTree
 ```
+
+## 22. ALIASING
+
+![JavaDevGIF](https://user-images.githubusercontent.com/91504420/213823727-b8867e62-1fe9-4b88-998d-48d147dbbfb3.gif)
+
+In Java, aliasing occurs when two or more references refer to the same object in memory. This can lead to unexpected behavior, particularly when the object is modified through one reference and the change is not reflected through the other references. To avoid aliasing, it is best practice to use only one reference to an object, and to create new objects when necessary.
+
+One of the most common ways to avoid aliasing in Java is to use the clone() method. The clone() method creates a new object that is an exact copy of the original object. The new object is completely independent of the original object and any changes made to the new object will not affect the original object.
+
+Another way to avoid aliasing is to use immutable objects. Immutable objects are objects whose state cannot be modified after they are created. Examples of immutable objects in Java are the String, Integer, and BigDecimal classes.
+
+In addition, it is important to use proper encapsulation techniques to limit the scope of references and make it clear which objects are being referred to. This can be done through the use of private fields and getter/setter methods.
+
+In summary, aliasing can be avoided in Java by using the clone() method, immutable objects, and proper encapsulation techniques. These techniques help ensure that changes made to an object through one reference do not affect other references and prevent unexpected behavior.
+
+![image](https://user-images.githubusercontent.com/91504420/213823803-38ce000d-9652-44ba-a3cd-776822cad928.png)
+
