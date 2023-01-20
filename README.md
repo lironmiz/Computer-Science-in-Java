@@ -105,6 +105,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [21. TREE](#21-tree)
 - [22. ALIASING](#22-aliasing)
 - [23. STATIC KEYWORD](#23-static-keyword)
+- [24. JAVADOC](#24-javadoc)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2347,3 +2348,43 @@ class StaticKeyword
     }// end of method staticMethod 
 }// end of method StaticKeyword
 ```
+
+24. JAVADOC
+
+![ItsImportantBruhChrisReddGIF](https://user-images.githubusercontent.com/91504420/213825168-a134493c-df33-484f-af76-27ea344cfc08.gif)
+
+JavaDoc is a tool that is used to generate documentation for Java classes, methods, and fields. It uses special comments in the source code, called Javadoc comments, that begin with /** and end with */, to extract documentation. The documentation is then presented in the form of HTML pages that can be easily viewed in a web browser.
+
+JavaDoc uses a set of tags, such as @param and @return, to specify different types of information about the class, method, or field being documented. The generated documentation includes a summary of the class, method, or field, as well as details about its parameters, return type, and exceptions.
+
+JavaDoc is typically used to document the public API of a Java library or application, so that other developers can understand how to use the library or application.
+
+Here are some key points about JavaDoc:
+
+It is a documentation tool for generating API documentation in HTML format from Java source code
+It uses special comments starting with /** and ending with */ in the source code
+It uses tags to specify different types of information about the class, method, or field being documented
+It is typically used to document the public API of a Java library or application
+It is integrated with most of the modern IDEs like Eclipse, IntelliJ, Netbeans etc.
+In summary, JavaDoc is a tool that generates documentation for Java classes, methods, and fields using special comments in the source code. It uses tags to specify different types of information about the class, method, or field being documented and it is typically used to document the public API of a Java library or application.
+
+```java
+/**
+ * This class demonstrates the use of JavaDoc
+ *
+ * @author liron mizrhai
+ */
+class JavaDoc 
+{
+
+    /**
+     * The main method that runs the program
+     * @param args Command line arguments
+     * @return None
+     */
+    public static void main(String[] args)
+    {
+        System.out.println("Hello, this is a JavaDoc example!");
+    }// end of method main
+}// end of class JavaDoc
+``
