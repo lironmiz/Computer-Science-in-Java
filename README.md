@@ -99,7 +99,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [15. METHODS](#15-methods)
 - [16. RANDOM NUMBERS](#16-random-numbers)
 - [17. RECURSION](#17-recursion)
-- [17. READ AND WRITE TO FILE](#17-read-and-write-to-file)
+- [18. READ AND WRITE TO FILE](#18-read-and-write-to-file)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1796,6 +1796,8 @@ The most commonly used method is through the use of the "Random" class, which is
 
 This class provides methods for generating various types of random numbers, such as integers, doubles, and booleans. Additionally, the class also provides methods for generating random numbers within a specified range.
 
+![SuperRandomJohnnyWeissGIF](https://user-images.githubusercontent.com/91504420/213818160-5087f1ff-3a16-4d25-b450-589e1ce85d6d.gif)
+
 ```java
 import java.util.Random;
 
@@ -1822,6 +1824,8 @@ public class RandomNumbers
 ```
 
 ## 17. RECURSION
+
+![CatsGIF](https://user-images.githubusercontent.com/91504420/213818272-6a195ca3-2252-4b7f-8255-02ba2a514ee4.gif)
 
 Recursion in Java is a programming technique where a method calls itself in order to solve a problem. The method has a base case, which is a simple and straightforward problem that can be solved without recursion, and a recursive case, which breaks down the problem into simpler subproblems that can be solved using the same method.
 
@@ -1862,6 +1866,8 @@ public class Recursion
 }// end of class Recursion 
 ```
 ## 17. READ AND WRITE TO FILE
+
+![INeedThoseFilesAssistantSpecialAgentInChargeJubalValentineGIF](https://user-images.githubusercontent.com/91504420/213818305-5e1e57df-ac01-446c-85ca-511c5c7d7b1a.gif)
 
 Reading and writing to a file in Java can be done using the File and Scanner classes for reading, and the FileWriter and PrintWriter classes for writing.
 
