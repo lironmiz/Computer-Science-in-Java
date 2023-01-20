@@ -76,4 +76,22 @@ public class RentNode
     {
         _next = next;
     }// end of method setNext
+    /**
+     * method return RentNode at given index
+     * @parm int index
+     * @return RentNode
+     */
+    public RentNode get(int index)
+    {
+        if(index < 0)
+        {
+            throw new IndexOutOfBoundsException();
+        }
+        RentNode temp = new RentNode(_rent);
+        for(int i = 0; i < index; i++)
+        {
+            temp = temp.getNext();
+        }
+        return temp;
+    }// end of method get 
 }// end of class RentNode
