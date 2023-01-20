@@ -100,6 +100,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [16. RANDOM NUMBERS](#16-random-numbers)
 - [17. RECURSION](#17-recursion)
 - [18. READ AND WRITE TO FILE](#18-read-and-write-to-file)
+- [19. LINKED LIST](#19-linked-list)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1917,4 +1918,214 @@ public class WorkWithFile
         }
     }// end of main method 
 }// end of class WorkWithFile
+```
+
+## 19. LINKED LIST
+A linked list is a data structure that consists of a sequence of elements, each containing a reference (or "link") to its next element. In Java, the LinkedList class is a commonly used implementation of a linked list.
+
+One of the main advantages of a linked list over an array is that elements can be easily inserted or removed from the middle of the list. With an array, these operations would require shifting all of the elements after the insertion or removal point.
+
+The LinkedList class in Java provides a variety of methods for working with the list, such as adding and removing elements, retrieving elements at specific positions, and searching for elements. It also implements the List interface, which means it has all the common methods that a list should have like add(), get(), remove(), size(), clear(), etc.
+
+The LinkedList class uses a doubly-linked list implementation, which means that each element has a reference to both the next and the previous element in the list. This allows for efficient traversal in both directions.
+
+It's worth noting that LinkedList is less efficient than an ArrayList when it comes to random access of elements (i.e. by index) since it needs to traverse the list from the head to the element's index.
+
+It's also worth noting that linked lists require more memory than arrays, as each element requires a reference to the next element in addition to the element's value.
+
+```java
+import java.io.*; 
+    
+// Java program to implement 
+// a Singly Linked List 
+public class LinkedList 
+{ 
+    
+    Node head; // head of list 
+    
+    // Linked list Node. 
+    // This inner class is made static 
+    // so that main() can access it 
+    static class Node 
+    { 
+    
+        int data; 
+        Node next; 
+    
+        // Constructor 
+        Node(int d) 
+        { 
+            data = d; 
+            next = null; 
+        } // end of method Node
+    } // end of class Node
+    
+    // Method to insert a new node 
+    public static LinkedList insert(LinkedList list, int data) 
+    { 
+        // Create a new node with given data 
+        Node new_node = new Node(data); 
+          
+    
+        // If the Linked List is empty, 
+        // then make the new node as head 
+        if (list.head == null)
+	{ 
+            list.head = new_node; 
+        } 
+        else
+	{ 
+            // Else traverse till the last node 
+            // and insert the new_node there 
+            Node last = list.head; 
+            while (last.next != null)
+	    { 
+                last = last.next; 
+            } 
+    
+            // Insert the new_node at last node 
+            last.next = new_node; 
+        } 
+    
+        // Return the list by head 
+        return list; 
+    } // end of method insert
+    
+    // Method to print the LinkedList. 
+    public static void printList(LinkedList list) 
+    { 
+        Node currNode = list.head; 
+     
+        System.out.print("LinkedList: "); 
+     
+        // Traverse through the LinkedList 
+        while (currNode != null)
+	{ 
+            // Print the data at current node 
+            System.out.print(currNode.data + " "); 
+     
+            // Go to next node 
+            currNode = currNode.next; 
+        } 
+    } // end of method printList
+    
+     // Method to delete a node in the LinkedList by KEY
+    public static LinkedList deleteByKey(LinkedList list,int key)
+    {
+        // Store head node
+        Node currNode = list.head, prev = null;
+  
+
+        if (currNode != null && currNode.data == key)
+	{
+            list.head = currNode.next; // Changed head
+  
+            // Display the message
+            System.out.println(key + " found and deleted");
+  
+            // Return the updated List
+            return list;
+        }
+
+        while (currNode != null && currNode.data != key)
+	{
+            // If currNode does not hold key
+            // continue to next node
+            prev = currNode;
+            currNode = currNode.next;
+        }
+  
+        // If the key was present, it should be at currNode
+        // Therefore the currNode shall not be null
+        if (currNode != null)
+	{
+            // Since the key is at currNode
+            // Unlink currNode from linked list
+            prev.next = currNode.next;
+	    
+            System.out.println(key + " found and deleted");
+        }
+  
+        if (currNode == null)
+	{
+            // Display the message
+            System.out.println(key + " not found");
+        }
+  
+        // return the List
+        return list;
+    }// end of method deleteByKey
+    
+    // Method to delete a node in the LinkedList by POSITION
+    public static LinkedList deleteAtPosition(LinkedList list, int index)
+    {
+        // Store head node
+        Node currNode = list.head, prev = null;
+  
+        if (index == 0 && currNode != null)
+	{
+            list.head = currNode.next; // Changed head
+  
+            // Display the message
+            System.out.println(
+                index + " position element deleted");
+  
+            // Return the updated List
+            return list;
+        }
+  
+        while (currNode != null)
+	{
+  
+            if (counter == index)
+	    {
+                // Since the currNode is the required
+                // position Unlink currNode from linked list
+                prev.next = currNode.next;
+  
+                // Display the message
+                System.out.println(
+                    index + " position element deleted");
+                break;
+            }
+            else
+	    {
+                // If current position is not the index
+                // continue to next node
+                prev = currNode;
+                currNode = currNode.next;
+                counter++;
+            }
+        }
+  
+        // In this case, the currNode should be null
+        if (currNode == null)
+	{
+            // Display the message
+            System.out.println(index + " position element not found");
+        }
+  
+        // return the List
+        return list;
+    }// end of method deleteAtPosition
+    
+    public static void main(String[] args) 
+    { 
+        /* Start with the empty list. */
+        LinkedList list = new LinkedList(); 
+    
+        // Insert the values 
+        list = insert(list, 1); 
+        list = insert(list, 2); 
+        list = insert(list, 3); 
+        list = insert(list, 4); 
+        list = insert(list, 5); 
+        list = insert(list, 6); 
+        list = insert(list, 7); 
+        list = insert(list, 8); 
+    
+        // Print the LinkedList 
+        printList(list); 
+    } // end of main method 
+}// end of class LinkedList
 ```
