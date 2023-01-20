@@ -101,6 +101,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [17. RECURSION](#17-recursion)
 - [18. READ AND WRITE TO FILE](#18-read-and-write-to-file)
 - [19. LINKED LIST](#19-linked-list)
+- [20. STACKS](#20-stacks)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1921,6 +1922,9 @@ public class WorkWithFile
 ```
 
 ## 19. LINKED LIST
+
+![EverythingIsConnectedNeilDegrasseTysonGIF](https://user-images.githubusercontent.com/91504420/213820954-910f2d25-a25f-4ab7-98d9-520940c7ac98.gif)
+
 A linked list is a data structure that consists of a sequence of elements, each containing a reference (or "link") to its next element. In Java, the LinkedList class is a commonly used implementation of a linked list.
 
 One of the main advantages of a linked list over an array is that elements can be easily inserted or removed from the middle of the list. With an array, these operations would require shifting all of the elements after the insertion or removal point.
@@ -2128,4 +2132,46 @@ public class LinkedList
         printList(list); 
     } // end of main method 
 }// end of class LinkedList
+```
+## 20. STACKS
+A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning that the last element added to the stack will be the first one to be removed. In Java, the Stack class is a commonly used implementation of a stack.
+
+The Stack class provides a variety of methods for working with the stack, such as pushing and popping elements, retrieving the top element, checking if the stack is empty, and determining the current size of the stack. The most important methods of the stack are push(), which adds an element to the top of the stack, pop(), which removes and returns the top element of the stack, and peek(), which returns the top element of the stack without removing it.
+
+It's worth noting that the Stack class is considered as legacy class and it's not recommended to use it, instead of that it's recommended to use the Deque interface and it's implementations, such as ArrayDeque and LinkedList.
+
+It's also worth noting that stack can be implemented using an array, a linked list, or any other data structure. The choice of implementation will depend on the specific requirements of the application and the trade-offs in terms of performance, memory usage, and ease of implementation.
+```java
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+public class StackExample
+{
+    public static void main(String[] args)
+    {
+        // Creating a stack using the ArrayDeque class
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        // Adding elements to the stack
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        // Retrieving and removing the top element
+        int top = stack.pop();
+        System.out.println("Top element: " + top);
+
+        // Retrieving the top element without removing it
+        top = stack.peek();
+        System.out.println("Top element: " + top);
+
+        // Checking if the stack is empty
+        boolean isEmpty = stack.isEmpty();
+        System.out.println("Is the stack empty? " + isEmpty);
+
+        // Determining the size of the stack
+        int size = stack.size();
+        System.out.println("Size of the stack: " + size);
+    }// end of method main
+}// end of class StackExample
 ```
