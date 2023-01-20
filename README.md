@@ -97,6 +97,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [13. STRING CLASS](#13-string-class)
 - [14. STRING BUFFER CLASS](#14-string-buffer-class)
 - [15. METHODS](#15-methods)
+- [16. RANDOM NUMBERS](#16-random-numbers)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1785,3 +1786,36 @@ public class MethodExample
     }// end of method multiply
 }// end of class MethodExample
 ```
+## 16. RANDOM NUMBERS
+
+In Java, there are several ways to generate random numbers.
+
+The most commonly used method is through the use of the "Random" class, which is part of the Java standard library.
+
+This class provides methods for generating various types of random numbers, such as integers, doubles, and booleans. Additionally, the class also provides methods for generating random numbers within a specified range.
+
+```java
+import java.util.Random;
+
+public class RandomNumbers
+{
+    public static void main(String[] args)
+    {
+        // Creating an object of the Random class
+        Random rand = new Random();
+        
+        // Generating a random integer between 0 and 9 (inclusive)
+        int randomInt = rand.nextInt(10);
+        System.out.println("Random Integer: " + randomInt);
+
+        // Generating a random float between 0 and 1 (inclusive)
+        float randomFloat = rand.nextFloat();
+        System.out.println("Random Float: " + randomFloat);
+
+        // Generating a random double between 0 and 1 (inclusive)
+        double randomDouble = rand.nextDouble();
+        System.out.println("Random Double: " + randomDouble);
+    }// end of method main 
+}// end of class RandomNumbers 
+```
+
