@@ -102,6 +102,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [18. READ AND WRITE TO FILE](#18-read-and-write-to-file)
 - [19. LINKED LIST](#19-linked-list)
 - [20. STACKS](#20-stacks)
+- [21. TREE](#21-tree)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2134,6 +2135,9 @@ public class LinkedList
 }// end of class LinkedList
 ```
 ## 20. STACKS
+
+![StackEmUpStackGIF](https://user-images.githubusercontent.com/91504420/213821631-05812600-ef40-4a6d-9d06-501dda9e1ae4.gif)
+
 A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning that the last element added to the stack will be the first one to be removed. In Java, the Stack class is a commonly used implementation of a stack.
 
 The Stack class provides a variety of methods for working with the stack, such as pushing and popping elements, retrieving the top element, checking if the stack is empty, and determining the current size of the stack. The most important methods of the stack are push(), which adds an element to the top of the stack, pop(), which removes and returns the top element of the stack, and peek(), which returns the top element of the stack without removing it.
@@ -2174,4 +2178,125 @@ public class StackExample
         System.out.println("Size of the stack: " + size);
     }// end of method main
 }// end of class StackExample
+```
+
+21. TREE
+
+![FlowersTreeGIF](https://user-images.githubusercontent.com/91504420/213821878-6cb53244-8db2-4854-af0e-5c0d8cb2bb3e.gif)
+
+A tree is a non-linear data structure that consists of a set of nodes, where each node can have one or more child nodes. In Java, the Tree interface and the DefaultMutableTreeNode class are commonly used to implement a tree.
+
+Trees can be used to represent hierarchical relationships, such as file systems, family trees, or decision-making processes. Each node in the tree represents an element, and the relationship between nodes represents a parent-child relationship.
+
+The Tree interface provides methods for working with the tree structure, such as adding, removing, and retrieving nodes, as well as traversing the tree in various ways, such as breadth-first or depth-first. The DefaultMutableTreeNode class is a concrete implementation of the Tree interface that can be used to create a tree and add nodes to it.
+
+In Java, there are different types of tree data structures, such as binary trees, where each node can have at most two children, and binary search trees, where the left child node has a value less than the parent node and the right child node has a value greater than the parent node.
+
+```java
+class BinaryTree
+{
+    Node root;
+ 
+    public void add(int data)
+    {
+        root = addRecursive(root, data);
+    }// end of method add
+ 
+    private Node addRecursive(Node current, int data)
+    {
+        if (current == null)
+	{
+            return new Node(data);
+        }
+ 
+        if (data < current.data)
+	{
+            current.left = addRecursive(current.left, data);
+        } 
+	else if (data > current.data)
+	{
+            current.right = addRecursive(current.right, data);
+        }
+	else
+	{
+            return current;
+        }
+ 
+        return current;
+    }// end of method addRecursive 
+ 
+    public boolean containsNode(int data)
+    {
+        return containsNodeRecursive(root, data);
+    }// end of method containsNode
+ 
+    private boolean containsNodeRecursive(Node current, int data)
+    {
+        if (current == null) 
+	{
+            return false;
+        } 
+        if (data == current.data) 
+	{
+            return true;
+        } 
+        return data < current.data ? containsNodeRecursive(current.left, data) : containsNodeRecursive(current.right, data);
+    }// end of method containsNodeRecursive
+ 
+    public void delete(int data) 
+    {
+        root = deleteRecursive(root, data);
+    }// end of delete method 
+ 
+    private Node deleteRecursive(Node current, int data) 
+    {
+        if (current == null) 
+	{
+            return null;
+        }
+ 
+        if (data == current.data)
+	{
+            if (current.left == null && current.right == null)
+	    {
+                return null;
+            }
+            if (current.right == null)
+	    {
+                return current.left;
+            }
+ 
+            if (current.left == null)
+	    {
+                return current.right;
+            }
+            int smallestValue = findSmallestValue(current.right);
+            current.data = smallestValue;
+            current.right = deleteRecursive(current.right, smallestValue);
+            return current;
+        }
+        if (data < current.data)
+	{
+            current.left = deleteRecursive(current.left, data);
+            return current;
+        }
+        current.right = deleteRecursive(current.right, data);
+        return current;
+    }// end of deleteRecursive methdo 
+ 
+    private int findSmallestValue(Node root)
+    {
+        return root.left == null ? root.data : findSmallestValue(root.left);
+    }// end of method findSmallestValue
+    
+    public void traverseInOrder(Node node)
+    {
+        if (node != null)
+	{
+            traverseInOrder(node.left);
+            System.out.print(" " + node.data);
+            traverseInOrder(node.right);
+        }
+    }// end of method traverseInOrder 
+}// end of class BinaryTree
 ```
