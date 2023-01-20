@@ -99,6 +99,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [15. METHODS](#15-methods)
 - [16. RANDOM NUMBERS](#16-random-numbers)
 - [17. RECURSION](#17-recursion)
+- [17. READ AND WRITE TO FILE](#17-read-and-write-to-file)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1859,4 +1860,55 @@ public class Recursion
         }
     }// end of method factorial
 }// end of class Recursion 
+```
+## 17. READ AND WRITE TO FILE
+
+Reading and writing to a file in Java can be done using the File and Scanner classes for reading, and the FileWriter and PrintWriter classes for writing.
+
+To read a file, you can first create a File object that represents the file you want to read, and then create a Scanner object that reads the contents of the file. You can then use the nextLine() method of the Scanner class to read each line of the file.
+
+To write a file, you can first create a FileWriter object that represents the file you want to write to, and then create a PrintWriter object that writes to the file. You can then use the println() method of the PrintWriter class to write to the file.
+
+It's important to handle the exception when reading and writing to a file in case the file doesn't exist or there's a problem with the file path.
+
+When reading and writing to a file, it's also important to close the file when you're finished. This can be done by calling the close() method on the Scanner, FileWriter, and PrintWriter objects.
+
+It's also worth noting that java.nio package offers another set of classes to perform file reading and writing operations such as Files, Paths and BufferedReader which offer better performance and flexibility over the traditional IO package.
+
+```java
+import java.io.*;
+
+public class WorkWithFile
+{
+    public static void main(String[] args)
+    {
+        // File to read from
+        File file = new File("example.txt");
+        // File to write to
+        File outputFile = new File("output.txt");
+        
+        try 
+	{
+            // Reading from file
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = br.readLine()) != null) 
+	    {
+                System.out.println(line);
+            }
+            br.close();
+            
+            // Writing to file
+            PrintWriter writer = new PrintWriter(new FileWriter(outputFile));
+            writer.println("Writing to file example");
+            writer.close();
+            
+        } 
+	catch (IOException e
+	{
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }// end of main method 
+}// end of class WorkWithFile
 ```
