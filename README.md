@@ -98,6 +98,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [14. STRING BUFFER CLASS](#14-string-buffer-class)
 - [15. METHODS](#15-methods)
 - [16. RANDOM NUMBERS](#16-random-numbers)
+- [17. RECURSION](#17-recursion)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -1819,3 +1820,43 @@ public class RandomNumbers
 }// end of class RandomNumbers 
 ```
 
+## 17. RECURSION
+
+Recursion in Java is a programming technique where a method calls itself in order to solve a problem. The method has a base case, which is a simple and straightforward problem that can be solved without recursion, and a recursive case, which breaks down the problem into simpler subproblems that can be solved using the same method.
+
+In order for a recursive method to terminate, it must have a base case that is reached at some point. If the base case is not reached, the method will continue calling itself indefinitely, resulting in a stack overflow error.
+
+A common example of recursion is the factorial function, which calculates the factorial of a given number. This can be computed using a loop, but it can also be computed using recursion.
+
+Recursive methods can also be more efficient than their iterative counterparts, as they can take advantage of the computer's stack memory to store temporary data.
+
+However, recursion can also consume more memory and processing power, so it's important to use it judiciously and be mindful of the problem's complexities.
+
+It's also important to be mindful of the problem's complexities when using recursion and that some problems can be solved more efficiently with an iterative approach.
+
+```java
+public class Recursion 
+{
+    public static void main(String[] args)
+    {
+        // Call the recursive method
+        int result = factorial(5);
+        System.out.println("Factorial of 5: " + result);
+    }// end of method main 
+
+    // Recursive method to calculate the factorial of a given number
+    public static int factorial(int n)
+    {
+        // Base case: if n is 0 or 1, return 1
+        if (n == 0 || n == 1)
+	{
+            return 1;
+        }
+        // Recursive case: return n * factorial(n-1)
+        else 
+	{
+            return n * factorial(n-1);
+        }
+    }// end of method factorial
+}// end of class Recursion 
+```
