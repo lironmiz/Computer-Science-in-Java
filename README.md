@@ -104,6 +104,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [20. STACKS](#20-stacks)
 - [21. TREE](#21-tree)
 - [22. ALIASING](#22-aliasing)
+- [23. STATIC KEYWORD](#23-static-keyword)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2318,3 +2319,31 @@ In summary, aliasing can be avoided in Java by using the clone() method, immutab
 
 ![image](https://user-images.githubusercontent.com/91504420/213823803-38ce000d-9652-44ba-a3cd-776822cad928.png)
 
+## 23. STATIC KEYWORD
+
+![ProgrammingGIF](https://user-images.githubusercontent.com/91504420/213824446-b93eb392-f6e5-45d1-8dfd-9e7a31bf9594.gif)
+
+The static keyword in Java is used to indicate that a member (field or method) belongs to a class rather than an instance of the class. This means that the member is shared by all instances of the class and can be accessed without creating an instance of the class.
+
+Here are some key points about the static keyword in Java:
+
+Static fields and methods can be accessed directly through the class name, without the need to create an instance of the class.
+Static fields and methods are initialized only once, when the class is loaded by the JVM.
+Static methods cannot access non-static fields and methods, as they do not have access to an instance of the class.
+Static fields can be accessed by both static and non-static methods.
+Static block is used to initialize the static variable, it gets executed only once when the class is loaded in the memory.
+It is commonly used for utility classes, factory classes, and for constants.
+In summary, the static keyword in Java is used to indicate that a member belongs to a class rather than an instance of the class. It allows fields and methods to be accessed directly through the class name, without the need to create an instance of the class and allows shared resources across all instances of a class. It is commonly used for utility classes, factory classes, and for constants.
+
+```java
+class StaticKeyword
+{
+    static int staticInt = 0; //static variable
+
+    public static void staticMethod()
+    {  
+        staticInt++;
+        System.out.println("This is a static method. staticInt = " + staticInt);
+    }// end of method staticMethod 
+}// end of method StaticKeyword
+```
