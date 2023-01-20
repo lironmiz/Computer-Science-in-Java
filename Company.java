@@ -113,6 +113,10 @@ public class Company
                 {
                     return i;
                 }
+                else if(date.equals(curPickUpDate))
+                {
+                    return i + 1;
+                }
             }
             return _noOfRents;
         } 
