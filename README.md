@@ -108,7 +108,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [24. JAVADOC](#24-javadoc) 
 - [25. ACCESS MODIFIERS](#25-accesss-modifiers)
 - [26. 	OBJECT-ORIENTED-PROGRAMMING](#26-object-oriented-programming)
-- [27. ENUM](#27-enum)  constant
+- [27. ENUM](#27-enum)  
 - [28. CONSTANT](#28-constant)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
