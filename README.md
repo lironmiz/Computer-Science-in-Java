@@ -113,7 +113,8 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [29. EXCEPTION HANDLING](#29-exception-handling)  
 - [30. OBJECT CLASS](#30-object-class)
 - [31. TIME COMPLEXITY](#31-time-complexity) 
-- [32. SPCAE COMPLEXITY](#32-space-complexity)
+- [32. SPCAE COMPLEXITY](#32-space-complexity) 
+- [33. QUEUES](#33-queues)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2862,4 +2863,64 @@ class SpaceComplexity
         }
     }// end of main method 
 }// end of class SpaceComplexity
+```
+
+## 33. QUEUES
+
+![YatoHerzogGIF](https://user-images.githubusercontent.com/91504420/213871781-96d4d448-cf91-452e-be54-5ef12086a7bb.gif)
+
+A queue is a linear data structure in Java that follows the First-In-First-Out (FIFO) principle. It is a collection of elements that are added to the back of the queue and removed from the front of the queue.
+
+The main operations performed on a queue are enqueue (add an element to the back of the queue) and dequeue (remove an element from the front of the queue).
+
+Java provides a built-in implementation of a queue in the form of the Queue interface and several classes that implement it such as LinkedList, PriorityQueue, ArrayDeque which are all part of the Java Collection Framework.
+
+The LinkedList class, for example, provides a add() method for adding an element to the back of the queue and a remove() method for removing an element from the front of the queue.
+PriorityQueue is a priority queue, elements are dequeued in order of priority.
+ArrayDeque is a resizable array implementation of the Deque interface, it's faster than the linked list implementation.
+
+Queues are used in a variety of applications, such as:
+
++ simulating real-world scenarios where items are added and removed in a first-in-first-out order, such as a line of customers at a store
+
++ implementing algorithms that require breadth-first traversal, such as breadth-first search
+
++ coordination between multiple threads or processes, such as a task queue for a worker thread
+
+It's worth noting that, Queues are not thread-safe, which means they are not safe to use in a multi-threaded environment without additional synchronization. Java provides thread-safe implementations of queues in the form of ConcurrentLinkedQueue and BlockingQueue classes.
+
+![image](https://user-images.githubusercontent.com/91504420/213871849-fcfb69eb-0be4-459e-877d-459195e210a3.png)
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+class QueuesExample
+{
+    public static void main(String[] args)
+    {
+        Queue<Integer> queue = new LinkedList<>();
+        
+        // Enqueue elements
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        
+        // Dequeue elements
+        System.out.println(queue.remove()); // output: 1
+        System.out.println(queue.remove()); // output: 2
+        
+        // Check the front element without dequeueing it
+        System.out.println(queue.peek()); // output: 3
+        
+        // Check if the queue is empty
+        System.out.println(queue.isEmpty()); // output: false
+        
+        // Dequeue all remaining elements
+        while (!queue.isEmpty())
+	{
+            System.out.print(queue.remove() + " "); // output: 3
+        }
+    }// end of main method 
+}// end of class QueuesExample
 ```
