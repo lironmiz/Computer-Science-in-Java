@@ -116,6 +116,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [32. SPCAE COMPLEXITY](#32-space-complexity) 
 - [33. QUEUES](#33-queues) 
 - [34. GENERICS](#34-generics)
+- [35. UNARY OPERATOR](#35-unary-operator)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2953,3 +2954,54 @@ Here, the type parameter T is used to specify the type of the elements in the ar
 
 It's worth mentioning that, Generics were introduced in Java SE 5, it provides a way for creating a single class, interface or method that works with multiple types of data. It eliminates the need for explicit type casting and allows for increased code reusability, type-safety and stronger type checking.
 
+## 35. UNARY OPERATOR
+
+![IOnlyHaveOneJobFreddieBensonGIF](https://user-images.githubusercontent.com/91504420/213872915-d3290edb-50b8-4e4c-bc4a-09852c21ad96.gif)
+
+A unary operator in Java is an operator that performs an operation on a single operand. The operand can be a variable, a constant, or an expression. There are several types of unary operators in Java:
+
+Arithmetic unary operators: These operators perform arithmetic operations on a single operand. The most common arithmetic unary operators are + and -. For example, -x negates the value of x and +x returns the value of x.
+
+Increment and decrement operators: These operators increment or decrement the value of a variable by 1. The increment operator (++) adds 1 to the variable, and the decrement operator (--) subtracts 1 from the variable. The increment and decrement operators can be used in both prefix and postfix notation.
+
+Logical unary operators: These operators perform logical operations on a single operand. The most common logical unary operator is the negation operator (!). For example, !true returns false.
+
+Bitwise unary operator: These operators perform bitwise operations on a single operand, the most common bitwise unary operator is the bitwise complement operator (~) which inverts all the bits of the operand.
+
+```java
+class UnaryOperator
+{
+    public static void main(String[] args)
+    {
+        int x = 5;
+        int y = -10;
+        
+        // Arithmetic unary operator
+        System.out.println(-x); // output: -5
+        System.out.println(+y); // output: -10
+        
+        // Increment and decrement operator
+        int z = 0;
+        System.out.println(++z); // output: 1
+        System.out.println(z++); // output: 1
+        System.out.println(z); // output: 2
+        
+        // Logical unary operator
+        boolean flag = true;
+        System.out.println(!flag); // output: false
+        
+        // Bitwise unary operator
+        int a = 10;
+        System.out.println(~a); // output: -11
+        
+        // Typecasting unary operator
+        double pi = 3.14;
+        int intPi = (int) pi;
+        System.out.println(intPi); // output: 3
+    }// end of method main 
+}// end of class UnaryOperator
+```
+
+Typecasting unary operator: The unary operator () can be used to cast the operand to a different type.
+
+It's worth noting that, the unary operator can be used before or after the operand, depending on the operator, the position of the operator can affect the value of the expression. The increment and decrement operators, for example, behave differently when used in prefix notation (++x) versus postfix notation (x++).
