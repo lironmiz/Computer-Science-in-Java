@@ -111,6 +111,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [27. ENUM](#27-enum)  
 - [28. CONSTANT](#28-constant)
 - [29. EXCEPTION HANDLING](#29-exception-handling)  
+- [30. OBJECT CLASS](#30-object-class)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2726,5 +2727,44 @@ catch (InvalidAgeException e)
     
 }
 ```
+
+## 30. OBJECT CLASS
+
+The Object class is the root class of all classes in Java. It is the superclass of all other classes and provides a basic set of methods and fields that are inherited by all other classes. The Object class is located in the java.lang package, which is automatically imported into all Java programs, so you don't need to import it explicitly.
+
+The Object class provides several important methods such as:
+
+ + equals(): compares the current object with another object for equality.
+ + hashCode(): returns a hash code value for the object.
+ + toString(): returns a string representation of the object.
+ + getClass(): returns the runtime class of an object.
+ + finalize() : method that is invoked before an object is garbage collected.
+ 
+The Object class also provides a basic implementation of the clone() method, which creates a new object that is a copy of the current object. However, it's a protected method, so it can be overridden by subclasses to provide a more specific implementation.
+
+In summary, the Object class is the root class of all classes in Java. It provides a basic set of methods and fields that are inherited by all other classes, including the equals(), hashCode(), toString(), getClass() and finalize() methods. It also provides a basic implementation of the clone() method which creates a new object that is a copy of the current object.
+
+```java
+class ObjectClass 
+{
+    public static void main(String[] args) 
+    {
+        // creating two objects of ObjectClass
+        ObjectClass obj1 = new ObjectClass();
+        ObjectClass obj2 = new ObjectClass();
+        
+        // using the equals method of Object class to compare the two objects
+        System.out.println("obj1 and obj2 are equal: " + obj1.equals(obj2));
+        
+        // using the toString method of Object class to return a string representation of the object
+        System.out.println("String representation of obj1: " + obj1.toString());
+        
+        // using the getClass method of Object class to return the runtime class of an object
+        System.out.println("Class of obj1: " + obj1.getClass());
+    }// end of main method 
+}// end of class ObjectClass
+```
+
+![image](https://user-images.githubusercontent.com/91504420/213866257-4288f286-7616-483e-bc9f-ea5b6d870491.png)
 
 
