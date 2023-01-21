@@ -113,6 +113,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [29. EXCEPTION HANDLING](#29-exception-handling)  
 - [30. OBJECT CLASS](#30-object-class)
 - [31. TIME COMPLEXITY](#31-time-complexity) 
+- [32. SPCAE COMPLEXITY](#32-space-complexity)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2815,4 +2816,50 @@ class TimeComplexity
         }
     }// end of main method 
 }// end of class TimeComplexity
+```
+
+## 32. SPCAE COMPLEXITY
+
+![ImJustGivingYouYourSpacePrestonHoraceGIF](https://user-images.githubusercontent.com/91504420/213871347-035b736e-8920-448d-a676-1d0614538de6.gif)
+
+Space complexity in Java refers to the amount of memory used by an algorithm or program, usually measured in terms of the size of the input. The most common space complexities in Java are:
+
++ O(1) or constant space, which means the memory usage does not depend on the size of the input
+
++ O(n) or linear space, which means the memory usage is directly proportional to the size of the input
+
++ O(n^2) or quadratic space, which means the memory usage increases exponentially with the size of the input.
+
+When analyzing and comparing algorithms, it's important to consider the space complexity and choose the one that has the best performance for the specific problem and input size. In some situations, using less memory may be more important than using less time, and vice versa.
+
+It's also worth noting that in addition to the memory usage of the algorithm itself, the memory usage of any data structures used by the algorithm, such as arrays and lists, should also be taken into account.
+
+It's important to be aware of the space complexity of an algorithm to prevent running out of memory or using too much memory, especially when working with large datasets or when using limited resources such as mobile devices.
+
+![image](https://user-images.githubusercontent.com/91504420/213871399-843a661b-c6ae-43c8-aea5-b3812d318f3b.png)
+
+```java
+class SpaceComplexity 
+{
+    public static void main(String[] args) 
+    {
+        int[] arr = {1, 2, 3, 4, 5};
+        
+        // O(1) example
+        int constant = 3; // constant space, the amount of memory used does not depend on the size of the input
+        
+        // O(n) example
+        int[] linear = arr.clone(); // linear space, the amount of memory used is directly proportional to the size of the input
+        
+        // O(n^2) example
+        int[][] quadratic = new int[arr.length][arr.length]; // quadratic space, the amount of memory used increases exponentially with the size of the input
+        for (int i = 0; i < arr.length; i++) 
+	{
+            for (int j = 0; j < arr.length; j++) 
+	    {
+                quadratic[i][j] = arr[i] * arr[j];
+            }
+        }
+    }// end of main method 
+}// end of class SpaceComplexity
 ```
