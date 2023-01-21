@@ -108,6 +108,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [24. JAVADOC](#24-javadoc) 
 - [25. ACCESS MODIFIERS](#25-accesss-modifiers)
 - [26. 	OBJECT-ORIENTED-PROGRAMMING](#26-object-oriented-programming)
+- [27. ENUM](#27-enum) 
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2583,3 +2584,26 @@ public class PolymorphismExample
     }// end of method main
 }// end of method PolymorphismExample 
 ```
+## 27. ENUM
+
+![AwesomeDealWithItGIF](https://user-images.githubusercontent.com/91504420/213864061-b3059414-f60b-4e34-98e4-578c0cd7caca.gif)
+
+An enumeration is a special type of class in Java that defines a set of predefined values. Enumerations, also known as enums, are used to represent a fixed set of constants, such as the days of the week or the suits in a deck of cards.
+
+An enum is declared using the enum keyword, followed by the name of the enumeration and a list of enumeration constants enclosed in curly braces. For example:
+```java
+enum Day
+{
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+```
+
+The enumeration constants are automatically given a unique integer value, starting from 0, and can be accessed using the name of the enumeration. For example, Day.MONDAY refers to the enumeration constant MONDAY in the Day enumeration.
+
+Enumerations are useful in situations where a variable can only take on a fixed set of values, as they provide type safety and make the code more readable.
+
+They also have some additional properties such as ordinal() which returns the index of the enumeration constant, name() which returns the name of the enumeration constant, and compareTo() which compares the enumeration constants based on their ordinal values.
+
+In summary, enums in Java are special types of classes that define a set of predefined constants. They are useful in situations where a variable can only take on a fixed set of values, as they provide type safety and make the code more readable.
+
+They also have additional properties such as ordinal(), name() and compareTo() which provide more functionality to work with the enumeration constants.
