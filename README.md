@@ -2388,7 +2388,7 @@ class JavaDoc
         System.out.println("Hello, this is a JavaDoc example!");
     }// end of method main
 }// end of class JavaDoc
-``
+```
 
 ## ACCESS MODIFIERS
 
@@ -2406,9 +2406,14 @@ Access modifiers are used to restrict the level of access to a class, method, or
 The most restrictive access modifier is private, followed by default, protected, and then public.
 The default access level for a class, method, or variable is package-private.
 Classes and interfaces can only be declared public or default.
+
+
 Inner classes can be declared with any access modifier.
 If a class is declared public, it must be saved in a file with the same name as the class and the file should be in the root of the source code directory.
-In summary, Access modifiers in Java are keywords that specify the level of access to a class, method, or variable. There are four access modifiers: public, protected, default (no keyword), and private. Public members have the least restrictions, while private members have the most. The default access level for a class, method, or variable is package-private. Access modifiers are used to restrict the level of access to a class, method, or variable and can be used to ensure encapsulation and information hiding.
+
+In summary, Access modifiers in Java are keywords that specify the level of access to a class, method, or variable. There are four access modifiers: public, protected, default (no keyword), and private. Public members have the least restrictions, while private members have the most.
+
+The default access level for a class, method, or variable is package-private. Access modifiers are used to restrict the level of access to a class, method, or variable and can be used to ensure encapsulation and information hiding.
 
 ![image](https://user-images.githubusercontent.com/91504420/213826653-414b97cc-3b34-41a9-b33f-13a31b7bb919.png)
 
