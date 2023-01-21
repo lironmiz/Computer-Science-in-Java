@@ -2730,6 +2730,8 @@ catch (InvalidAgeException e)
 
 ## 30. OBJECT CLASS
 
+![ImJustAProudPapaJohnKrasinskiGIF](https://user-images.githubusercontent.com/91504420/213866367-b26e970f-b4e1-483e-af6f-4802112ab52f.gif)
+
 The Object class is the root class of all classes in Java. It is the superclass of all other classes and provides a basic set of methods and fields that are inherited by all other classes. The Object class is located in the java.lang package, which is automatically imported into all Java programs, so you don't need to import it explicitly.
 
 The Object class provides several important methods such as:
