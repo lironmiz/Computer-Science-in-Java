@@ -114,7 +114,8 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [30. OBJECT CLASS](#30-object-class)
 - [31. TIME COMPLEXITY](#31-time-complexity) 
 - [32. SPCAE COMPLEXITY](#32-space-complexity) 
-- [33. QUEUES](#33-queues)
+- [33. QUEUES](#33-queues) 
+- [34. GENERICS](#34-generics)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2924,3 +2925,31 @@ class QueuesExample
     }// end of main method 
 }// end of class QueuesExample
 ```
+
+## 34. GENERICS
+
+![ImDoingEverythingSalCamposGIF](https://user-images.githubusercontent.com/91504420/213872487-84428854-3373-4d05-95b5-9b8725e8e05f.gif)
+
+Generics in Java is a feature that allows developers to write reusable, type-safe code. With generics, developers can define a class, interface, or method that can work with multiple types of data, rather than being restricted to a single type. This allows for increased code reusability and eliminates the need for explicit type casting.
+
+To use generics, developers use angle brackets < > to define a type parameter, which is a placeholder for a specific type that will be provided when the class, interface, or method is instantiated or invoked. For example, a generic class for a stack might be defined as Stack<T>, where T is the type parameter.
+
+Generics are typically used in collection classes such as List, Set, and Queue to specify the type of objects that they can hold. For example, a List<Integer> is a list of integers, and a List<String> is a list of strings.
+
+In addition to classes and interfaces, generics can also be used in method declarations. A generic method is a method that has a type parameter, which can be used as the type of its return value or as the type of one or more of its parameters.
+
+For example, a generic method that swaps the positions of two elements in an array could be defined as follows:
+
+```java
+public static <T> void swap(T[] array, int i, int j)
+{
+    T temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}// end of method swap
+```
+
+Here, the type parameter T is used to specify the type of the elements in the array, and the method can be used with arrays of any type.
+
+It's worth mentioning that, Generics were introduced in Java SE 5, it provides a way for creating a single class, interface or method that works with multiple types of data. It eliminates the need for explicit type casting and allows for increased code reusability, type-safety and stronger type checking.
+
