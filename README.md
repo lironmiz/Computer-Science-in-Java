@@ -110,6 +110,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [26. 	OBJECT-ORIENTED-PROGRAMMING](#26-object-oriented-programming)
 - [27. ENUM](#27-enum)  
 - [28. CONSTANT](#28-constant)
+- [29. EXCEPTION HANDLING](#29-exception-handling)  
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2652,3 +2653,78 @@ public class Constant
     }// end of main method 
 }// end of class Constant
 ```
+
+## 29. EXCEPTION HANDLING
+
+![ICanHandleItBillFrazierGIF](https://user-images.githubusercontent.com/91504420/213865427-90f51e8a-d38d-4fac-9248-1d1ffe65c3a0.gif)
+
+Exception handling is a mechanism in Java that allows a program to handle and recover from errors, known as exceptions, that occur during the execution of the program. Exceptions are events that occur during the execution of a program that disrupt the normal flow of instructions.
+
+When an exception occurs, the program generates an object of the class Throwable or one of its subclasses, known as an exception object.
+
+Java provides a built-in mechanism for exception handling, which includes the try-catch statement and the throw statement. The try-catch statement is used to enclose a block of code that might throw an exception. The catch block is used to handle the exception and provide an appropriate response. For example:
+
+```java
+try 
+{
+    // code that might throw an exception
+} 
+catch (ExceptionType e) 
+{
+    // code to handle the exception
+}
+```
+
+The throw statement is used to explicitly throw an exception. It can be used to signal that an abnormal condition has occurred and that the program cannot continue. For example:
+
+```java
+if (input < 0)
+{
+    throw new IllegalArgumentException("Input cannot be negative");
+}
+```
+Java also provides a finally block which is used to execute some code regardless of whether an exception is thrown or not. It is typically used to release resources such as file handles or network connections that were acquired in the try block.
+
+In summary, exception handling in Java is a mechanism that allows a program to handle and recover from errors that occur during the execution of the program. It includes the try-catch statement, the throw statement and the finally block.
+
+The try-catch statement is used to enclose a block of code that might throw an exception, the catch block is used to handle the exception and provide an appropriate response, the throw statement is used to explicitly throw an exception and the finally block is used to execute some code regardless of whether an exception is thrown or not, typically used to release resources.
+
+### 29.1 Custom Exception 
+
+In Java, a custom exception is a user-defined exception class that inherits from one of the exception classes provided by the Java standard library. Custom exceptions are used to handle specific error conditions that are not covered by the built-in exception classes. They can be used to provide a more informative error message or to handle the error condition in a specific way.
+
+To create a custom exception, you need to create a new class that inherits from one of the exception classes provided by the Java standard library, such as Exception, RuntimeException, or IOException. For example, you can create a custom exception class called InvalidAgeException that inherits from Exception:
+
+```java
+public class InvalidAgeException extends Exception 
+{
+    public InvalidAgeException(String message)
+    {
+        super(message);
+    }// end of method InvalidAgeException
+}// end of class InvalidAgeException that extends Exception
+```
+
+Then you can throw the custom exception in your code when a specific error condition occurs, such as an invalid age is passed as an argument:
+
+```java
+if (age < 0) 
+{
+    throw new InvalidAgeException("Age cannot be negative");
+}
+```
+
+And you can catch the custom exception and handle it accordingly:
+
+```java
+try 
+{
+    // code that might throw InvalidAgeException
+} 
+catch (InvalidAgeException e) 
+{
+    
+}
+```
+
+
