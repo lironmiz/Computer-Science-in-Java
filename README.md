@@ -112,6 +112,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [28. CONSTANT](#28-constant)
 - [29. EXCEPTION HANDLING](#29-exception-handling)  
 - [30. OBJECT CLASS](#30-object-class)
+- [31. TIME COMPLEXITY](#31-time-complexity) 
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2769,4 +2770,49 @@ class ObjectClass
 
 ![image](https://user-images.githubusercontent.com/91504420/213866257-4288f286-7616-483e-bc9f-ea5b6d870491.png)
 
+## 31. TIME COMPLEXITY
 
+![ItsComplicatedAndrewGloubermanGIF](https://user-images.githubusercontent.com/91504420/213870908-d65aef99-44d6-4840-8fed-502b8adff4c5.gif)
+
+Time complexity in Java refers to the amount of time it takes for an algorithm or program to run, usually measured in terms of the size of the input. The most common time complexities in Java are:
+
++ O(1) or constant time, which means the runtime does not depend on the size of the input
+
++ O(log n) or logarithmic time, which means the runtime increases logarithmically with the size of the input
+
++ O(n) or linear time, which means the runtime is directly proportional to the size of the input
+
++ O(n log n) which means the runtime increases by n log n with the size of the input
+
++ O(n^2) or quadratic time, which means the runtime increases exponentially with the size of the input.
+
+When analyzing and comparing algorithms, it's important to consider the time complexity and choose the one that has the best performance for the specific problem and input size.
+
+![image](https://user-images.githubusercontent.com/91504420/213870960-b8af0063-40aa-46d0-af9c-c5dde01ff884.png)
+
+```java 
+class TimeComplexity
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {1, 2, 3, 4, 5};
+        
+        // O(1) example
+        System.out.println(arr[2]); // constant time, no matter how big the array is, it will always take the same time to access the 3rd element
+        
+        // O(n) example
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " "); // linear time, the amount of time it takes will increase with the size of the input
+        }
+        
+        // O(n^2) example
+        for (int i = 0; i < arr.length; i++) 
+	{
+            for (int j = 0; j < arr.length; j++) 
+	    {
+                System.out.print(arr[i] + " " + arr[j] + " "); // quadratic time, the amount of time it takes will increase exponentially with the size of the input
+            }
+        }
+    }// end of main method 
+}// end of class TimeComplexity
+```
