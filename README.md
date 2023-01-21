@@ -105,7 +105,8 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [21. TREE](#21-tree)
 - [22. ALIASING](#22-aliasing)
 - [23. STATIC KEYWORD](#23-static-keyword)
-- [24. JAVADOC](#24-javadoc)
+- [24. JAVADOC](#24-javadoc) 
+- [25. ACCESS MODIFIERS](#25-accesss-modifiers)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2388,3 +2389,26 @@ class JavaDoc
     }// end of method main
 }// end of class JavaDoc
 ``
+
+## ACCESS MODIFIERS
+
+![YouCantDoThatOliverGIF](https://user-images.githubusercontent.com/91504420/213826224-bfa4b9b8-258a-4f8b-81d6-a8fcd281b5a0.gif)
+
+In Java, access modifiers are keywords used to specify the level of access to a class, method, or variable. The four access modifiers in Java are:
+
+public: A public class, method, or variable can be accessed from anywhere in the program.
+protected: A protected method or variable can be accessed within the same package or by a subclass in a different package.
+default (no keyword): A default class, method, or variable can be accessed within the same package.
+private: A private method or variable can be accessed only within the same class.
+Here are some key points about access modifiers in Java:
+
+Access modifiers are used to restrict the level of access to a class, method, or variable.
+The most restrictive access modifier is private, followed by default, protected, and then public.
+The default access level for a class, method, or variable is package-private.
+Classes and interfaces can only be declared public or default.
+Inner classes can be declared with any access modifier.
+If a class is declared public, it must be saved in a file with the same name as the class and the file should be in the root of the source code directory.
+In summary, Access modifiers in Java are keywords that specify the level of access to a class, method, or variable. There are four access modifiers: public, protected, default (no keyword), and private. Public members have the least restrictions, while private members have the most. The default access level for a class, method, or variable is package-private. Access modifiers are used to restrict the level of access to a class, method, or variable and can be used to ensure encapsulation and information hiding.
+
+![image](https://user-images.githubusercontent.com/91504420/213826653-414b97cc-3b34-41a9-b33f-13a31b7bb919.png)
+
