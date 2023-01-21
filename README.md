@@ -108,7 +108,8 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [24. JAVADOC](#24-javadoc) 
 - [25. ACCESS MODIFIERS](#25-accesss-modifiers)
 - [26. 	OBJECT-ORIENTED-PROGRAMMING](#26-object-oriented-programming)
-- [27. ENUM](#27-enum) 
+- [27. ENUM](#27-enum)  constant
+- [28. CONSTANT](#28-constant)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2607,3 +2608,47 @@ They also have some additional properties such as ordinal() which returns the in
 In summary, enums in Java are special types of classes that define a set of predefined constants. They are useful in situations where a variable can only take on a fixed set of values, as they provide type safety and make the code more readable.
 
 They also have additional properties such as ordinal(), name() and compareTo() which provide more functionality to work with the enumeration constants.
+
+## CONSTANT
+
+![YouveBeenSoConsistentAleshaDixonGIF](https://user-images.githubusercontent.com/91504420/213864545-3f12d47a-ffb8-4e6d-80b4-448c2c8b6936.gif)
+
+In Java, a constant is a variable whose value cannot be modified after it is assigned. Constants are often used to represent fixed values that are used throughout a program, such as mathematical constants (e.g. pi), physical constants (e.g. the speed of light), or application-specific constants (e.g. the number of pixels in an image).
+
+There are two ways to create constants in Java:
+
+Using the final keyword: A variable can be declared as final by using the final 
+
+```java
+final int DAYS_IN_WEEK = 7;
+```
+
+Using static final keyword: A variable can be declared as static final by using both static and final keyword. Once a static final variable is assigned a value, it cannot be reassigned. For example:
+
+```java
+static final double PI = 3.14159;
+```
+
+It is also a common convention to use all uppercase letters and underscores to separate words when naming constants, to make them easy to recognize.
+
+In summary, constants are variables whose value cannot be modified after it is assigned. They are used to represent fixed values that are used throughout a program. Java provides two ways to create constants: using the final keyword and using static final keyword.
+
+Constants are commonly named with all uppercase letters and underscores to separate words, to make them easy to recognize.
+
+```java
+public class Constant
+{
+    public static final double PI = 3.14159; // constant
+    public static final int DAYS_IN_WEEK = 7; // constant
+    public static final String NAME = "John Doe"; // constant
+
+    public static void main(String[] args)
+    {
+        double radius = 5;
+        double area = PI * radius * radius;
+        System.out.println("Area of circle with radius " + radius + " is " + area);
+        System.out.println("Number of days in a week is " + DAYS_IN_WEEK);
+        System.out.println("Name is " + NAME);
+    }// end of main method 
+}// end of class Constant
+```
