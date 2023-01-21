@@ -2330,12 +2330,20 @@ The static keyword in Java is used to indicate that a member (field or method) b
 Here are some key points about the static keyword in Java:
 
 Static fields and methods can be accessed directly through the class name, without the need to create an instance of the class.
+
 Static fields and methods are initialized only once, when the class is loaded by the JVM.
+
 Static methods cannot access non-static fields and methods, as they do not have access to an instance of the class.
+
 Static fields can be accessed by both static and non-static methods.
+
 Static block is used to initialize the static variable, it gets executed only once when the class is loaded in the memory.
+
 It is commonly used for utility classes, factory classes, and for constants.
-In summary, the static keyword in Java is used to indicate that a member belongs to a class rather than an instance of the class. It allows fields and methods to be accessed directly through the class name, without the need to create an instance of the class and allows shared resources across all instances of a class. It is commonly used for utility classes, factory classes, and for constants.
+
+In summary, the static keyword in Java is used to indicate that a member belongs to a class rather than an instance of the class. It allows fields and methods to be accessed directly through the class name, without the need to create an instance of the class and allows shared resources across all instances of a class. 
+
+It is commonly used for utility classes, factory classes, and for constants.
 
 ```java
 class StaticKeyword
@@ -2350,7 +2358,7 @@ class StaticKeyword
 }// end of method StaticKeyword
 ```
 
-24. JAVADOC
+## 24. JAVADOC
 
 ![ItsImportantBruhChrisReddGIF](https://user-images.githubusercontent.com/91504420/213825168-a134493c-df33-484f-af76-27ea344cfc08.gif)
 
@@ -2363,11 +2371,18 @@ JavaDoc is typically used to document the public API of a Java library or applic
 Here are some key points about JavaDoc:
 
 It is a documentation tool for generating API documentation in HTML format from Java source code
+
 It uses special comments starting with /** and ending with */ in the source code
+
 It uses tags to specify different types of information about the class, method, or field being documented
+
 It is typically used to document the public API of a Java library or application
+
 It is integrated with most of the modern IDEs like Eclipse, IntelliJ, Netbeans etc.
-In summary, JavaDoc is a tool that generates documentation for Java classes, methods, and fields using special comments in the source code. It uses tags to specify different types of information about the class, method, or field being documented and it is typically used to document the public API of a Java library or application.
+
+In summary, JavaDoc is a tool that generates documentation for Java classes, methods, and fields using special comments in the source code. It uses tags to specify
+
+different types of information about the class, method, or field being documented and it is typically used to document the public API of a Java library or application.
 
 ```java
 /**
@@ -2397,13 +2412,16 @@ class JavaDoc
 In Java, access modifiers are keywords used to specify the level of access to a class, method, or variable. The four access modifiers in Java are:
 
 public: A public class, method, or variable can be accessed from anywhere in the program.
+
 protected: A protected method or variable can be accessed within the same package or by a subclass in a different package.
 default (no keyword): A default class, method, or variable can be accessed within the same package.
+
 private: A private method or variable can be accessed only within the same class.
 Here are some key points about access modifiers in Java:
 
 Access modifiers are used to restrict the level of access to a class, method, or variable.
 The most restrictive access modifier is private, followed by default, protected, and then public.
+
 The default access level for a class, method, or variable is package-private.
 Classes and interfaces can only be declared public or default.
 
