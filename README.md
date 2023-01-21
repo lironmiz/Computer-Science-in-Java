@@ -107,6 +107,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [23. STATIC KEYWORD](#23-static-keyword)
 - [24. JAVADOC](#24-javadoc) 
 - [25. ACCESS MODIFIERS](#25-accesss-modifiers)
+- [26. 	OBJECT-ORIENTED-PROGRAMMING](#26-object-oriented-programming)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -2435,3 +2436,150 @@ The default access level for a class, method, or variable is package-private. Ac
 
 ![image](https://user-images.githubusercontent.com/91504420/213826653-414b97cc-3b34-41a9-b33f-13a31b7bb919.png)
 
+## 26. 	OBJECT-ORIENTED-PROGRAMMING
+
+![CalmDownBroChillOutGIF](https://user-images.githubusercontent.com/91504420/213862658-8fda7c88-271a-48dc-9f18-742b5336c8c2.gif)
+
+Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code that manipulates that data. Java is an object-oriented programming language, which means that it supports OOP concepts such as classes, objects, inheritance, and polymorphism.
+
+A class is a blueprint for creating objects (a particular data structure), providing initial values for state (member variables or attributes), and implementations of behavior (member functions or methods). An object is an instance of a class and can be created using the "new" keyword.
+
+Inheritance is the mechanism of deriving a new class from an existing one. The new class is known as the derived class or the child class and the class from which the new class is derived is known as the base class or the parent class. This allows for code reuse and a hierarchical class structure.
+
+Polymorphism is the ability of an object to take on many forms. In Java, polymorphism is achieved through method overloading and method overriding. Method overloading allows a class to have multiple methods with the same name but different parameters. Method overriding allows a derived class to provide a specific implementation of a method that is already provided by its base class.
+
+Overall, OOP in Java allows for the creation of reusable and modular code, and a clear structure for organizing and manipulating data.
+
+![image](https://user-images.githubusercontent.com/91504420/213862767-1cb9e705-c3c4-48f6-8f13-ea174a897deb.png)
+
+```java
+public class Opp
+{
+    // state (attributes)
+    private String name;
+    private int age;
+    
+    // constructor
+    public Opp(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }// end of method Opp
+    
+    // behavior (methods) setters and getters
+    public void setName(String name)
+    {
+        this.name = name;
+    }// end of method setName
+    
+    public String getName()
+    {
+        return name;
+    }// end of method getName 
+    
+    public void setAge(int age)
+    {
+        this.age = age;
+    }// end of method setAge
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void displayInfo()
+    {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }// end of method displayInfo
+    
+    public static void main(String[] args)
+    {
+        Opp obj = new Opp("John Doe", 30); // creating an object
+        obj.displayInfo(); // calling displayInfo() method
+    }// end of main method 
+}// end of class Opp
+```
+
+This is a simple example of a class named Opp that demonstrates the use of object-oriented programming concepts in Java. The class has two private member variables name and age which are the state of the object. The class has a constructor Opp(String name, int age) that allows the user to set the values of the member variables.
+
+The class also contains several methods, such as setName(), getName(), setAge(), getAge() and displayInfo() that allow the user to manipulate the state of the object, as well as to display the values of the member variables.
+
+In the main method, an object of the Opp class is created and passed the value of name and age, then the displayInfo() method is called to display the value of name and age.
+
+This example demonstrates how OOP concepts can be used to create a class that encapsulates the state and behavior of an object, making it easy to create and manipulate objects of that class.
+
+### 26.1 Inheritance 
+
+Inheritance is a mechanism in object-oriented programming that allows a new class to inherit the properties and methods of an existing class. This allows for code reuse and a hierarchical class structure in which a derived class can inherit the characteristics of a base class.
+
+In Java, a class can be derived from another class using the extends keyword. The derived class is also known as a subclass or child class, and the class from which it is derived is known as the superclass or parent class.
+
+For example, imagine that you have a base class called Animal that has properties like name, age, weight, and methods like eat(), sleep() and move(). And you want to create a new class called Cat which have all the properties and methods of Animal class and also some additional properties and methods like color and sound(). You can create a class Cat by using extends keyword like this:
+
+```java
+public class Cat extends Animals
+{
+    private String color;
+    public void sound()
+    {
+    	System.out.println("Meow!");
+    }// end of method sound
+}// end of class Cat thet extends Animals 
+```
+In summary, inheritance in Java allows for code reuse, a hierarchical class structure, and polymorphism. It enables the creation of new classes that inherit the properties and methods of existing classes, making it easier to create and manipulate objects of those classes.
+
+### 26.1 Polymorphism
+
+Polymorphism is a concept in object-oriented programming that allows an object to take on many forms. It allows objects of different classes to be treated as objects of a common superclass, enabling them to be used interchangeably. In Java, polymorphism is achieved through method overloading and method overriding.
+
+Method overloading allows a class to have multiple methods with the same name but different parameters. For example, a class might have two methods with the same name, print(), but one takes an int parameter and the other takes a String parameter.
+
+When the print() method is called with an int parameter, the version of the method that takes an int parameter will be called, and when it's called with a String parameter, the version that takes a String parameter will be called.
+
+Method overriding allows a derived class to provide a specific implementation of a method that is already provided by its base class. This allows objects of the derived class to be used in place of objects of the base class, since they have the same interface.
+
+For example, if a base class Animal has a method sound() that prints "generic sound", a derived class Cat can override the sound() method to print "Meow!" instead.
+
+In summary, polymorphism in Java allows objects of different classes to be treated as objects of a common superclass and to be used interchangeably. It is achieved through method overloading, which allows a class to have multiple methods with the same name but different parameters, and method overriding, which allows a derived class to provide a specific implementation of a method from its base class. This enables the creation of more flexible and reusable code.
+
+```java
+class Shape
+{
+    public void draw()
+    {
+        System.out.println("Drawing a shape");
+    }// end of draw method 
+}// end of class Shape 
+
+class Rectangle extends Shape
+{
+    @Override
+    public void draw() 
+    {
+        System.out.println("Drawing a rectangle");
+    }// end of draw method 
+}// end of class Rectangle extends Shape 
+
+class Circle extends Shape
+{
+    @Override
+    public void draw()
+    {
+        System.out.println("Drawing a circle");
+    }// end of draw method 
+}// end of class Circle that extends Shape 
+
+public class PolymorphismExample 
+{
+    public static void main(String[] args) 
+    {
+        Shape shape1 = new Shape();
+        Shape shape2 = new Rectangle();
+        Shape shape3 = new Circle();
+        
+        shape1.draw(); // "Drawing a shape"
+        shape2.draw(); // "Drawing a rectangle"
+        shape3.draw(); // "Drawing a circle"
+    }// end of method main
+}// end of method PolymorphismExample 
+```
