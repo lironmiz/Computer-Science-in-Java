@@ -265,14 +265,22 @@ public class Company
             }
         }
         // return the most common rate base on the frequencies array
-        if (rates[maxIndexOne] > rates[maxIndexTwo])
+        if(maxIndexOne >= 0 && maxIndexTwo >= 0)
+        {
+            if (rates[maxIndexOne] > rates[maxIndexTwo])
+            {
+                return rates[maxIndexOne];
+            }
+            else
+            {
+                return rates[maxIndexTwo];
+            }
+        }
+        else if(maxIndexOne >= 0)
         {
             return rates[maxIndexOne];
         }
-        else
-        {
-            return rates[maxIndexTwo];
-        }
+        return 'N';
     }// end of method  mostCommonRate
     /**
     * method returns the rental where the number of rental days is maximum 
