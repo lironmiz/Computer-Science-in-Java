@@ -116,7 +116,8 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [32. SPCAE COMPLEXITY](#32-space-complexity) 
 - [33. QUEUES](#33-queues) 
 - [34. GENERICS](#34-generics)
-- [35. UNARY OPERATOR](#35-unary-operator)
+- [35. UNARY OPERATOR](#35-unary-operator) HashMap
+- [36. HASHMAP](#36-hashmap) 
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3005,3 +3006,71 @@ class UnaryOperator
 Typecasting unary operator: The unary operator () can be used to cast the operand to a different type.
 
 It's worth noting that, the unary operator can be used before or after the operand, depending on the operator, the position of the operator can affect the value of the expression. The increment and decrement operators, for example, behave differently when used in prefix notation (++x) versus postfix notation (x++).
+
+## 36. HASHMAP
+
+![MicDropImOutGIF](https://user-images.githubusercontent.com/91504420/214188452-130c542a-db55-46c7-90e8-f9707067dd29.gif)
+
+A HashMap in Java is a data structure that stores key-value pairs and uses a hash function to map keys to their corresponding values.
+
+It allows for fast lookups, insertions, and deletions of elements by key. It is implemented using an array and a linked list, where each element in the array is a linked list of key-value pairs that share the same hash code. 
+
+The HashMap is part of the Java Collections Framework and is not thread-safe by default, but it can be made thread-safe by using the java.util.Collections.synchronizedMap() method.
+
+![image](https://user-images.githubusercontent.com/91504420/214188096-ca9c97b4-21d1-45f9-8370-5e1d4e200281.png)
+
+```java
+import java.util.HashMap;
+
+public class HashMapExample
+{
+    public static void main(String[] args) 
+    {
+
+        // Create a new HashMap object
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Add key-value pairs to the map
+        map.put("Apple", 1);
+        map.put("Banana", 2);
+        map.put("Cherry", 3);
+
+        // Print the entire map
+        System.out.println("Original map: " + map);
+
+        // Get the value for a specific key
+        int value = map.get("Banana");
+        System.out.println("Value for key 'Banana': " + value);
+
+        // Check if a key is in the map
+        boolean containsKey = map.containsKey("Apple");
+        System.out.println("Map contains key 'Apple': " + containsKey);
+
+        // Check if a value is in the map
+        boolean containsValue = map.containsValue(3);
+        System.out.println("Map contains value 3: " + containsValue);
+
+        // Remove a key-value pair from the map
+        map.remove("Cherry");
+        System.out.println("Map after removing key 'Cherry': " + map);
+
+        // Clear the entire map
+        map.clear();
+        System.out.println("Map after clear: " + map);
+    }// end of method main
+}// end of class HashMapExample
+```
+
+the output:
+
++ Original map: {Apple=1, Banana=2, Cherry=3}
+
++ Value for key 'Banana': 2
+
++ Map contains key 'Apple': true
+
++ Map contains value 3: true
+
++ Map after removing key 'Cherry': {Apple=1, Banana=2}
+
++ Map after clear: {}
