@@ -118,6 +118,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [34. GENERICS](#34-generics)
 - [35. UNARY OPERATOR](#35-unary-operator) 
 - [36. HASHMAP](#36-hashmap) 
+- [37. HASHTABLE](#37-hashtable)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3074,3 +3075,80 @@ the output:
 + Map after removing key 'Cherry': {Apple=1, Banana=2}
 
 + Map after clear: {}
+
+## 37. HASHTABLE
+
+![JerbearMehGIF](https://user-images.githubusercontent.com/91504420/214191343-8b16bad6-56ef-4411-969e-36ba77655955.gif)
+
+A Hashtable in Java is a data structure that stores key-value pairs and uses a hash function to map keys to their corresponding values.
+
+It is similar to a HashMap, but it is synchronized, meaning that only one thread can access the Hashtable at a time. This makes Hashtable a thread-safe alternative to HashMap.
+
+The Hashtable class is part of the original Java version 1.0, and it does not allow null keys or null values. The method used to access elements in a Hashtable is Enumeration.
+
+![image](https://user-images.githubusercontent.com/91504420/214191224-811b8d63-8938-48ee-b7f6-2af824669643.png)
+
+```java
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public class HashTableExample
+{
+    public static void main(String[] args)
+    {
+        
+        // Create a new HashTable object
+        Hashtable<String, Integer> table = new Hashtable<>();
+
+        // Add key-value pairs to the table
+        table.put("Apple", 1);
+        table.put("Banana", 2);
+        table.put("Cherry", 3);
+
+        // Print the entire table
+        System.out.println("Original table: " + table);
+
+        // Get the value for a specific key
+        int value = table.get("Banana");
+        System.out.println("Value for key 'Banana': " + value);
+
+        // Check if a key is in the table
+        boolean containsKey = table.containsKey("Apple");
+        System.out.println("Table contains key 'Apple': " + containsKey);
+
+        // Check if a value is in the table
+        boolean containsValue = table.containsValue(3);
+        System.out.println("Table contains value 3: " + containsValue);
+
+        // Remove a key-value pair from the table
+        table.remove("Cherry");
+        System.out.println("Table after removing key 'Cherry': " + table);
+        
+        // Iterating over the key-value pairs
+        Enumeration<String> keys = table.keys();
+        while (keys.hasMoreElements())
+	{
+            String key = keys.nextElement();
+            Integer val = table.get(key);
+            System.out.println("Key: " + key + " Value: " + val);
+        }// end of while
+    }// end of method main
+}// end of class HashTableExample
+```
+
+output : 
+
++ Original table: {Apple=1, Banana=2, Cherry=3}
+
++ Value for key 'Banana': 2
+
++ Table contains key 'Apple': true
+
++ Table contains value 3: true
+
++ Table after removing key 'Cherry': {Apple=1, Banana=2}
+
++ Key: Apple Value: 1
+
++ Key: Banana Value: 2
+
