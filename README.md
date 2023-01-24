@@ -116,7 +116,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [32. SPCAE COMPLEXITY](#32-space-complexity) 
 - [33. QUEUES](#33-queues) 
 - [34. GENERICS](#34-generics)
-- [35. UNARY OPERATOR](#35-unary-operator) HashMap
+- [35. UNARY OPERATOR](#35-unary-operator) 
 - [36. HASHMAP](#36-hashmap) 
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
@@ -2195,7 +2195,7 @@ public class StackExample
 }// end of class StackExample
 ```
 
-21. TREE
+## 21. TREE
 
 ![FlowersTreeGIF](https://user-images.githubusercontent.com/91504420/213821878-6cb53244-8db2-4854-af0e-5c0d8cb2bb3e.gif)
 
