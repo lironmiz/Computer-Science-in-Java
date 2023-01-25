@@ -123,6 +123,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [39. POSTFIX AND PREFIX](#39-postfix-and-prefix)
 - [40. TERNARY OPERATOR](#40-ternary-operator)
 - [41. ABSTRACT CLASS](#41-abstract-class)
+- [42. INTERFACE](#42-interface)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3308,3 +3309,43 @@ Subclasses such as Circle and Rectangle would need to provide an implementation 
 
 In summary, an abstract class is a class that cannot be instantiated and contains abstract and concrete methods, fields and constructors. The abstract methods are meant to be overridden by subclasses and provide a common interface for all subclasses.
 	
+## 42. INTERFACE
+
+![NextLevelQuoteGIF](https://user-images.githubusercontent.com/91504420/214488973-5cf6ef61-306a-4256-a976-6d6ea51f0f48.gif)
+
+In Java, an interface is a collection of abstract methods (methods without a body) and constant fields (static final variables). It defines a contract that classes must adhere to, specifying a set of methods that a class must implement.
+
+A class can implement multiple interfaces. When a class implements an interface, it must provide an implementation for all of the interface's methods.
+
+Here is an example of an interface:
+
+```java
+interface Shape
+{
+    double getArea();
+    double getPerimeter();
+}// end of interface Shape
+```
+
+In this example, the Shape interface defines two abstract methods, getArea and getPerimeter, that classes implementing this interface must provide an implementation for.
+
+Here's an example of a class that implements the Shape interface:
+
+```java
+class Circle implements Shape
+{
+    private double radius;
+    public Circle(double radius)
+    {
+        this.radius = radius;
+    }// end of method Circle
+    public double getArea()
+    {
+        return Math.PI * radius * radius;
+    }// end of method getArea
+    public double getPerimeter()
+    {
+        return 2 * Math.PI * radius;
+    }// end of method getPerimeter
+}// end of class Circle
+```
