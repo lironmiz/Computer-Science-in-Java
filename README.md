@@ -124,6 +124,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [40. TERNARY OPERATOR](#40-ternary-operator)
 - [41. ABSTRACT CLASS](#41-abstract-class)
 - [42. INTERFACE](#42-interface)
+- [43. ANONYMOUS INNER CLASS](#43-anonymous-inner-class)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3348,4 +3349,31 @@ class Circle implements Shape
         return 2 * Math.PI * radius;
     }// end of method getPerimeter
 }// end of class Circle
+```
+
+## 43. ANONYMOUS INNER CLASS
+
+An anonymous inner class in Java is a class without a name that is defined and instantiated in a single expression. It is typically used as an implementation of a functional interface, such as a listener or callback, and is defined and instantiated at the point of use.
+
+Anonymous inner classes are useful for creating small, one-time-use classes, and can be more concise than defining a named inner class.
+
+```java
+public class AnonymousInnerClass
+{
+    public static void main(String[] args)
+    {
+        // Create an instance of an anonymous inner class that implements Runnable
+        Runnable runnable = new Runnable()
+	{
+            @Override
+            public void run()
+	    {
+                System.out.println("Running from anonymous inner class");
+            }
+        };
+        
+        // Run the anonymous inner class
+        new Thread(runnable).start();
+    }// end of method main
+}// end of class AnonymousInnerClass
 ```
