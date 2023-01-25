@@ -125,6 +125,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [41. ABSTRACT CLASS](#41-abstract-class)
 - [42. INTERFACE](#42-interface)
 - [43. ANONYMOUS INNER CLASS](#43-anonymous-inner-class)
+- [44. OPTIONAL](#44-optional)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3353,6 +3354,8 @@ class Circle implements Shape
 
 ## 43. ANONYMOUS INNER CLASS
 
+![AnonymousThanksGIF](https://user-images.githubusercontent.com/91504420/214593103-48b11367-407d-48a8-87bb-71210a43c81b.gif)
+
 An anonymous inner class in Java is a class without a name that is defined and instantiated in a single expression. It is typically used as an implementation of a functional interface, such as a listener or callback, and is defined and instantiated at the point of use.
 
 Anonymous inner classes are useful for creating small, one-time-use classes, and can be more concise than defining a named inner class.
@@ -3376,4 +3379,61 @@ public class AnonymousInnerClass
         new Thread(runnable).start();
     }// end of method main
 }// end of class AnonymousInnerClass
+```
+
+## 44. OPTIONAL
+
+![IGotOptionsKassandraLeeGIF](https://user-images.githubusercontent.com/91504420/214593201-8c187305-47b0-4359-a9b6-036ac98b1492.gif)
+
+In Java, Optional is a container object which is used to contain a value that may be null or non-null. The purpose of the Optional class is to provide a type-level solution for representing optional values instead of using null references.
+
+It has several methods to check the presence of a value, to retrieve a value, or to perform an action on the value if it's present.
+
+
+It is introduced in Java 8, and it is a part of the java.util package. Optional class can be used as an alternative to null checks and provide a way to handle null values in a more elegant way.
+
+You can create an Optional instance by calling the of() or ofNullable() method. Once an Optional instance is created, you can use the isPresent() method to check if it contains a value, and the get() method to retrieve the value.
+
+You can also use the orElse() method to provide a default value if the Optional is empty or use orElseGet() and orElseThrow() to handle the case where the Optional is empty.
+
+```java
+import java.util.Optional;
+
+public class OptionalExample
+{
+    public static void main(String[] args)
+    {
+        // Create an Optional instance that contains a value
+        Optional<String> optionalString = Optional.of("Hello, Optional!");
+
+        // Use the isPresent() method to check if the Optional contains a value
+        if (optionalString.isPresent())
+	{
+            // Use the get() method to retrieve the value from the Optional
+            System.out.println(optionalString.get());
+        }
+
+        // Create an Optional instance that does not contain a value
+        Optional<String> emptyOptional = Optional.empty();
+
+        // Use the orElse() method to provide a default value if the Optional is empty
+        System.out.println(emptyOptional.orElse("Default value"));
+
+        // Use the orElseGet() method to provide a default value using a Supplier
+        System.out.println(emptyOptional.orElseGet(() -> "Default value from supplier"));
+
+        // Use the orElseThrow() method to throw an exception if the Optional is empty
+        try 
+	{
+            emptyOptional.orElseThrow(IllegalArgumentException::new);
+        } 
+	catch (Exception e) 
+	{
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+
+        // Use the ifPresent() method to perform an action if the Optional contains a value
+        optionalString.ifPresent(System.out::println);
+    }// end of method main
+}// end of class OptionalExample
 ```
