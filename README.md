@@ -122,6 +122,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [38. HASHSET](#38-hashset)
 - [39. POSTFIX AND PREFIX](#39-postfix-and-prefix)
 - [40. TERNARY OPERATOR](#40-ternary-operator)
+- [41. ABSTRACT CLASS](#41-abstract-class)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3266,4 +3267,44 @@ else
 ```
 In short, the Ternary operator is a shorthand way of writing if-else statements and it's much more concise. It's useful when you have to return a value based on a boolean condition and it's easy to read when the expressions are simple and short.
 
+## 41. ABSTRACT CLASS
+	
+![BoBurnhamInsideGIF](https://user-images.githubusercontent.com/91504420/214487565-b883fcd1-e609-442b-bbb2-d0455c1a5032.gif)
+	
+An abstract class in Java is a class that cannot be instantiated but can have abstract and concrete methods. An abstract method is a method that has a method signature but no implementation. Concrete methods are methods that have a method signature and an implementation.
 
+An abstract class can also have constructors and fields, but it cannot be used to create objects. It is meant to be subclassed, with the subclasses providing the implementation for the abstract methods.
+
+A class that contains at least one abstract method must be declared as abstract. Subclasses of an abstract class must provide an implementation for all of its abstract methods.
+
+Here's an example of an abstract class:
+
+```java
+abstract class Shape 
+{
+    // Fields
+    private String color;
+    
+    // Constructor
+    public Shape(String color)
+    {
+        this.color = color;
+    }
+    
+    // Abstract method
+    public abstract double getArea();
+    
+    // Concrete method
+    public String getColor()
+    {
+        return color;
+    }
+}// end of abstract class Shape
+```
+
+In this example, the Shape class is an abstract class that cannot be instantiated. It has a constructor, a field, an abstract method (getArea) which does not have implementation and a concrete method (getColor) which have implementation.
+	
+Subclasses such as Circle and Rectangle would need to provide an implementation for the getArea method.
+
+In summary, an abstract class is a class that cannot be instantiated and contains abstract and concrete methods, fields and constructors. The abstract methods are meant to be overridden by subclasses and provide a common interface for all subclasses.
+	
