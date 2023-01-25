@@ -126,6 +126,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [42. INTERFACE](#42-interface)
 - [43. ANONYMOUS INNER CLASS](#43-anonymous-inner-class)
 - [44. OPTIONAL](#44-optional)
+- [45. LAMBDA EXPRESSION](#45-lambda-expression)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3437,3 +3438,42 @@ public class OptionalExample
     }// end of method main
 }// end of class OptionalExample
 ```
+
+## 45. LAMBDA EXPRESSION
+
+Lambda expressions are a feature introduced in Java 8 that allow for functional programming and more concise code. They are often used to implement functional interfaces, which are interfaces with a single abstract method.
+
+The basic syntax of a lambda expression is as follows:
+
+```java
+(parameters) -> {body}
+```
+
+For example: 
+
+```java
+(int x, int y) -> x + y
+```
+
++ Lambda expressions can be used to replace anonymous inner classes in situations where a functional interface is expected.
++ Lambda expressions can be used to sort collections using the sort() method, by passing a comparator as an argument.
++ Lambda expressions can be used to pass behavior as an argument to a method, such as with the forEach() method of the Stream API.
++ Lambda expressions can be used to filter collections using the filter() method of the Stream API.
++ Lambda expressions can be used to transform collections using the map() method of the Stream API.
++ Lambda expressions can be used to perform aggregate operations on collections using the reduce() method of the Stream API.
+
+Example: 
+
+```java
+List<Person> people = new ArrayList<>();
+people.add(new Person("Bob", 25));
+people.add(new Person("Alice", 30));
+people.add(new Person("Charlie", 20));
+
+people.sort((p1, p2) -> p1.name.compareTo(p2.name));
+```
+
+In the above example, we are using lambda expression to sort the people list based on name of the person.
+
+In general, lambda expressions provide a more concise and readable way to express behavior in Java and are often used in functional programming.
+
