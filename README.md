@@ -120,6 +120,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [36. HASHMAP](#36-hashmap) 
 - [37. HASHTABLE](#37-hashtable)
 - [38. HASHSET](#38-hashset)
+- [39. POSTFIX AND PREFIX](#39-postfix-and-prefix)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3198,3 +3199,35 @@ public class HashSetExample
     }// end of main method 
 }// end of class HashSetExample
 ```
+
+## 39. POSTFIX AND PREFIX
+
+![ImBetterGIF](https://user-images.githubusercontent.com/91504420/214485704-6f869310-227f-4ca0-a61c-27ee7c89390a.gif)
+
+In Java, the postfix and prefix operators are used to increment or decrement a variable by a certain amount.
+
+The postfix operator (e.g. i++) increments the variable after it has been used in the expression, while the prefix operator (e.g. ++i) increments the variable before it has been used in the expression.
+
+For example, consider the following code:
+
+```java
+int i = 5;
+int j = i++;
+```
+
+In this case, the value of j will be set to 5, and then the value of i will be incremented to 6.
+
+On the other hand, consider the following code:
+
+```java
+int i = 5;
+int j = ++i;
+```
+
+In this case, the value of i will be incremented to 6, and then the value of j will be set to 6.
+
+In summary, postfix and prefix operators in Java are used to increment or decrement a variable before or after it is used in the expression.
+
+The prefix operator is more efficient than postfix operator and the choice of which one to use depends on the specific use case and the desired behavior of the program.
+
+
