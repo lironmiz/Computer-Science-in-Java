@@ -1,5 +1,7 @@
 <h1 align="center"> 💻 Computer-Science-in-Java 💻 </h1>
-<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
+
+<img src="https://i.imgur.com/dBaSKWF.gif" height="50" width="100%">
+
 Intended for saving solutions for tests , exercises and assignments as part of an introductory course to computer science in the Java language at the Open University as part of a degree in computer science and physics 😎 
 
 <p align="center">
@@ -3440,6 +3442,8 @@ public class OptionalExample
 ```
 
 ## 45. LAMBDA EXPRESSION
+
+![Uploading ItsWayMoreAdvancedUnmeshDindaGIF.gif…]()
 
 Lambda expressions are a feature introduced in Java 8 that allow for functional programming and more concise code. They are often used to implement functional interfaces, which are interfaces with a single abstract method.
 
