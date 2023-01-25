@@ -119,6 +119,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [35. UNARY OPERATOR](#35-unary-operator) 
 - [36. HASHMAP](#36-hashmap) 
 - [37. HASHTABLE](#37-hashtable)
+- [38. HASHSET](#38-hashset)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3152,3 +3153,48 @@ output :
 
 + Key: Banana Value: 2
 
+## 38. HASHSET
+
+![WhatAreYouTalkingAboutHuhGIF](https://user-images.githubusercontent.com/91504420/214484061-fe6990bc-3d23-4f97-ae3d-d243109e3a47.gif)
+
+A HashSet in Java is a collection that stores unique elements in no particular order. It is implemented using a hash table, which provides fast access to elements for operations such as adding, removing, and checking if an element is contained in the set.
+
+HashSet does not guarantee any specific order of the elements.
+
+It is useful for cases where you need to quickly check if an element is present in a set, or remove an element from a set. HashSet does not allow duplicate elements.
+
+```java
+import java.util.HashSet;
+
+public class HashSetExample
+{
+    public static void main(String[] args)
+    {
+        // Create a new HashSet
+        HashSet<String> set = new HashSet<>();
+        
+        // Add elements to the HashSet
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Cherry");
+        
+        // Attempt to add a duplicate element
+        set.add("Apple");
+        
+        // Check the size of the HashSet
+        System.out.println("Size of HashSet: " + set.size()); // Output: Size of HashSet: 3
+        
+        // Check if an element is present in the HashSet
+        System.out.println("Is Orange in HashSet: " + set.contains("Orange")); // Output: Is Orange in HashSet: false
+        
+        // Remove an element from the HashSet
+        set.remove("Banana");
+        
+        // Iterate through the HashSet and print the elements
+        for (String fruit : set)
+	{
+            System.out.println(fruit);
+        }
+    }// end of main method 
+}// end of class HashSetExample
+```
