@@ -121,6 +121,7 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 - [37. HASHTABLE](#37-hashtable)
 - [38. HASHSET](#38-hashset)
 - [39. POSTFIX AND PREFIX](#39-postfix-and-prefix)
+- [40. TERNARY OPERATOR](#40-ternary-operator)
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
@@ -3229,5 +3230,40 @@ In this case, the value of i will be incremented to 6, and then the value of j w
 In summary, postfix and prefix operators in Java are used to increment or decrement a variable before or after it is used in the expression.
 
 The prefix operator is more efficient than postfix operator and the choice of which one to use depends on the specific use case and the desired behavior of the program.
+
+## 40. TERNARY OPERATOR
+
+![PrettyCoolTrickHuhCatraGIF](https://user-images.githubusercontent.com/91504420/214486360-d768c930-8700-4aab-a842-4c3e88abd257.gif)
+
+The ternary operator in Java is a shorthand way of writing an if-else statement. It has the following syntax:
+
+```java
+condition ? expression1 : expression2
+```
+
+The ternary operator takes a condition as its first parameter, followed by a question mark (?), and then two expressions separated by a colon (:). If the condition is true, the operator returns the first expression; otherwise, it returns the second expression.
+
+Here's an example:
+
+```java
+int x = 5;
+int y = 10;
+int max = (x > y) ? x : y;
+```
+
+In this example, the ternary operator compares the values of x and y, and assigns the larger value to the max variable. This is equivalent to the following if-else statement:
+
+```java
+int max;
+if (x > y) 
+{
+    max = x;
+} 
+else 
+{
+    max = y;
+}
+```
+In short, the Ternary operator is a shorthand way of writing if-else statements and it's much more concise. It's useful when you have to return a value based on a boolean condition and it's easy to read when the expressions are simple and short.
 
 
