@@ -1,8 +1,9 @@
 import java.util.Arrays;
-/**
-* Class DynamicArray.java
-* A class that represents an implementation of DynamicArray in java
-*/
+//*******************************************************
+// DynamicArray.java
+// A class that represents an implementation of DynamicArray in java
+// Author: liron mizrahi
+//*******************************************************
 public class DynamicArray<T>
 {
    Object[] _data;
