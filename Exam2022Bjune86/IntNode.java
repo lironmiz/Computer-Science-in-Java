@@ -1,7 +1,8 @@
-
-/**
- * IntNode.java
- */
+//*******************************************************
+// IntNode.java
+// the class reprsents IntNode
+// Author: liron mizrahi
+//*******************************************************
 public class IntNode
 {
     private int _value;
