@@ -1,3 +1,8 @@
+//*******************************************************
+// E.java
+// the class reprsents E
+// Author: liron mizrahi
+//*******************************************************
 public class E extends C
 {
     public int calc(int x)
