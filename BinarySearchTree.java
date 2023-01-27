@@ -1,7 +1,8 @@
-/**
-* Class BinarySearchTree.java
-* A class that represents an implementation of binary search tree in java
-*/
+//*******************************************************
+// BinarySearchTree.java
+// A class that represents an implementation of binary search tree in java
+// Author: liron mizrahi
+//*******************************************************
 public class BinarySearchTree
 {
    private Node _root;
@@ -87,7 +88,6 @@ public class BinarySearchTree
    {
        return findFloor(_root, input);
    }// end of method findFloor
-   
    // private methods
    /**
    * private insert method insert a key to the BST 
