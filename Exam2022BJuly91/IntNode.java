@@ -1,7 +1,9 @@
 
-/**
- * IntNode.java
- */
+//*******************************************************
+// IntNode.java
+// the class reprsents IntNode
+// Author: liron mizrahi
+//*******************************************************
 public class IntNode
 {
     private int _value;
@@ -32,5 +34,4 @@ public class IntNode
     {
         _value = v;
     }// end of method setValue
-    
 }// end of class IntNode
