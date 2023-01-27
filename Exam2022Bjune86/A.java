@@ -1,7 +1,8 @@
-
-/**
- * A.java
- */
+//*******************************************************
+// A.java
+// the class reprsents A
+// Author: liron mizrahi
+//*******************************************************
 public class A
 {
    private int _num;
