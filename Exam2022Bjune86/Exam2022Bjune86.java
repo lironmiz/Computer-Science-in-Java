@@ -2,6 +2,7 @@
 // Exam in June 2022B (86)
 // Semester 2022B
 // Solutions to the test
+// Author: liron mizrahi
 //*******************************************************
 public class Exam2022Bjune86
 {
@@ -21,7 +22,7 @@ public class Exam2022Bjune86
     public static int maxPath(int[][] mat)
     {
         return maxPath(mat, 0, 0, 0, 1);
-    }
+    }// end of method maxPath
     // Aulliexsery method 
     private static int maxPath(int[][] mat, int row, int column, int sum, int cellId)
     {
