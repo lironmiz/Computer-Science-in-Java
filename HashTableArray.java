@@ -1,8 +1,9 @@
 
-/**
-* Class Entry.java
-* A class that represents an implementation of a hase table in java
-*/
+//*******************************************************
+// Class Entry.java
+// A class that represents an implementation of a hase table in java
+// Author: liron mizrahi
+//*******************************************************
 public class HashTableArray<T>
 {
    Entry[] _hashArray;
