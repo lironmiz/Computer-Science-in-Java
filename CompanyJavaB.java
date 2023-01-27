@@ -1,10 +1,9 @@
 
-/**
- * Company.java 
- * the class represent a Company
- * @author liron mizrahi
- * @date (1/20/2023)
- */
+//*******************************************************
+// Company.java 
+// the class represent a Company using linked list 
+// Author: liron mizrahi
+//*******************************************************
 public class Company
 {
     private RentNode _rent;
