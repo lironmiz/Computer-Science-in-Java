@@ -2,9 +2,13 @@ import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+//*******************************************************
+// Deck.java
+// the class reprsents Deck
+// Author: liron mizrahi
+//*******************************************************
 public class Deck
-{
-    
+{ 
     public final static int MAX_NUM_OF_CARD = 40;
     public Card[] _cardArray;
     public int _leftCard;
