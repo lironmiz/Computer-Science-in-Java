@@ -1,4 +1,8 @@
-
+//*******************************************************
+// tester for the class
+// Semester 2022B
+// Author: liron mizrahi
+//*******************************************************
 public class Exam2022BJuly91Driver
 {
     public static void main(String[] args)
@@ -94,6 +98,5 @@ public class Exam2022BJuly91Driver
         IntNode list2Node1 = new IntNode(4, list2Node2);
         IntList list2 = new IntList();
         System.out.println(list2.what()); // false
-        
     }// end of method main
 }// end of class Exam2022BJuly91Driver
