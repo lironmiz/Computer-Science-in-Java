@@ -1,6 +1,6 @@
 /**
  * Exam2018AJavaA.java
- * the class reprsents a Exam
+ * the class have solutions to the test
  * Author: liron mizrhai
  */
 public class Exam2018AJavaA
