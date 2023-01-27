@@ -1,3 +1,8 @@
+//*******************************************************
+// C1.java
+// the class reprsents C1
+// Author: liron mizrahi
+//*******************************************************
 public class C extends A
 {
     public void doSomething(int x)
