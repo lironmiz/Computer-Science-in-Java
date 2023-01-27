@@ -1,3 +1,8 @@
+//*******************************************************
+// D1.java
+// the class reprsents D1
+// Author: liron mizrahi
+//*******************************************************
 public class D extends A
 {
     public void calc(int x, int y)
