@@ -1,3 +1,8 @@
+//*******************************************************
+// B.java
+// the class reprsents B
+// Author: liron mizrahi
+//*******************************************************
 public class B extends A
 {
     private int _x;
