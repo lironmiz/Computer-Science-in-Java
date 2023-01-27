@@ -1,8 +1,8 @@
-
-/**
-* Class Queue.java
-* A class that represents an implementation of a Queue in java
-*/
+//*******************************************************
+// Queue.java
+// A class that represents an implementation of a Queue in java
+// Author: liron mizrahi
+//*******************************************************
 public class Queue
 {
   int[] _queue;
@@ -22,7 +22,7 @@ public class Queue
       _size = 0;
   }//end of method Queue
   /**
-  * getSize get the size of the queue
+  * method return the size of the queue
   * @param None 
   * @return int
   */
@@ -31,7 +31,7 @@ public class Queue
       return _size;
   }// end of method getSize
   /**
-  * checking if the queue is empty
+  * return true if the queue is empty
   * @param None
   * @return boolean
   */
@@ -46,7 +46,7 @@ public class Queue
       return response;
   }//end of method isEmpty
   /**
-  * enQueue method is insert value to queue
+  *  method is insert value to queue
   * @param int 
   * @return boolean
   */
@@ -64,7 +64,7 @@ public class Queue
       return response;
   }//end of method enQueue
   /**
-  * dequeue method is removing value from queue
+  * method is removing value from queue
   * @param None
   * @return int
   */
@@ -81,7 +81,7 @@ public class Queue
       return response;
   }// end of method deQueue
   /**
-  * show method is print the queue elements
+  * method is print the queue elements
   * @param None
   * @return None
   */
@@ -95,7 +95,7 @@ public class Queue
       }
   }// end of method show
   /**
-  * peek method is show the first element in queue
+  * method is show the first element in queue
   * @param None
   * @return int
   */
@@ -107,12 +107,8 @@ public class Queue
           response = _queue[_front + 1];
       }
       return response;
-  }
-  /**
-  * main method
-  * @param args (array type java.lang)
-  * @return None
-  */
+  }// end of method peek
+  
   public static void main(String[] args) 
   {
       // making queue object 
@@ -127,4 +123,4 @@ public class Queue
       queue.isEmpty(); //return false
       System.out.println(queue.deQueue() + " deleted from the list"); // return 1000 deleted from the list
   }// end of method main
-}
+}// end of class Queue
