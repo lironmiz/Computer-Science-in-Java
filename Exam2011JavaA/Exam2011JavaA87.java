@@ -1,6 +1,6 @@
 /**
  * Exam2011JavaA87.java
- * the class reprsents a Exam
+ * the class hava solutions to the test
  * Author : liron mizrhai
  */
 public class Exam2011JavaA87
@@ -33,4 +33,4 @@ public class Exam2011JavaA87
     * Exercise 3 
     * the correct statments are A, B, E
     */
-}
+}// end of class Exam2011JavaA87
