@@ -1,3 +1,8 @@
+//*******************************************************
+// B.java
+// the class reprsents B
+// Author: liron mizrahi
+//*******************************************************
 public abstract class B extends A
 {
     public boolean f(int x)
