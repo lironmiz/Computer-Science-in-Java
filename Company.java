@@ -1,9 +1,9 @@
-/**
- * Company.java
- * the class represent a Company
- * @author (liron mizrhai)
- * @Date (1/7/2023)
- */
+//*******************************************************
+// Company.java
+// the class represent a Company
+// Author: liron mizrahi
+//*******************************************************
+
 public class Company
 {
     private Rent[] _rents;
