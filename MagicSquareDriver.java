@@ -1,8 +1,8 @@
-/*
- * Created by: liron mizrhai
- * required Classes: MagicSquare
- * if you find any bugs at the test please tell me :)
- */
+//*******************************************************
+// MagicSquareDriver.java
+// Required Classes: MagicSquare
+// Author: liron mizrahi
+//*******************************************************
 public class MagicSquareDriver
 {
     private static int testNumber = 0;
@@ -79,8 +79,7 @@ public class MagicSquareDriver
         test(MagicSquare.isMagicSquare(mat2));
         System.out.println("---mat3---");
         test(!MagicSquare.isMagicSquare(mat3));
-
-    }
+    }// end of main method 
 
     private static void test(boolean testCondition)
     {
