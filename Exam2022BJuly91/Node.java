@@ -1,6 +1,9 @@
-/**
-* Node.java
-*/
+
+//*******************************************************
+// Node.java
+// the class reprsents Node
+// Author: liron mizrahi
+//*******************************************************
 public class Node
 {
    public int _number;
