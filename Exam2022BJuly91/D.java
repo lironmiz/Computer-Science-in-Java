@@ -1,7 +1,8 @@
-
 /**
- * D.java
- */
+* D.java
+* the class represents a D
+* Author: liron mizrhai
+*/
 public class D extends B
 {
     public D(int val)
