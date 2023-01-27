@@ -1,8 +1,9 @@
 import java.util.Stack;
-
-/**
- * Node.java
- */
+//*******************************************************
+// Node.java
+// the class reprsents Node
+// Author: liron mizrahi
+//*******************************************************
 public class Node
 {
     int _number;
@@ -50,7 +51,8 @@ public class Node
     {
         String output = "(";
           // Base Case
-        if (t == null) {
+        if (t == null)
+        {
             return output;
         }
         output += t.getNumber();
