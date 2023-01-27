@@ -1,6 +1,7 @@
-
 /**
 * B.java
+* the class represents a B
+* Author: liron mizrhai
 */
 public class B extends A
 {
