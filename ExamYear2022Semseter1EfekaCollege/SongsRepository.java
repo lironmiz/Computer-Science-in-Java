@@ -1,8 +1,8 @@
-/**
- * SongsRepository.java
- * the class represent a SongsRepository
- * @author (liron mizrhai)
- */
+//*******************************************************
+// SongsRepository.java
+// the class reprsents SongsRepository
+// Author: liron mizrahi
+//*******************************************************
 import java.util.Arrays;
 public class SongsRepository
 {
