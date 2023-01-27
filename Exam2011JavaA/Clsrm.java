@@ -47,7 +47,7 @@ public class Clsrm
     public int getClassPlaces()
     {
         return _classPlaces;
-    }
+    }// end of method getClaassPlaces
     /**
     * the method return if the class avilable or not 
     * @param: None
