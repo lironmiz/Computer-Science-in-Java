@@ -2,14 +2,10 @@
 // Exam in February 2022 (89)
 // Semester 2022a
 // Solutions to the test
+// Author: liron mizrahi
 //*******************************************************
 public class Exam2022aFebruary89
 {
-   /**
-   * main methdo for checking the solutions 
-   * @parm none
-   * @return none
-   */
    public static void main(String[] args) 
    {
        // checking the isJump method
@@ -256,5 +252,3 @@ public class Exam2022aFebruary89
    * which is 7 and that is why the error will occur
    */
 }// end of class Exam2022aFebruary89
-
-
