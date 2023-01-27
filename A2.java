@@ -1,3 +1,8 @@
+//*******************************************************
+// A.java
+// the class reprsents A
+// Author: liron mizrahi
+//*******************************************************
 public class A
 {
     public void doSomething(int x)
