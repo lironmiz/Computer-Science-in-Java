@@ -1,6 +1,11 @@
 import java.util.Scanner;
 import java.io.PrintWriter;
 import java.util.Scanner;
+//*******************************************************
+// Card.java
+// the class reprsents Card
+// Author: liron mizrahi
+//*******************************************************
 public class Card
 {
     public final static int FINAL_VALUE_FOR_CARD = 10;
