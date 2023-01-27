@@ -2,6 +2,7 @@
 // Exam in July 2022B (91)
 // Semester 2022B
 // Solutions to the test
+// Author: liron mizrahi
 //*******************************************************
 public class Exam2022BJuly91
 {
