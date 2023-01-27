@@ -1,12 +1,10 @@
 import java.util.Scanner;
-/**
- * class with solutions to loop problems 
- * @Date 19|12|2022
- * @author Liron Mizrahi
- */
-public class Homework2 
+//*******************************************************
+// class with solutions to loop problems 
+// Author: liron mizrahi
+//*******************************************************
+public class Loops
 {
-
     public static void main(String[] args) 
     {
         // make scan object 
@@ -300,4 +298,4 @@ public class Homework2
         }
         return sum;
     }// end of method isHappy
-}// end of class Homework2
+}// end of class Loops
