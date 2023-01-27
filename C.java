@@ -1,3 +1,8 @@
+//*******************************************************
+// C.java
+// the class reprsents C
+// Author: liron mizrahi
+//*******************************************************
 public class C
 {
     public void foo(D d)
