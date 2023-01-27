@@ -1,8 +1,8 @@
-/**
- * Exam2022SemesterA.java
- * the class has solutions to the test 
- * @author (liron mizrhai)
- */
+//*******************************************************
+//Exam2022SemesterA.java
+//the class has solutions to the test 
+// Author: liron mizrahi
+//*******************************************************
 import java.util.Random;
 public class Exam2022SemesterA
 {
