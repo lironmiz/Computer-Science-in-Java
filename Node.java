@@ -1,7 +1,8 @@
-/**
-* Class Node.java
-* A class that represents an implementation of a node for binary search tree in java
-*/
+//*******************************************************
+// Node.java
+// A class that represents an implementation of a node for binary search tree in java
+// Author: liron mizrahi
+//*******************************************************
  public class Node
 {
     int _key;      
@@ -9,7 +10,7 @@
     Node _right;
     /**
     * constructor of the class
-    * @param int
+    * @param int data 
     * @return None
     */
     public Node(int data)
