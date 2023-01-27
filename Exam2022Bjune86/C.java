@@ -1,7 +1,8 @@
-
-/**
- * C.java
- */
+//*******************************************************
+// C.java
+// the class reprsents C
+// Author: liron mizrahi
+//*******************************************************
 public class C extends B
 {
     public C(int n)
