@@ -1,11 +1,10 @@
 /**
  * Exam2019JavaA83.java
- * the class reprsents a Exam
+ * the class solutions to the test 
  * Author: liron mizrhai
  */
 public class Exam2019JavaA83
 {
-
     /**
     * the method return the original string of secret string
     * @param: String secret
@@ -30,8 +29,8 @@ public class Exam2019JavaA83
     // Solution 3->  |0|0|0|0|6|4|6|1|8|9|
     // Solution 4 -> she do add the two numbers and put in the arr3
                 
-    // Ex4
     /**
+     * Ex4
      * -3 -2 0 9
      * -1  0 5 12
      *  5  8 11 14
