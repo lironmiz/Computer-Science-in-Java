@@ -77,7 +77,11 @@ public class College
         }
         return numTopFloor;
     }// end of method howManyOnTopFloor
-    
+     /**
+     * the methd return the biggest floor
+     * @param: None
+     * @return: Course
+     */
     private int getBiggestFloor()
     {
         int index = 0;
@@ -90,5 +94,4 @@ public class College
         }
         return _clsrms[index].getFloorNumber();
     }// end of method getBiggestFloor
-    
 }// end of class College
