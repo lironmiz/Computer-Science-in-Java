@@ -1,8 +1,9 @@
 
-/**
-* Class PriorityQueue.java
-* A class that represents an implementation of PriorityQueue in java
-*/
+//*******************************************************
+// PriorityQueue.java
+// A class that represents an implementation of PriorityQueue in java
+// Author: liron mizrahi
+//*******************************************************
 public class PriorityQueue
 {
    private int _max;
