@@ -1,8 +1,8 @@
-/**
- * Artist.java
- * the class represent a Artist
- * @author (liron mizrhai)
- */
+//*******************************************************
+// Artist.java
+// the class reprsents Artist
+// Author: liron mizrahi
+//*******************************************************
 import java.util.Arrays;
 public class Artist 
 {	
