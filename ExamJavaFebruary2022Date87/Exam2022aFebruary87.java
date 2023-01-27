@@ -2,6 +2,7 @@
 // Exam in February 2022 (87)
 // Semester 2022a
 // Solutions to the test
+// Author: liron mizrahi
 //*******************************************************
 public class Exam2022aFebruary87
 {
