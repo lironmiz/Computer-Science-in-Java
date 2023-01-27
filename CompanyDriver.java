@@ -1,9 +1,8 @@
-/**
- * CompanyDriver.java
- * the class have test for company class
- * @author (liron mizrhai)
- * @Date (1/7/2023)
- */
+//*******************************************************
+// CompanyDriver.java
+// the class have test for company class
+// Author: liron mizrahi
+//*******************************************************
 public class CompanyDriver
 {
     /**
