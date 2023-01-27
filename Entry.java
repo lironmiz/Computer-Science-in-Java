@@ -1,7 +1,9 @@
-/**
-* Class Entry.java
-* A class that represents an implementation of a Entry for hase table in java
-*/
+
+//*******************************************************
+// Class Entry.java
+// Class that represents an implementation of a Entry for hase table in java
+// Author: liron mizrahi
+//*******************************************************
  public class Entry
 {
     int _key;      
