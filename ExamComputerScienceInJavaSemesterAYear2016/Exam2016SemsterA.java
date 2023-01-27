@@ -1,4 +1,9 @@
-
+//*******************************************************
+// Exam in java Year 2016 
+// Semester !
+// Solutions to the test
+// Author: liron mizrahi
+//*******************************************************
 public class Exam2016SemsterA
 {
     /**
