@@ -1,8 +1,8 @@
-/**
- * Song.java
- * the class represent a Song
- * @author (liron mizrhai)
- */
+//*******************************************************
+// Song.java
+// the class reprsents Song
+// Author: liron mizrahi
+//*******************************************************
 public class Song
 {
     private String _name;
