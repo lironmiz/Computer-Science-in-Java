@@ -1,3 +1,8 @@
+//*******************************************************
+// ClassA.java
+// the class reprsents ClassA
+// Author: liron mizrahi
+//*******************************************************
 public class ClassA
 {
     public ClassA()
