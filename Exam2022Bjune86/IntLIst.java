@@ -1,7 +1,8 @@
-
-/**
- * IntList.java
- */
+//*******************************************************
+// IntList.java
+// the class reprsents IntList
+// Author: liron mizrahi
+//*******************************************************
 public class IntList
 {
     private IntNode _head;
@@ -45,5 +46,5 @@ public class IntList
             fp = fp.getNext();
         }
         return m;
-    }
+    }// end of method what
 }// end of class IntList
