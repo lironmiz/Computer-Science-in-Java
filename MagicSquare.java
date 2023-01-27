@@ -1,9 +1,8 @@
-/**
- * MagicSquare.java
- * the class represent a MazicSquare
- * @author (liron mizrhai)
- * @Date (1/7/2023)
- */
+//*******************************************************
+// MagicSquare.java
+// The class represent a MazicSquare
+// Author: liron mizrahi
+//*******************************************************
 public class MagicSquare
 {
     /**
@@ -62,7 +61,11 @@ public class MagicSquare
         }
         return sum;
     }// end of method sumSecondaryDiag
-
+    /**
+    * method return true if given int[][] is magicsquare otherwise return false 
+    * @parm int[][] mat
+    * @return boolean
+    */
     public static boolean isMagicSquare(int[][] mat)
     {
         int sumRow;
