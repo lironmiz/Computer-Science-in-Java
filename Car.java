@@ -1,6 +1,7 @@
 //*******************************************************
 // Class Car.java
 // The class represent car
+// Author: liron mizrahi
 //*******************************************************
 public class Car
 {
