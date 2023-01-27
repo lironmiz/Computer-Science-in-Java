@@ -1,11 +1,12 @@
-
 /**
 * A.java
+* the class represents a A
+* Author: liron mizrhai
 */
 public abstract class A
 {
    protected int _x;
-   
+
    public A()
    {
        _x = 1;
