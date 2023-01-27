@@ -1,6 +1,7 @@
 //*******************************************************
-// Class Date.java
+// Date.java
 // The class manages everything related to dates
+// Author: liron mizrahi
 //*******************************************************
 public class Date
 {
