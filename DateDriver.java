@@ -1,8 +1,9 @@
+//*******************************************************
+// DateDriver.java
+// A main class for check the Date class
+// Author: liron mizrahi
+//*******************************************************
 
-/**
-* DateDriver.java
-* A main class for check the Date class
-*/
 import java.util.Scanner;
 public class DateDriver
 {
