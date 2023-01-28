@@ -132,6 +132,29 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 
 <img src="https://media.giphy.com/media/bpEH21sHkWQQ8/giphy.gif">
 
+```java
+// headers
+//*******************************************************
+// Exam in July 2022B (91)
+// Semester 2022B
+// Solutions to the test
+// Author: liron mizrahi
+//*******************************************************
+
+//*******************************************************
+// IntList.java
+// the class reprsents IntList
+// Author: liron mizrahi
+//*******************************************************
+
+// API
+/**
+ * method return true if the arr values shift by 1 
+ * @param: intp[ arr1, int[] arr2
+ * @return: boolean 
+ */
+```
+
 ## 2. PRIMITIVE VARIABLES TYPES
 In Java, variables are used to store and manipulate data. There are several types of variables, each with its own characteristics and uses. 
 
