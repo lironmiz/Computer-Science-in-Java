@@ -342,7 +342,7 @@ public class Company
      * @parm RentNode other 
      * @return boolean
      */
-    public boolean includs(Company other)
+    public boolean includes(Company other)
     {
         if(getNumOfRents() > other.getNumOfRents())
         {
@@ -374,7 +374,7 @@ public class Company
      */
     public void merge(Company other)
     {
-        if(!includs(other))
+        if(!includes(other))
         {
             for(int i = 0; i < other.getNumOfRents(); i++)
             {
