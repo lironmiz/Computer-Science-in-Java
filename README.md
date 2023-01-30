@@ -15,7 +15,24 @@ Intended for saving solutions for tests , exercises and assignments as part of a
   </a>
 </p>
 
-# Course Material 💼
+<!-- Table of Contents -->
+<details>
+
+<summary>
+
+# :notebook_with_decorative_cover: Table of Contents
+
+</summary>
+
+- [Course Material](#star2-course-material)
+- [Course Material](#books-course-material) 
+- [Some Of The Projects](#sparkles-some-of-the-projects)
+- [Contact](#handshake-contact)
+- [Acknowledgements](#gem-acknowledgements)
+
+</details>  
+
+# :star2: Course Material 
 
 + Introduction And Basics Of The Language
 
