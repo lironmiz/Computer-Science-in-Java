@@ -9,6 +9,6 @@ public class ClassB extends ClassA
     
     public void f()
     {
-        System.out.println(" "b);
+        System.out.println("b");
     }
 }// end of class ClassB
