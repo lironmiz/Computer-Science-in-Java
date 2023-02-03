@@ -1,7 +1,8 @@
-/**
-* Class TestCarClass.java
-* A main class for check the Car class
-*/
+//*******************************************************
+// CarDriver.java
+// A main class for check the Car class
+// Author: liron mizrahi
+//*******************************************************
 import java.util.Scanner;
   
 public class TestCarClass
