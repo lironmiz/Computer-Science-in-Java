@@ -1,6 +1,7 @@
 //*******************************************************
 // Triangle1.java.
 // Calculation of area and perimeter of a triangle.
+// Author: liron mizrahi
 //*******************************************************
 import java.util.Scanner;
 public class Triangle1
