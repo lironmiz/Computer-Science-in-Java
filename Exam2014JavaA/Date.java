@@ -1,9 +1,9 @@
-import java.util.Scanner;
 /**
  * Date.java
  * the class reprsents a Date
  * Author: liron mizrhai
  */
+import java.util.Scanner;
 public class Date
 {
     private int _day;
@@ -56,7 +56,7 @@ public class Date
      */
     public int getYear()
     {
-        return _day; 
+        return _year; 
     }// end of method getYear
     /**
      * method set the day of the date
