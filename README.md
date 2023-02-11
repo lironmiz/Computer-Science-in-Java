@@ -16,7 +16,8 @@ Intended for saving solutions for tests , exercises and assignments as part of a
 </p>
 
 ## Useful link
- * Link to [Mega ]( https://mega.nz/folder/0Sg0iD4B#0OPF1JJgFjtYoJuStlsCtA )
+ * Link to [Mega ]( https://mega.nz/folder/0Sg0iD4B#0OPF1JJgFjtYoJuStlsCtA)
+ * Lint to [Drive ] ( https://drive.google.com/drive/folders/15saERJfCxzcg_EJF3H0cMsJ9g-HHERY2)
  
 # :star2: Course Material 
 
