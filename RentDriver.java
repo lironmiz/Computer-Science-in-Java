@@ -1,7 +1,8 @@
-/**
-* RentDriver.java
-* A main class for check the Rent class
-*/
+//*******************************************************
+// RentDriver.java.
+// tester for the rent class 
+// Author: liron mizrahi
+//*******************************************************
 import java.util.Scanner;
 public class RentDriver
 {
