@@ -13,7 +13,7 @@ public class Train
   int v2 = scan.nextInt();
   System.out.println ("Please enter the time of train 2:");
   int t2 = scan.nextInt();
-  int dis = Math.abs(((t1 / 60) * v1) - ((t2 / 60) * v2));
-  Systen.out.println (" The distance between the trains is " + dis + "km");
+  double dis = Math.abs(((t1 / 60.0) * v1) - ((t2 / 60.0) * v2));
+  System.out.println (" The distance between the trains is " + dis + " km");
  } // end of method main
 } //end of class Train
