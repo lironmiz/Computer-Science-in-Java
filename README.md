@@ -3053,7 +3053,9 @@ A HashMap in Java is a data structure that stores key-value pairs and uses a has
 
 It allows for fast lookups, insertions, and deletions of elements by key. It is implemented using an array and a linked list, where each element in the array is a linked list of key-value pairs that share the same hash code. 
 
-The HashMap is part of the Java Collections Framework and is not thread-safe by default, but it can be made thread-safe by using the java.util.Collections.synchronizedMap() method.
+The HashMap is part of the Java Collections Framework and is not thread-safe by default, but it can be made thread-safe by using the java.util.Collections.synchronizedMap() method. 
+
+Know more about => [HashMap Internal Working](https://boldcoder.blogspot.com/2024/08/internal-working-of-hashmap-in-java.html)
 
 ![image](https://user-images.githubusercontent.com/91504420/214188096-ca9c97b4-21d1-45f9-8370-5e1d4e200281.png)
 
